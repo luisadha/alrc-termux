@@ -1,3 +1,5 @@
+#BrandomusicV offers a better version of BrandomusicQ at least it doesn't require a change to the export PATH="$PATH:/system/bin" for the input command keyevent but uses an environment variable. Read more (readme.md)BrandomusicV offers a better version of BrandomusicQ at least it doesn't require a change to the $export PATH="$PATH:/system/bin" for the input command keyevent but uses an environment variable. Read more (readme.md)BrandomusicV offers a better version of BrandomusicQ at least it doesn't require a change to the $export PATH="$PATH:/system/bin" for the input command keyevent but uses an environment variable. Read more (readme.md)
+
 set +o noclobber
 brandomusicv()
 {
@@ -28,7 +30,7 @@ EOF
         ;;
         *)
             rm -f "${tmp}";
-            termux-toast "brandomusicq2: error, 'BRANDO_RESPONSE' variable environment not set yet!";
+            termux-toast "brandomusicv: error, 'BRANDO_RESPONSE' variable environment not set yet!";
             cd - &> /dev/null;
             return 0
         ;;
