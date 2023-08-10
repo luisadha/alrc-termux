@@ -16,15 +16,15 @@ alias al come with mkshrc mod by @7175-xda-devoloper, but function named al come
 
  B. This requires the environment variable export PATH="$PATH:/system/bin " set to be used for the \`input' and \`am' commands
 
-   C. The directory contains media content in your termux environment for brandomusic and imjpgrand to work.
+ C. The directory contains media content in your termux environment for brandomusic and imjpgrand to work.
 
-    C.1. Built-in music player that is strong enough to be able to play in the termux environment (there is no music market player application that can be recommended yet)
+ C.1. Built-in music player that is strong enough to be able to play in the termux environment (there is no music market player application that can be recommended yet)
     
-    C.2. Choose one for the image media viewer (Zarchiver image viewer or Swipeview on F-DROID) If your default gallery application is not strong enough to run on the Termux application
+ C.2. Choose one for the image media viewer (Zarchiver image viewer or Swipeview on F-DROID) If your default gallery application is not strong enough to run on the Termux application
+ 
+ D. Termux-setup-storage first
 
-D. Termux-setup-storage first
-
-  D.1. Make sure Termux has sufficient permissions on your device. like all files permission and other permissions.
+D.1. Make sure Termux has sufficient permissions on your device. like all files permission and other permissions.
 
 E. Uncomment or write ```allow-external-apps = true ``` in ~/.termux/termux.properties
 
