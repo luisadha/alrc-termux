@@ -24,11 +24,11 @@ alias al come with mkshrc mod by @7175-xda-devoloper, but function named al come
  
  D. Termux-setup-storage first
 
-D.1. Make sure Termux has sufficient permissions on your device. like all files permission and other permissions.
+ D.1. Make sure Termux has sufficient permissions on your device. like all files permission and other permissions.
 
-E. Uncomment or write ```allow-external-apps = true ``` in ~/.termux/termux.properties
+ E. Uncomment or write ```allow-external-apps = true ``` in ~/.termux/termux.properties
 
-F. Enough basic tools like grep, sed, gawk, bc, cut and more.
+ F. Enough basic tools like grep, sed, gawk, bc, cut and more.
 
 ##
 
