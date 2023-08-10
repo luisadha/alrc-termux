@@ -1,5 +1,4 @@
 #!/data/data/com.termux/files/usr/bin/bash # Cannot execute, source file
-#
 # ---BASH EXECUTECHECK--- #
 
 # name:.alrc autoload for initial command at Terminal emulator, but this for Termux.
