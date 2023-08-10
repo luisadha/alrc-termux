@@ -89,10 +89,10 @@ echo ' al;' >> ~/.bash_profile
    ```
 
 ### Update
-    
-    Not available on this branch. Other Terminal
+   Not available on this branch. 
 
-    B. If you install alrc-termux in another place like fork termux. You can replace/remove the shebang! so you can continue the installation process. But it is highly recommended to install it in Termux environment
+    B. Other Terminal
+ If you install alrc-termux in another place like fork termux. You can replace/remove the shebang! so you can continue the installation process. But it is highly recommended to install it in Termux environment
 
 
 ## Testing
@@ -112,44 +112,6 @@ echo ' al;' >> ~/.bash_profile
 * Be careful installing other dotfiles, it can cause unwanted bugs/errors due to misconfiguration.  first uninstall alrc-termux if you want to try using other dotfiles. termux-desktop causes imjpgrand to not work and other weird bugs.
 
 ## DOC
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
