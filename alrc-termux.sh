@@ -18,18 +18,13 @@
  
  # set -xv
 
-#export NAMA="${BASH_SOURCE[0]}"
-#export NAME="${0:+$(printf '%s\n' "$(basename -- "$(realpath ${BASH_SOURCE})")" )}"
-#FULLNAME="${0:+$(printf '%s\n' "$BASH_SOURCE" )}"
-export ALRC_VERSION="4.0.6-unstable"
 
+export ALRC_VERSION="4.0.7-unstable"
 
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
 
 export ALRC_SOURCE="$(basename ${ALRC_HOME}.sh)"
-
-# export FULLNAME="$ALRC_HOME_alt"
 
 export ALRC_SCRIPT="$ALRC_HOME/$ALRC_SOURCE"
 
@@ -477,17 +472,36 @@ fi
 
 }
 declare -f -x cattypus
+
 function al_opt_scan {
 # by luisadha
+
 declare -a "$(al help 2>&1 | sed 's/,//g' | sed 's/\[//g' | sed 's/\]//g' | sed 's/^/VARIABEL=/g' | sed 's/\"//g' )"
 
 for i in ${VARIABEL[@]}; do
   
   al $i &> /dev/null;
 done
-echo "Scanned!"
+echo "Export success!, please type env and found "al_something= ..." "
 }
 declare -f -x al_opt_scan
+
+function al_opt_extract {
+  # Created by luisadha
+  num=1;
+  _max_al_opt=$(alvar -t al_);
+
+    while [[ $num -le $_max_al_opt ]] ; do
+      eval "alvar -xn $num al_";
+      ((num++));
+      done
+
+      termux-clipboard-set "$(al_opt_extract)"
+      termux-clipboard-get
+}
+declare -x -f al_opt_extract;
+
+
 function setenv {
 # function mksh
 	eval export "\"$1\""'="$2"'
@@ -781,12 +795,12 @@ elif [ "$args" == "-nf" ]; then eval "echo" "$(main $2 | awk '{print $NF}')";
 elif [ "$args" == "-xnf" ]; then eval "echo" "\$$(main $2 | awk '{print $NF}')";
 elif [ "$args" == "-t" ]; then eval "echo" "$(main "$2" |  wc -w)";
 elif [ "$args" == "-n" ]; then
-local egvarexpan2_notif=`echo "$2" | grep -E ^\-?[0-9]*\.?[0-9]+$`
-int="${egvarexpan2_notif:?'require number after '-n'.'}"
+local alvar_notif=`echo "$2" | grep -E ^\-?[0-9]*\.?[0-9]+$`
+int="${alvar_notif:?'require number after '-n'.'}"
   eval "echo" "$(main $3 | cut -f$int -d ' ')";
 elif [ "$args" == "-xn" ]; then
-local egvarexpan2_notif=`echo "$2" | grep -E ^\-?[0-9]*\.?[0-9]+$`
-int2="${egvarexpan2_notif:?'require number after '-xn'.'}"
+local alvar_notif=`echo "$2" | grep -E ^\-?[0-9]*\.?[0-9]+$`
+int2="${alvar_notif:?'require number after '-xn'.'}"
   eval "echo" "\$$(main $3 | cut -f$int2 -d ' ')";
 else
  main $1 $2 $3;
