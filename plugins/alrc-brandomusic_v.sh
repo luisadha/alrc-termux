@@ -17,11 +17,11 @@ local format='audio/mp3';
     cd "/sdcard/Download" &> /dev/null;
     cp -rf "${result}" "${tmp}" &> /dev/null;
     answer=$BRANDO_RESPONSE
-    cat <<-EOF > ~/.local/bin/answer.txt
+    cat <<-EOF > $ALRC_HOME/cache/answer.txt
 ${answer}
 EOF
-    read -rd '' content < ~/.local/bin/answer.txt;
-    case "$answer" in
+    read -rd '' content < $ALRC_HOME/cache/answer.txt
+    case "$answer" in 
         [Yy]*)
             eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &> /dev/null;
             sleep 1;
