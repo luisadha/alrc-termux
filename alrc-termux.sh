@@ -394,8 +394,8 @@ alias r='fc -e -'
 #  personal aliases
 #maintain_alias()  {
 
-alias brandomusic-set_autoremove="sed 's/\#\ brandomusic-cache-clear\.sh/\ brandomusic-cache-clear\.sh/g' $FULLPATH > $FULLPATH.t; mv -f $FULLPATH.t $FULLPATH > /dev/null 2>&1; al_login;"
-alias brandomusic+set_autoremove="sed 's/\ brandomusic-cache-clear\.sh/\#\ brandomusic-cache-clear\.sh/g' $FULLPATH > $FULLPATH.t; mv -f $FULLPATH.t $FULLPATH > /dev/null 2>&1; al_login;"
+alias brandomusic-set_autoremove="sed 's/\#\ brandomusic-cache-clear\.sh/\ brandomusic-cache-clear\.sh/g' $ALRC_SCRIPT > $ALRC_SCRIPT.tmp; mv -f $ALRC_SCRIPT.tmp $ALRC_SCRIPT > /dev/null 2>&1; al_login;"
+alias brandomusic+set_autoremove="sed 's/\ brandomusic-cache-clear\.sh/\#\ brandomusic-cache-clear\.sh/g' $ALRC_SCRIPT > $ALRC_SCRIPT.tmp; mv -f $ALRC_SCRIPT.tmp $ALRC_SCRIPT > /dev/null 2>&1; al_login;"
 #                  }
 #
 # alias al
@@ -825,24 +825,8 @@ EOF
 cat <<- "EOF" > $HOME/.local/bin/$CHECKIP_FILES
 
 #!/usr/bin/env bash
-
-# Animations-test.sh
-
-# library by myTermux dotfiles
-# edit some
-
-HELPERS=(
-  animation check_ip
-)
-
-for HELPER in ${HELPERS[@]}; do
-  source ~/luisadha/progress-bar/helper/${HELPER}.sh
-done
-
-function main() {
-mulai
-}
-main
+# check_ip v1.0.2
+eval "(animation.sh "curl -s -o ifconfig.txt ifconfig.me")"
 EOF
 
 chmod +x $HOME/.local/bin/$ADDON_BRANDO
