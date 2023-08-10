@@ -521,7 +521,7 @@ function brandomusicq {
 # Created by @luisadha 
   set +o noclobber
   set +m
-  echo 'y' > $ALRC_HOME/answer.txt;
+  echo 'y' > $ALRC_HOME/cache/answer.txt;
   
   test $(echo $PATH | grep -o '/system/bin' | head -n1);
 
@@ -636,7 +636,7 @@ cp -rf "${result}" "${tmp}" &>/dev/null;
     read -n 1 -t 5 -p "Please tick remember my choice, once you see the popup! Y?
 " answer
 
-cat <<- EOF > $ALRC_HOME/answer.txt
+cat <<- EOF > $ALRC_HOME/cache/answer.txt
 ${answer}
 EOF
 
