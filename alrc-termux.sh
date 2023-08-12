@@ -493,11 +493,11 @@ function al_opt_extract {
     while [[ $num -le $_max_al_opt ]] ; do
       eval "alvar -xn $num al_";
       ((num++));
-      done > $$.cache
-      cat $$.cache;
-      cat $$.cache | termux-clipboard-set
+      done > $ALRC_HOME/cache/$$.cache
+      cat $ALRC_HOME/cache/$$.cache;
+      cat $ALRC_HOME/cache/$$.cache | termux-clipboard-set
       termux-toast "Success add to clip!"
-    rm -f $$.cache
+    rm -f $ALRC_HOME/cache/$$.cache
 
    # echo "cuangki top hebat" 1> x.out 2> x.err | termux-clipboard-set < x.out && termux-clipboard-get
 }
