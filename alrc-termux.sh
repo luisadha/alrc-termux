@@ -395,7 +395,7 @@ alias brandomusic+set_autoremove="sed 's/\ brandomusic-cache-clear\.sh/\#\ brand
 # alias al
 #
 alias al_activate='source <(~/.local/bin/alrc env)'; 
-alias al_login='source $ALRC_HOME/$ALRC_SOURCE';
+alias al_login='source $ALRC_HOME/$ALRC_SOURCE; set -o history';
 alias alcatalias='alcat | grep -e "^alias"'; 
 alias aligrep='alias | grep';
 
@@ -476,9 +476,9 @@ function al_opt_scan {
 # by luisadha
 
 declare -a "$(al help 2>&1 | sed 's/,//g' | sed 's/\[//g' | sed 's/\]//g' | sed 's/^/VARIABEL=/g' | sed 's/\"//g' )"
-
+al_notify "Exporting..."
 for i in ${VARIABEL[@]}; do
-  
+
   al $i &> /dev/null;
 done
 echo "Export success!, please type env and found "al_something= ..." "
@@ -493,10 +493,13 @@ function al_opt_extract {
     while [[ $num -le $_max_al_opt ]] ; do
       eval "alvar -xn $num al_";
       ((num++));
-      done
+      done > $$.cache
+      cat $$.cache;
+      cat $$.cache | termux-clipboard-set
+      termux-toast "Success add to clip!"
+    rm -f $$.cache
 
-      termux-clipboard-set "$(al_opt_extract)"
-      termux-clipboard-get
+   # echo "cuangki top hebat" 1> x.out 2> x.err | termux-clipboard-set < x.out && termux-clipboard-get
 }
 declare -x -f al_opt_extract;
 
@@ -543,7 +546,7 @@ if [ $? -eq 0 ]; then
   function mainn() {
   
     (brandomusic & input text y & brandomusic &>/dev/null )
- brandomusic-cache-clear.sh &> /dev/null;
+## brandomusic-cache-clear.sh &> /dev/null;
   }
 mainn;
 
@@ -658,7 +661,7 @@ EOF
  eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &>/dev/null; 
  sleep 1
 echo
- brandomusic-cache-clear.sh
+## brandomusic-cache-clear.sh
 cd - &>/dev/null;;
         * ) rm -f "${tmp}" ; termux-toast "timeout or done!"; cd - &>/dev/null; return 0;;
     esac
@@ -784,23 +787,39 @@ function usage()
 (
 echo '[' && type alvar | grep -w '$args' | awk '{print $5}' | sed 's/\];//g' | sed 's/\'\$args'//g' | sed "s/\"/\",/g" | cut -c"3-"  | sed "s/pe//" | sed s'/^/\"/' | sed '1,2 s/\"//g' | sed '/./,$!d' | sort && echo ']'
 )
-echo -e "Usage : alvar VARIABLE NAME" >&2;
-echo -e "alvar BASH" >&2;
-echo -e ""
+
+echo -e "" >&2; echo -e "alvar v1.0.4 - Parsing tools for variable enviroment, Copyright (c) 2023 @luisadha" >&2;
+echo -e "Usage : alvar {QUERY VARIABLE ENVIRONMENT}" >&2;
+echo -e "        alvar -xnf BASH // menampilkan informasi versi bash" >&2;
+echo -e "" >&2;
+
+# cut 1,3-34 # 50, 49
+usage | xargs -d '\n' | cut -c"1,3-47",50 
+echo '' >&2;
 echo -e "Available options: \n" >&2;
-usage | xargs -d '\n' | cut -c"1,3-34",37
+#echo '' >&2;
+echo -e "a,     Maksudnya tampilkan semua variable yang cocok berdasarkan queri." >&2;
+echo -e "x,     Maksudnya ektrak nilai dari variabel queri" >&2;
+echo -e "n NUM  Maksudnya menampilkan nama variable queri berdasarkan nomer spesifik." >&2;
+echo -e "t,     Maksudnya menampilkan jumlah variable queri yang cocok dengan parameter yang ditentukan." >&2;
+echo -e "nf,    Maksudnya tampilkan variable query yang terakhir, biasanya variable Seperti {QUERY}_VERSION dibeberapa kasus." >&2;
+echo -e "{x, n}, Option ini dapat dikombinasikan dengan option tertentu." >&2;
+echo "" >&2;
+
 
 elif [ "$args" == "-nf" ]; then eval "echo" "$(main $2 | awk '{print $NF}')";
 elif [ "$args" == "-xnf" ]; then eval "echo" "\$$(main $2 | awk '{print $NF}')";
 elif [ "$args" == "-t" ]; then eval "echo" "$(main "$2" |  wc -w)";
-elif [ "$args" == "-n" ]; then
-local alvar_notif=`echo "$2" | grep -E ^\-?[0-9]*\.?[0-9]+$`
-int="${alvar_notif:?'require number after '-n'.'}"
+elif [ "$args" == "-n" ]; then local alvar_notif=`echo "$2" | grep -E ^\-?[0-9]*\.?[0-9]+$`; 
+   int="${alvar_notif:?'require number after '-n'.'}";
   eval "echo" "$(main $3 | cut -f$int -d ' ')";
-elif [ "$args" == "-xn" ]; then
-local alvar_notif=`echo "$2" | grep -E ^\-?[0-9]*\.?[0-9]+$`
-int2="${alvar_notif:?'require number after '-xn'.'}"
+elif [ "$args" == "-xn" ]; then local alvar_notif=`echo "$2" | grep -E ^\-?[0-9]*\.?[0-9]+$`;
+   int2="${alvar_notif:?'require number after '-xn'.'}";
   eval "echo" "\$$(main $3 | cut -f$int2 -d ' ')";
+
+elif [ "$args" == "-a" ]; then local num=1; local max=$(alvar -t $2 ); for i in `seq $num $max`; do  eval "alvar -n $i $2"; done;
+
+elif [ "$args" == "-xa" ]; then local num=1; local max=$(alvar -t $2 ); for j in `seq $num $max`; do  eval "alvar -xn $j $2"; done;
 else
  main $1 $2 $3;
 fi
@@ -835,11 +854,15 @@ fi
 EOF
 
 #
+export IPFETCH="$ALRC_HOME/cache/ifconfig.txt"
+echo '' > $IPFETCH
 cat <<- "EOF" > $HOME/.local/bin/$CHECKIP_FILES
 
 #!/usr/bin/env bash
 # check_ip v1.0.2
-eval "(animation.sh "curl -s -o ifconfig.txt ifconfig.me")"
+#
+export ANIMATION_STATE=$(cat $IPFETCH)
+eval "(animation.sh "curl -s -o ${IPFETCH} ifconfig.me")"
 EOF
 
 chmod +x $HOME/.local/bin/$ADDON_BRANDO

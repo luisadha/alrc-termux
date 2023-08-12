@@ -7,5 +7,4 @@ return 1
   fi
 }                                          
 
-declare -f -x check_dependency
 
