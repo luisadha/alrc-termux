@@ -131,6 +131,7 @@ fi
 
 
 }
+function al_notify()      { local args="$@";                                          read i < <(echo "$args");                                 eval "(al_set_window $i)";                                eval "$(termux-toast $i)";             echo "${i}"; }
 
 function al_log () {
 cat $ALRC_HOME/Changelog.al.txt
@@ -455,8 +456,9 @@ alias al_enable_alcat='echo '_alcat' >> ~/.bash_history && source $ALRC_HOME/$AL
 alias al_enable_brandomusicv='source $ALRC_HOME/plugins/alrc-brandomusic_v.sh'
 
 ## FUNCTION
-
-function cattypus() {
+function printalpha()     { for i in {a..z};                                          do type $i 2>/dev/null;                             done }
+declare -f -x printalpha;
+function cattypus()       {
 # by luisadha
   if [ "$(type -t $1)" == "function" ]; then
 echo "$(declare -f $1)";
@@ -467,9 +469,7 @@ elif [ "$(type -t $1)" == "file" ]; then
   echo "$(cat $(type -p $1))";
 else
   echo "$1 is'nt function, alias or file.";
-fi
-
-}
+  fi                       }
 declare -f -x cattypus
 
 function al_opt_scan {
@@ -516,6 +516,8 @@ hname=$(busybox ifconfig wlan0 | awk '/inet / { print $2 }' | sed -e s/addr:// )
 declare -f -x ipwifi 
 function bh { bash -c 'help '"$@"; }
 declare -f -x bh
+function timgrandom()     { pushd ~ &>/dev/null;                                           timg "$(realpath "${ARG:=$(busybox ls ~/**/*.jpg | shuf -n1)}")";                                            popd &>/dev/null; }                                             
+declare -f -x timgrandom; #by luisadha 
 function imjpgrand {
 # by luisadha
 dir="${1:+"${1}/*.jpg"}"
