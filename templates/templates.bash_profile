@@ -8,6 +8,7 @@ echo -e "${reset}∆"
 : INITIAL 'ALIASES'
 . ~/.aliases > /dev/null 2>&1; #myTermux Configuration
 alias al_source_profile='source ~/.bash_profile'
+
 alias code-server='env NODE_OPTIONS="--require $HOME/android_as_server.js" code-server' # by fmway
 ##
 : INITIAL 'ENVIRONMENT'
@@ -15,7 +16,8 @@ export LC_ALL=en_US.UTF-8
 export PATH=$PATH:/system/bin:/usr/local/bin:$HOME/.local/bin
 export BASH_ARGV0='bash' # Digunakan untuk memperbaiki bug saat login ke GNU/Linux melalui PRoot-Distro 
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups:erasedups
-export HISTFILESIZE=1000000           export HISTSIZE=1000000
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
 export HISTIGNORE='history*'
 
 
@@ -39,7 +41,7 @@ PROMPT_DIRTRIM=3
 : INITIAL 'POSIX OPTIONS'
 # set +o errexit
   set +o noclobber
-
+  set -o history
 
 
 : INITIAL 'FUNCTION'
@@ -67,19 +69,6 @@ fi
 trap interrupt_handler SIGINT
 
 
-function timgrandom()     { pushd ~ &>/dev/null; 
-                           timg "$(realpath "${ARG:=$(busybox ls ~/**/*.jpg | shuf -n1)}")"; 
-        popd &>/dev/null; }
-        timgrandom; echo -e '\n'
-
-function al_notify()      { local args="$@";
-                            read i < <(echo "$args");
-                            eval "(al_set_window $i)";
-                            eval "$(termux-toast $i)";
-              echo "${i}"; }
-function printalpha()     { for i in {a..z};
-                            do type $i 2>/dev/null;
-                      done }
 
 function fancytext()       {
 # by wibi9424
@@ -115,21 +104,25 @@ if [ -n "$SSH_CLIENT" ]; then text=" ssh"; fi
 : ' \
   eval "(brandomusic ~/music-repositories/twice)" #'
 # atau
-: ' \
+# : ' \
   export BRANDO_RESPONSE=y
   al_enable_brandomusicv
-  brandomusicv > /dev/null 2>&1; # ~/music-repositories/jkt48 #' 
+  brandomusicv #&> /dev/null;
 # atau
 : 'eval "(brandomusicx shuffle)" '
+# atau
 #: BEGIN MUTLIPLE COMMENT'
 export ANIMATION_STATE="terpilih" ANIMATION_MESSAGE="Memilih lagu"
 
-eval "(animation.sh "brandomusicx shuffle")"
+#eval "(animation.sh "brandomusicx shuffle")"
 
-unset ANIMATION_STATE ANIMATION_MESSAGE
+#unset ANIMATION_STATE ANIMATION_MESSAGE
+
 # dan
 ###! Image viewer Randomize
 #
+timgrandom;
+
 export ANIMATION_STATE="terpilih" ANIMATION_MESSAGE="Memilih gambar"
 eval "(animation.sh "imjpgrand ~/daydreams")"
 
@@ -137,7 +130,6 @@ unset ANIMATION_STATE ANIMATION_MESSAGE
 
 # ' ENDL
 
-######al;
 
 ###! ================ end of alrc-termux Configuration ==============================
 
@@ -166,11 +158,12 @@ read -a pouting_cat < <((echo "$(echo -en 'smileys,\npaws,\nand nose,\nfurry fri
 echo "${pouting_cat[1]} is $(printf "\U0001F63E\n")"
 EOF
 
-
+echo
 source pouting_cat.sh # ini akan menampilkan angka 3 ketika login, namun jika di source akan muncul emoji text
 echo '<-- -->'
 
 source <(command cat ~/pouting_cat.sh) # paksa munculkan emoji text ketika login shell
+source ~/storage/shared/termuxlauncher/.apps-launcher # termuxlauncher Configuration. Install apk first
 
 
 # echo "Jika anda tidak melihat emoji anda login seperti biasa, jika ya anda memanggil dengan source"
@@ -180,8 +173,9 @@ source <(command cat ~/pouting_cat.sh) # paksa munculkan emoji text ketika login
 # Untuk mengaktifkan fitur _alcat, biarkan kode dibawah ini menjadi yang terakhir dimuat (you commenting out al_enable_alcat at last line) pastikan untuk mengaktifkan set -o history anda jika tidak mengaktifkan alcat (you commenting al_enable_alcat) 
 
 # >> Pilih salah satu dari ini
-al_enable_alcat 2>/dev/null 
+# al_enable_alcat 2>/dev/null 
 # atau
-# al && set -o history # Mandatory / Penting jika anda men source Alrc-Termux 
+al #&& 
+set -o history # Mandatory / Penting jika anda men source Alrc-Termux 
 
 

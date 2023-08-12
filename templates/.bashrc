@@ -1,7 +1,23 @@
+ # configuration environment variable by luisadha
+case $- in  
+ *i*) ;;
+    *) return;;
+esac
+
+ eval "$(zoxide init bash)"
+ eval "$(starship init bash)" #Bash Forever             167 #eval "$(oh-my-posh init bash)"                        168 # brandomusicx shuffle &>/dev/null
+ echo '¶' #Artinya bahwa sesi ini telah memuat .bashrc (bash)                                                171                                                        172 
+ echo -e "\033[1;34mToday\n------"
+ 
+ # Print date time  
+echo -e "\033[0;36m$(date '+🗓️   Date: %A, %B %d, %Y at %H:%M')"
+ 
+
 # Enable the subsequent settings only in interactive sessions
+
 case $- in
   *i*) ;;
-    *) return;;
+  *) return;;
 esac
 
 # Path to your oh-my-bash installation.
@@ -153,21 +169,6 @@ if [[ $- =~ .*i.* ]]; then bind -x '"\C-r": "hstrnotiocsti"'; fi
 export HSTR_TIOCSTI=n
 
 # configuration environment variable by luisadha
-export PATH=$PATH:/system/bin:/usr/local/bin:$HOME/.local/bin
-export BASH_ARGV0='bash'
-
-
-alias code-server='env NODE_OPTIONS="--require $HOME/android_as_server.js" code-server'
-
-# Initial plugin/tools 
-eval "$(zoxide init bash)"
-
-eval "$(starship init bash)" #Bash Forever
-
-brandomusicx shuffle &>/dev/null || echo "alrc-termux NOT INSTALLED, can't run brandomusicx!";
-
-echo '¶' #Artinya bahwa sesi ini telah memuat .bashrc (bash)
-
 
 # If not running interactively, don't do anything
 case $- in
@@ -181,7 +182,8 @@ export BASH_IT="/data/data/com.termux/files/home/.bash_it.git"
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
 # location /.bash_it/themes/
-export BASH_IT_THEME='barbuk' 2> /dev/null
+
+: 'export BASH_IT_THEME='' 2> /dev/null'
 
 # Some themes can show whether `sudo` has a current token or not.
 # Set `$THEME_CHECK_SUDO` to `true` to check every prompt:
