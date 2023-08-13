@@ -565,7 +565,7 @@ function brandomusicx {
    help() {
 (
 echo -e "BrandomusicXtended (brandomusicx) is an shortcut for function brandomusic.\n" >&2;
-_about_author
+
 echo -e "Powered by TERMUX API\n
 Available options : " >&2;
 
