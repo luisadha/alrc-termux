@@ -65,9 +65,9 @@ echo ' al;' >> ~/.bash_profile
 ### usage#2:
 
 ```text
-         chsh -s bash && login      change to bash shell and exit
+chsh -s bash && login      change to bash shell and exit
 
-         whatisal                   print this help message and return
+whatisal                   print this help message and return
 ```
 
 ### Templates
