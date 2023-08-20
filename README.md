@@ -77,7 +77,7 @@ echo ' al;' >> ~/.bash_profile
 
 ## Test & Testing
 1. Test
-> Test with the termux widget. If you don't want to mess up your .bash_profile, put the file ~/local/share/alrc-termux/test/.shortcuts/alr c.test To ~/.shorts/alr p.test Then make the Termux widget run from there, if it doesn't show up do the refresh.
+> Test with the termux widget. If you don't want to mess up your .bash_profile, put the file ~/local/share/alrc-termux/test/.shortcuts/alrc.test To ~/.shortcuts/alrc.test Then make the Termux widget run from there, if it doesn't show up do the refresh.
 
 3. Testing
 
