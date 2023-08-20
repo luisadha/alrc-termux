@@ -94,3 +94,21 @@ echo ' al;' >> ~/.bash_profile
 - On my device The imjpgrand automation feature won't consistently select the image viewer even if I press "Select always" in the end the solution was that one of the apps had to be uninstalled. I kept the zarchiver viewer and deleted the other one.
 - Other Brandomusic variants cannot be combined with animation.sh, except BrandomusicX.
 - Be careful installing other dotfiles, it can cause unwanted bugs/errors due to misconfiguration. first uninstall alrc-termux if you want to try using other dotfiles. termux-desktop causes imjpgrand to not work and other weird bugs.
+
+## Roadmap
+
+I'd like to add more plugins for upcoming updates.
+
+## Contribution
+
+Feedback, contributors, pull requests are all very welcome.
+
+## Author & Contributor
+
+__Luis Adha__
+
+__Fmways__
+
+## License
+
+This project is licensed under the [GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html). Please refer to the license link for more information.
