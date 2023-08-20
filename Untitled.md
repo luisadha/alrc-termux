@@ -1,15 +1,16 @@
+# alrc-termux | dotfiles | .bash_profile (Config) | automations
+
+## Name
 Alrc-termux is a sourceable file like .bashrc but separate from it. 
 
 ## Description 
 Used for interactive login automation purposes that will display the information of your device when opening a terminal session (Termux). 
 It was originally created to replace user customization .bashrc but now there's no need to do that anymore. Just call through the source in .bashrc or .bash_profile.
 
-<iframe width="560" height="315" src="https://youtube.com/shorts/9X6naGKNOys?feature=share" frameborder="0" allowfullscreen></iframe>
-	
-<video width="560" height="315" controls> <source src="https://youtube.com/shorts/9X6naGKNOys?feature=share" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-	
+
+[![Shorts Video](https://img.youtube.com/vi/9X6naGKNOys/0.jpg)](https://www.youtube.com/shorts/9X6naGKNOys)
+
+
 ## Requitments
 - Install the application with the Termux API, the Termuct Widget and the Optional Termux Float
 - Enough basic tools like grep, sed, gawk, bc, cut and more.
@@ -29,16 +30,17 @@ A. Termux
 git clone https://codeberg.org/luisadha/alrc-termux.git ~/.local/share/alrc-termux
 ```
 
-	link alrc to your bin path
+link alrc to your bin path
 
 ```sh
 ln -s ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc
 ```
 
-- **Uninstall
-	alrc uninstall
+- *Uninstall*
 
-- **Updates
+	```alrc uninstall```
+
+- *Updates*
 > Not available on this branch
 
 B. Other Platform Termux based
