@@ -11,11 +11,11 @@ It was originally created to replace user customization .bashrc but now there's 
 [![Shorts Video](https://img.youtube.com/vi/9X6naGKNOys/0.jpg)](https://www.youtube.com/shorts/9X6naGKNOys)
 
 
-## Requitments
+## Requirements
 - Install the application with the Termux API, the Termux Widget and the Optional Termux Float
 - Enough basic tools like grep, sed, gawk, bc, cut and more.
 - Ran \`termux-setup-storage' first and Uncomment or write `allow-external-apps = true` in ~/.termux/termux.properties.
-- This requires the environment variable export PATH="$PATH:/system/bin " set to be used for the `input' and `am' commands.
+- This requires the environment variable export PATH="$PATH:/system/bin " set to be used for the \`input' and \`am' commands.
 - Built-in music player that is strong enough to be able to play in the termux environment (there is no music market player application that can be recommended yet).
 - Install third party apps, Choose one for the image media viewer (Zarchiver image viewer or Swipeview on F-DROID) If your default gallery application is not strong enough to run on the Termux application.
 
@@ -44,7 +44,8 @@ ln -s ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc
 > Not available on this branch
 
 B. Other Platform Termux based
-> If you install alrc-termux in another place like fork termux. You can replace/remove the shebang! so you can continue the installation process. But it is highly recommended to install it in Termux environment
+
+  If you install alrc-termux in another place like fork termux. You can replace/remove the shebang! so you can continue the installation process. But it is highly recommended to install it in Termux environment
 
 ## Usage
 
@@ -79,7 +80,7 @@ whatisal                   print this help message and return
 1. Test
 > Test with the termux widget. If you don't want to mess up your .bash_profile, put the file ~/local/share/alrc-termux/test/.shortcuts/alrc.test To ~/.shortcuts/alrc.test Then make the Termux widget run from there, if it doesn't show up do the refresh.
 
-3. Testing
+2. Testing
 
 - [x] Termux
 - [ ] AndroidIDE (Terminal) But some gui features and features that require fire extinguishers won't work.
