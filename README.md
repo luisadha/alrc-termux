@@ -104,6 +104,20 @@ I'd like to add more plugins for upcoming updates.
 
 Feedback, contributors, pull requests are all very welcome.
 
+## Thanks & Refernce
+
+- God 
+ 
+- Contributor
+
+- Termux Apps
+
+- Termuxlauncher
+
+- Mkshrc 
+
+
+
 ## Author & Contributor
 
 __Luis Adha__
