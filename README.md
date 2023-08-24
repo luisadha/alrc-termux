@@ -110,12 +110,13 @@ Feedback, contributors, pull requests are all very welcome.
  
 - Contributor
 
-- Termux Apps
+- Termux Apps https://github.com/termux/termux-app
 
-- Termuxlauncher
+- Termuxlauncher  Plugin Dependencies  https://github.com/amsitlab/termuxlauncher/releases
 
-- Mkshrc 
+- Mkshrc (Inspirations) https://forum.xda-developers.com/t/shell-mksh-scripting-mksh-r50e-static-full-mkshrc_mods.2770804/
 
+- Many internet source
 
 
 ## Author & Contributor
