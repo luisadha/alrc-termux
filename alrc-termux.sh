@@ -271,7 +271,7 @@ elif [ "$opt" == "ab" ]; then # bug#226_3761a
   getprop ro.build.ab_update;
   export  al_"$opt"="$(getprop $_)"
 if [ "$(getprop ro.build.ab_update)" == "true" ]; then
-  export al_"$opt"="$(getprop $_)"
+ # export al_"$opt"="$(getprop $_)"
   echo "We detected that your device have an A/B system partition."
 fi
 
@@ -446,14 +446,18 @@ alias prefix='cd $PREFIX'
 alias preview='fzf --preview='\''bat --color=always --style=numbers --theme OneHalfDark {}'\'' --preview-window=down'
 alias proot-dinstalled='cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs; ls;'
 alias proot-dlogin='proot-distro login '
-alias al_refresh_profile='source /data/data/com.termux/files/home/.bash_profile' #for refresh profile
+# alias al_refresh_profile='source /data/data/com.termux/files/home/.bash_profile' #for refresh profile
 alias vendor='getprop ro.product.manufacturer'
 # add periode 28-29 March
 alias loghis='echo 'login' >> ~/.bash_history; login'
 # convert loghis to login in body .bash_history
 # 19 juni
-alias al_enable_alcat='echo '_alcat' >> ~/.bash_history && source $ALRC_HOME/$ALRC_SOURCE'
-alias al_enable_brandomusicv='source $ALRC_HOME/plugins/alrc-brandomusic_v.sh'
+#
+# plugins
+alias al_include_collect_applist='source $ALRC_HOME/plugins/al_collect_applist_termuxlauncher.alrc.plugin.sh'
+alias al_include_alcat='echo '_alcat' >> ~/.bash_history && source $ALRC_HOME/$ALRC_SOURCE'
+alias al_include_brandomusicv='source $ALRC_HOME/plugins/brandomusicv.alrc.plugin.sh'
+alias al_include_brandomusicxz='source $ALRC_HOME/plugins/brandomusicxforzsh.alrc.plugin.sh'
 
 ## FUNCTION
 function printalpha()     { for i in {a..z};                                          do type $i 2>/dev/null;                             done }
@@ -663,7 +667,7 @@ EOF
  eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &>/dev/null; 
  sleep 1
 echo
-## brandomusic-cache-clear.sh
+brandomusic-cache-clear.sh
 cd - &>/dev/null;;
         * ) rm -f "${tmp}" ; termux-toast "timeout or done!"; cd - &>/dev/null; return 0;;
     esac

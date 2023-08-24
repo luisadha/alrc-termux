@@ -93,6 +93,11 @@ if [ -n "$SSH_CLIENT" ]; then text=" ssh"; fi
 
  source <(~/.local/bin/alrc env)> /dev/null 2>&1; 
 
+ # Enable plugins
+ #
+ al_include_collect_applist
+ al_include_brandomusicxz
+
 # Automasi dibawah alrc-termux
 ###! Music Randomize
 # Memutar music secara acak silahkan pilih antara brandomusic/q/v atau brandomusicx 
@@ -106,7 +111,7 @@ if [ -n "$SSH_CLIENT" ]; then text=" ssh"; fi
 # atau
 # : ' \
   export BRANDO_RESPONSE=y
-  al_enable_brandomusicv
+  al_include_brandomusicv
   brandomusicv #&> /dev/null;
 # atau
 : 'eval "(brandomusicx shuffle)" '
@@ -173,7 +178,7 @@ source ~/storage/shared/termuxlauncher/.apps-launcher # termuxlauncher Configura
 # Untuk mengaktifkan fitur _alcat, biarkan kode dibawah ini menjadi yang terakhir dimuat (you commenting out al_enable_alcat at last line) pastikan untuk mengaktifkan set -o history anda jika tidak mengaktifkan alcat (you commenting al_enable_alcat) 
 
 # >> Pilih salah satu dari ini
-# al_enable_alcat 2>/dev/null 
+: 'al_include_alcat 2>/dev/null '
 # atau
 al #&& 
 set -o history # Mandatory / Penting jika anda men source Alrc-Termux 
