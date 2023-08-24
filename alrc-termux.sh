@@ -18,7 +18,7 @@
  # set -xv
 
 
-export ALRC_VERSION="4.0.7-unstable"
+export ALRC_VERSION="4.0.8-unstable"
 
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
