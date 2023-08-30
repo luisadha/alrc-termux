@@ -18,7 +18,7 @@
  # set -xv
 
 
-export ALRC_VERSION="4.0.8-unstable"
+export ALRC_VERSION="4.0.9-unstable"
 
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
@@ -460,6 +460,13 @@ alias al_include_brandomusicv='source $ALRC_HOME/plugins/brandomusicv.alrc.plugi
 alias al_include_brandomusicxz='source $ALRC_HOME/plugins/brandomusicxforzsh.alrc.plugin.sh'
 
 ## FUNCTION
+function check_ip_privates() {
+  # by luisadha
+    local ip=$(ip addr show | grep -Eo 'inet [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | grep -Ev '127\.0\.0\.1' | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+    echo "$ip"
+}
+declare -f -x check_ip_privates;
+
 function printalpha()     { for i in {a..z};                                          do type $i 2>/dev/null;                             done }
 declare -f -x printalpha;
 function cattypus()       {
@@ -552,7 +559,7 @@ if [ $? -eq 0 ]; then
   function mainn() {
   
     (brandomusic & input text y & brandomusic &>/dev/null )
-## brandomusic-cache-clear.sh &> /dev/null;
+brandomusic-cache-clear.sh &> /dev/null;
   }
 mainn;
 
@@ -667,7 +674,7 @@ EOF
  eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &>/dev/null; 
  sleep 1
 echo
-brandomusic-cache-clear.sh
+ brandomusic-cache-clear.sh
 cd - &>/dev/null;;
         * ) rm -f "${tmp}" ; termux-toast "timeout or done!"; cd - &>/dev/null; return 0;;
     esac
@@ -835,7 +842,7 @@ declare -f -x alvar
 set +o noclobber
 export PATH="${PATH}:$HOME/.local/bin"
 ADDON_BRANDO="brandomusic-cache-clear.sh"
-CHECKIP_FILES="check_ip.sh"
+CHECKIP_FILES="check_ip_publics"
 
 cat <<- "EOF" > $HOME/.local/bin/$ADDON_BRANDO
 
@@ -865,8 +872,7 @@ echo '' > $IPFETCH
 cat <<- "EOF" > $HOME/.local/bin/$CHECKIP_FILES
 
 #!/usr/bin/env bash
-# check_ip v1.0.2
-#
+# check_ip_publics v1.0.3
 export ANIMATION_STATE=$(cat $IPFETCH)
 eval "(animation.sh "curl -s -o ${IPFETCH} ifconfig.me")"
 EOF
