@@ -6,9 +6,9 @@ CMD="$(basename -- $0)"
 
 _usage() {
   echo -e "Usage :"
-  echo -e "\t$CMD [command]"
+  echo -e "\t$CMD [options]"
   echo
-  echo -e "Command :"
+  echo -e "Options :"
   echo -e " h\thelp\t\t display this message"
   echo -e " v\tversion\t\t display alrc-termux version"
   echo -e " i\tinstall\t\t install alrc-termux to your termux"
