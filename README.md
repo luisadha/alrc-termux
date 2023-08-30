@@ -29,7 +29,9 @@ A. Termux
 ---------
 - *Automatic*
 
-```curl -fSsL https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh | bash```
+```
+curl -fSsL https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh | bash
+```
 
 - *Manual*
 	clone this repository
@@ -46,11 +48,15 @@ ln -s ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc
 
 - *Uninstall*
 
-	```alrc uninstall```
+	```
+	alrc uninstall
+	```
 
 - *Updates*
 
-	```alrc updates```
+	```
+	alrc updates
+	```
 
 B. Other Platform Termux based
 ------------------------------
