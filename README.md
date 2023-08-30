@@ -29,7 +29,7 @@ A. Termux
 ---------
 - *Automatic*
 
-```curl -fSsL https://codeberg.org/luisadha/alrc-termux/src/commit/83ea34aeb8fdc2fbd0460cea4c8c5c3bea72d1a2/install.sh | bash```
+```curl -fSsL https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh | bash```
 
 - *Manual*
 	clone this repository
