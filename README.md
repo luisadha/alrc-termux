@@ -135,4 +135,6 @@ __Fmways__
 
 LICENSE
 -------
+Copyright © 2023 Adharudin (Luis Adha). License GPLv3+: GNU GPL version 3 or later http://gnu.org/licenses/gpl.html. This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.
+
 This project is licensed under the [GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html). Please refer to the license link for more information.
