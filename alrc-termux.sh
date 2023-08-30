@@ -520,11 +520,8 @@ function setenv {
 	eval export "\"$1\""'="$2"'
 }
 declare -x -f setenv
-function ipwifi {
-HOSTNAME='localhost'
-hname=$(busybox ifconfig wlan0 | awk '/inet / { print $2 }' | sed -e s/addr:// ); echo ${hname:- "${HOSTNAME}"};
-}
-declare -f -x ipwifi 
+
+
 function bh { bash -c 'help '"$@"; }
 declare -f -x bh
 function timgrandom()     { pushd ~ &>/dev/null;                                           timg "$(realpath "${ARG:=$(busybox ls ~/**/*.jpg | shuf -n1)}")";                                            popd &>/dev/null; }                                             
@@ -625,7 +622,8 @@ function brandomusic {
 #  - Add function (brandomusic)x 
 #  - Add function (brandomusic)q
 #  - Rename termux-toast
-#
+# Version : v1.4.7
+#  - 
 
 # Pemutar musik dinamis menggunakan "$PREFIX/bin/am"
 #
@@ -643,6 +641,7 @@ function brandomusic {
 
 set +o noclobber
 local format='audio/mp3'
+local format2='audio'
 
 local file="${1:+"${1}/*.mp3"}" #jika argumen $1 is not NULL
 
@@ -671,7 +670,8 @@ EOF
 
     case "$answer" in
         [Yy]* )
- eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &>/dev/null; 
+ termux-open --content-type ${format2} ${tmp} &>/dev/null;
+ # eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &>/dev/null; 
  sleep 1
 echo
  brandomusic-cache-clear.sh
