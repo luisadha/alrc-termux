@@ -670,8 +670,8 @@ EOF
 
     case "$answer" in
         [Yy]* )
- termux-open --content-type ${format2} ${tmp} &>/dev/null;
- # eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &>/dev/null; 
+ #termux-open --content-type ${format2} ${tmp} &>/dev/null;
+ eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &>/dev/null; 
  sleep 1
 echo
  brandomusic-cache-clear.sh
