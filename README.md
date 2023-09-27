@@ -34,13 +34,14 @@ curl -fSsL https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh 
 ```
 
 - *Manual*
-	clone this repository
+	
+clone this repository
 
 ```sh
 git clone https://codeberg.org/luisadha/alrc-termux.git ~/.local/share/alrc-termux
 ```
 
-link alrc to your bin path
+and linking alrc to your ~/.local/bin path
 
 ```sh
 ln -s ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc
