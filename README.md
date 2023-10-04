@@ -22,7 +22,7 @@ INSTALLATION
 - Ran \`termux-setup-storage' first and Uncomment or write `allow-external-apps = true` in ~/.termux/termux.properties.
 - This requires the environment variable export PATH="$PATH:/system/bin " set to be used for the \`input' and \`am' commands.
 - Built-in music player that is strong enough to be able to play in the termux environment (there is no music market player application that can be recommended yet) mine com.miui.player (v6.4.20i).
-- Install third party apps, Choose one for the image media viewer (Zarchiver image viewer or [Swipeview](https://f-droid.org/packages/org.voidptr.swpieview/) on F-DROID) If your default gallery application is not strong enough to run on the Termux application.
+- Install third party apps, Choose one for the image media viewer (Zarchiver image viewer or [Swpieview](https://f-droid.org/packages/org.voidptr.swpieview/) on F-DROID) If your default gallery application is not strong enough to run on the Termux application.
 
 
 A. Termux
