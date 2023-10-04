@@ -129,7 +129,7 @@ export ANIMATION_STATE="terpilih" ANIMATION_MESSAGE="Memilih lagu"
 timgrandom;
 
 export ANIMATION_STATE="terpilih" ANIMATION_MESSAGE="Memilih gambar"
-eval "(animation.sh "imjpgrand ~/daydreams")"
+eval "(animation.sh "imjpgrand ~")"
 
 unset ANIMATION_STATE ANIMATION_MESSAGE
 
