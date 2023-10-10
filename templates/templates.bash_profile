@@ -38,6 +38,7 @@ shopt -s cmdhist
 : INITIAL 'VARIABLE'
 PROMPT_DIRTRIM=3
 
+
 : INITIAL 'POSIX OPTIONS'
 # set +o errexit
   set +o noclobber
@@ -95,8 +96,14 @@ if [ -n "$SSH_CLIENT" ]; then text=" ssh"; fi
 
  # Enable plugins
  #
- al_include_collect_applist
- al_include_brandomusicxz
+ al_include_collect_applist # kita akan mengaktfikan plugin collect_applist
+ al_include_brandomusicxz # kita akan mengaktifkan plugin brandomusicxz untuk zsh
+ al_exclude_brandomusic # kita akan menonaktifkan plugin default brandomusic legacy yang deprecated (sudah usang)
+ brandomusic_disable
+
+ al_exclude_brandomusicx
+ brandomusicx_disable
+
 
 # Automasi dibawah alrc-termux
 ###! Music Randomize
@@ -111,11 +118,15 @@ if [ -n "$SSH_CLIENT" ]; then text=" ssh"; fi
 # atau
 # : ' \
   export BRANDO_RESPONSE=y
-  al_include_brandomusicv
+  export BRANDO_NO_CACHE=true
+  al_include_brandomusicv # kita akan mengaktifkan plugin brandomusicv versi brandomusic yang disarankan dan stabil
+
   brandomusicv #&> /dev/null;
+# jika perintah ini ditulis di .bashrc maka automisasi brandomusicv dimulai
+
 # atau
 : 'eval "(brandomusicx shuffle)" '
-# atau
+# atau 
 #: BEGIN MUTLIPLE COMMENT'
 export ANIMATION_STATE="terpilih" ANIMATION_MESSAGE="Memilih lagu"
 

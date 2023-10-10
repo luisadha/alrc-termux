@@ -1,10 +1,26 @@
 #BrandomusicV offers a better version of BrandomusicQ at least it doesn't require a change to the export PATH="$PATH:/system/bin" for the input command keyevent but uses an environment variable. Read more (readme.md)
 
+# Copyright (c) 2023 Luisadha, GNU GPLv3
 
 set +o noclobber
 brandomusicv()
 {
+
+  # Testing on Musik com.miui.player (6.4.20i)
+  # Testing on Dialog Music Player phone.vishnu.dialogmusicplayer (v2.1.1)
+
+
   #export BRANDO_RESPONSE=
+  #export BRANDO_NO_CACHE=
+ 
+  # Variabel ini digunakan untuk aplikasi DMP, aktifkan variabel di .bashrc jika anda memutar dengan DMP player
+  # Direkomendasikan untuk mengaktifkan variabel ini secara setinggan default untuk menghindari error
+
+      _TMP=".tmp"
+  if [[ $BRANDO_NO_CACHE == true ]]; then
+      export _TMP=""
+ source ~/.local/share/alrc-termux/plugins/brandomusicv.alrc.plugin.sh
+  fi
 
 local format='audio/mp3';
     local file="${1:+"${1}/*.mp3"}";
@@ -13,7 +29,7 @@ local format='audio/mp3';
     local n="${#files[@]}";
     local pick="${files[RANDOM % n]}";
     local result="$(printf "${0:+${pick}}" | shuf -n 1)";
-    local tmp="/sdcard/download/"$(basename "${result}")".tmp";
+    local tmp="/sdcard/download/"$(basename "${result}")"$_TMP";
     cd "/sdcard/Download" &> /dev/null;
     cp -rf "${result}" "${tmp}" &> /dev/null;
     answer=$BRANDO_RESPONSE
@@ -24,12 +40,22 @@ EOF
     case "$answer" in 
         [Yy]*)
             eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &> /dev/null;
-            sleep 1;
+            sleep 2;
             echo;
-            brandomusic-cache-clear.sh;
+            
+    
+            if [ "$_TMP" == ".tmp" ]; then
+
+
+           brandomusic-cache-clear.sh;
+         else
+           
+            rm -f "${tmp}";
+            fi
             cd - &> /dev/null
         ;;
         *)
+          
             rm -f "${tmp}";
             termux-toast "brandomusicv: error, 'BRANDO_RESPONSE' variable environment not set yet!";
             cd - &> /dev/null;

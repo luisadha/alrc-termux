@@ -453,12 +453,14 @@ alias loghis='echo 'login' >> ~/.bash_history; login'
 # convert loghis to login in body .bash_history
 # 19 juni
 #
+
 # plugins
 alias al_include_collect_applist='source $ALRC_HOME/plugins/al_collect_applist_termuxlauncher.alrc.plugin.sh'
 alias al_include_alcat='echo '_alcat' >> ~/.bash_history && source $ALRC_HOME/$ALRC_SOURCE'
 alias al_include_brandomusicv='source $ALRC_HOME/plugins/brandomusicv.alrc.plugin.sh'
 alias al_include_brandomusicxz='source $ALRC_HOME/plugins/brandomusicxforzsh.alrc.plugin.sh'
-
+alias al_exclude_brandomusic='source $ALRC_HOME/plugins/al_disable_brandomusic_legacy.alrc.plugin.sh'
+alias al_exclude_brandomusicx='source $ALRC_HOME/plugins/al_disable_brandomusic_extended.alrc.plugin.sh'
 ## FUNCTION
 function check_ip_privates() {
   # by luisadha
@@ -674,7 +676,7 @@ EOF
  eval `am start -a android.intent.action.VIEW -d file://"${tmp}" -t ${format} ` &>/dev/null; 
  sleep 1
 echo
- brandomusic-cache-clear.sh
+# brandomusic-cache-clear.sh
 cd - &>/dev/null;;
         * ) rm -f "${tmp}" ; termux-toast "timeout or done!"; cd - &>/dev/null; return 0;;
     esac
