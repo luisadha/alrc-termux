@@ -47,6 +47,12 @@ and linking alrc to your ~/.local/bin path
 ln -s ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc
 ```
 
+for testing use this,
+
+```
+bash ~/.shortcuts/alrc.test
+```
+
 - *Uninstall*
 
 	```
