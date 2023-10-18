@@ -36,6 +36,8 @@ chmod +x $ALRC_HOME/lib/*
 
 source $ALRC_HOME/lib/check_dependency.sh
 
+check_dependency xdg-open
+check_dependency pandoc
 check_dependency awk
 check_dependency bc
 check_dependency tput
@@ -140,6 +142,10 @@ function al_runtest () {
 }
 function alcat () {
   cat $ALRC_HOME/$ALRC_SOURCE
+}
+function al_runmanual () {
+    pandoc README.md -o README.html
+  cd $ALRC_HOME && xdg-open README.html
 }
 function al_opt () {
 al help | jq .
