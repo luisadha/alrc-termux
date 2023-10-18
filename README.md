@@ -47,11 +47,7 @@ and linking alrc to your ~/.local/bin path
 ln -s ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc
 ```
 
-for testing use this,
-
-```
-bash ~/.shortcuts/alrc.test
-```
+and then, try with this [command](#test).
 
 - *Uninstall*
 
@@ -99,10 +95,16 @@ whatisal                   print this help message and return
 > Use the templates folder for config recommendations
 
 ### Test & Testing
-1. Test
+#### test
 > Test with the termux widget. If you don't want to mess up your .bash_profile, put the file ~/local/share/alrc-termux/test/.shortcuts/alrc.test To ~/.shortcuts/alrc.test Then make the Termux widget run from there, if it doesn't show up do the refresh.
 
-2. Testing
+or shot on terminal with 
+
+```
+al_runtest
+```
+
+#### testing
 
 - [x] Termux
 - [ ] AndroidIDE (Terminal) But some gui features and features that require fire extinguishers won't work.
