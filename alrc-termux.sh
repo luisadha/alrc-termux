@@ -18,7 +18,7 @@
  # set -xv
 
 
-export ALRC_VERSION="4.0.10"
+export ALRC_VERSION="4.0.11"
 
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
@@ -451,8 +451,36 @@ alias vendor='getprop ro.product.manufacturer'
 # add periode 28-29 March
 alias loghis='echo 'login' >> ~/.bash_history; login'
 # convert loghis to login in body .bash_history
-# 19 juni
+
+
+# Personal Listing directories by luisadha
+
+## BACKUP ALIAS
+#+Never use this alias for
+alias llm='bat --theme OneHalfDark -p '
+
+## OPTIONAL ALIASES
+#+ mybe you like this
+
+alias ls='exa --icons'
+
+
+## MAiN ALIAS
+#+Daily alias usage
 #
+
+alias lrsaw='command ls -rSaw $COLUMNS' # another option of ls by me
+alias llrsaw='command ls -lrSaw $COLUMNS' # another option of ls by me part II.
+alias lm='ls | llm' # the best one of ls from me
+alias lgv='ls -la |grep -v'
+alias llg='ls -la |grep'
+# example usage
+#+ lgv downloads && llg downloads | lolcat
+# print listing directory $HOME and grep that queri 'downloads' with color
+alias luisadha='bash $HOME/luisadha/luisadha-interactive-script.sh' # run collection script interactive by luisadha directly with one command
+
+alias drawercli="launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | lolcat -r"
+# install an app termuxlauncher before using this alias
 
 # plugins
 alias al_include_collect_applist='source $ALRC_HOME/plugins/al_collect_applist_termuxlauncher.alrc.plugin.sh'
