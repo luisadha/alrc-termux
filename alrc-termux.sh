@@ -19,7 +19,7 @@
 
 
 export ALRC_VERSION="4.0.11"
-
+local ALRC_UDATE='19/10/23 06:48:58 WIB'
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
 
@@ -346,7 +346,7 @@ function whatisal() {
 
 al_runmanual
 
-echo -e "${ALRC_SOURCE} -whatisal v$ALRC_VERSION-en (19/06/23 21:14:37 WIB) al and whatisal (functions) are minimal autoload for your termux alternate of neofetch to display system information just call it through source within your .bashrc.\n"
+echo -e "${ALRC_SOURCE} -whatisal v$ALRC_VERSION ($ALRC_UDATE) al and whatisal (functions) are minimal autoload for your termux alternate of neofetch to display system information just call it through source within your .bashrc.\n"
 echo -e "Definitions: ";
 echo -e "\"al is an exported alias for al\" (by default mkshrc MOD) or if any function named 'al' it must be called \"al is a function\". \n ";
 echo -e "alias al come with mkshrc mod by @7175-xda-devoloper, but function named al come with this resource by @adharudin14 also this function. ";
