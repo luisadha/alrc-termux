@@ -132,15 +132,15 @@ fi
 
 }
 function al_notify()      { local args="$@";                                          read i < <(echo "$args");                                 eval "(al_set_window $i)";                                eval "$(termux-toast $i)";             echo "${i}"; }
-
 function al_log () {
 cat $ALRC_HOME/Changelog.al.txt
 }
-
+function al_runtest () {
+  bash ~/.shortcuts/alrc.test
+}
 function alcat () {
   cat $ALRC_HOME/$ALRC_SOURCE
 }
-
 function al_opt () {
 al help | jq .
 }
