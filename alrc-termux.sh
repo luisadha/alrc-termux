@@ -340,6 +340,8 @@ fi
 }
 function whatisal() {
 
+al_runmanual
+
 echo -e "${ALRC_SOURCE} -whatisal v$ALRC_VERSION-en (19/06/23 21:14:37 WIB) al and whatisal (functions) are minimal autoload for your termux alternate of neofetch to display system information just call it through source within your .bashrc.\n"
 echo -e "Definitions: ";
 echo -e "\"al is an exported alias for al\" (by default mkshrc MOD) or if any function named 'al' it must be called \"al is a function\". \n ";
