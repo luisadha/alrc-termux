@@ -1,3 +1,7 @@
+4.0.11
+- Add more aliases
+
+4.0.10
 - BrandomusicV improvement now can play .mp3 before only mp3.tmp
   (Yes you can using Dialog Music Player app)
 - Add first disable plugin
