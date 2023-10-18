@@ -51,6 +51,10 @@ check_dependency sed
 check_dependency xargs
 check_dependency cut
 
+pushd $ALRC_HOME
+pandoc README.md -o README.html
+popd
+
 bold=$(tput bold)
 underline=$(tput smul)
 italic=$(tput sitm)
@@ -144,7 +148,7 @@ function alcat () {
   cat $ALRC_HOME/$ALRC_SOURCE
 }
 function al_runmanual () {
-    pandoc README.md -o README.html
+    
   cd $ALRC_HOME && xdg-open README.html
 }
 function al_opt () {
