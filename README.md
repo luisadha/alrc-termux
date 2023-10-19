@@ -1,4 +1,4 @@
-# alrc-termux | dotfiles | .bash_profile (Config) | automations
+# <| alrc-termux | automations with .bash_profile |>
 
 NAME
 ----
