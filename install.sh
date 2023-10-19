@@ -22,7 +22,7 @@ alrc_install() {
   sleep 1
   echo "initializing env..."
   sleep 1
-  source <(~/.local/bin/alrc env)
+    bash ~/.shortcuts/alrc.test 
   echo
 }
 
