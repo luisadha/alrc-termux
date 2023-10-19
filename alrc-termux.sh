@@ -19,7 +19,7 @@
 
 
 export ALRC_VERSION="4.0.11"
-local ALRC_UDATE='19/10/23 06:48:58 WIB'
+ALRC_UDATE='19/10/23 06:48:58 WIB'
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
 
@@ -51,9 +51,9 @@ check_dependency sed
 check_dependency xargs
 check_dependency cut
 
-pushd $ALRC_HOME
+pushd $ALRC_HOME > /dev/null 2>&1;
 pandoc README.md -o README.html
-popd
+popd > /dev/null 2>&1;
 
 bold=$(tput bold)
 underline=$(tput smul)
