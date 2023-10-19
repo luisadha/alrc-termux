@@ -17,12 +17,8 @@ alrc_install() {
   _run ln -sv "$ALRC_HOME/alrc" "$HOME/.local/bin/alrc"
   echo
   echo "alrc installed successfully"
-  #echo "please add $ALRC_HOME/env.sh or alrc environment to your bash config"
-  #echo -e "\tsource <(\$HOME/.local/bin/alrc env)"
-  sleep 1
-  echo "initializing env..."
-  sleep 1
-    bash ~/.shortcuts/alrc.test 
+  echo "please add $ALRC_HOME/env.sh or alrc environment to your bash config"
+  echo -e "\tsource <(\$HOME/.local/bin/alrc env)"
   echo
 }
 
