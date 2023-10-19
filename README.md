@@ -38,7 +38,7 @@ curl -fSsL https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh 
 clone this repository
 
 ```sh
-git clone https://codeberg.org/luisadha/alrc-termux.git ~/.local/share/alrc-termux
+export PATH="$PATH:$HOME/.local/bin"; git clone https://codeberg.org/luisadha/alrc-termux.git ~/.local/share/alrc-termux
 ```
 
 and linking alrc to your ~/.local/bin path
@@ -47,7 +47,7 @@ and linking alrc to your ~/.local/bin path
 ln -s ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc
 ```
 
-and then, try with this [command](#test) or [usage](#usage)
+and then follow step [usage](#usage) or try the following alternatives [one line command](#test)
 
 - *Uninstall*
 
@@ -93,12 +93,12 @@ whatisal                   print this help message and return
 
 ### Test & Testing
 #### test
-> Test with the termux widget. If you don't want to mess up your .bash_profile, put the file ~/local/share/alrc-termux/test/.shortcuts/alrc.test To ~/.shortcuts/alrc.test Then make the Termux widget run from there, if it doesn't show up do the refresh.
+> GUI: Test with the termux widget. If you don't want to mess up your .bash_profile, put the file ~/local/share/alrc-termux/test/.shortcuts/alrc.test To ~/.shortcuts/alrc.test Then make the Termux widget run from there, if it doesn't show up do the refresh.
 
-or shot on terminal with 
+> CLI: shot on terminal with 
 
 ```
-al_runtest
+bash ~/.shortcuts/alrc.test 
 ```
 
 #### testing
