@@ -2,7 +2,7 @@
 # By fmway
 
 REPO="https://codeberg.org/luisadha/alrc-termux.git"
-export PATH="$PATH:$HOME/.local/bin";
+
 ALRC_HOME="$HOME/.local/share/alrc-termux"
 
 _run() {
