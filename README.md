@@ -47,7 +47,7 @@ and linking alrc to your ~/.local/bin path
 ln -s ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc
 ```
 
-and then, try with this [command](#test).
+and then, try with this [command](#test) or [usage](#usage)
 
 - *Uninstall*
 
@@ -69,7 +69,7 @@ B. Other Platform Termux based
 USAGE
 -----
 
-### usage#1:
+### usage:
 
 Copy the following code snippet, paste it into the terminal. This will add the configuration directly to your .bash_profile
 
@@ -81,11 +81,8 @@ echo ' source <(~/.local/bin/alrc env)> /dev/null 2>&1; ' >> ~/.bash_profile
 echo ' al;' >> ~/.bash_profile
 ```
 
-## [](https://codeberg.org/luisadha/alrc-termux#usage-2)
-
-### usage#2:
-
 ```text
+
 chsh -s bash && login      change to bash shell and exit
 
 whatisal                   print this help message and return
