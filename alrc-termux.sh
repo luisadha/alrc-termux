@@ -141,9 +141,6 @@ function al_notify()      { local args="$@";                                    
 function al_log () {
 cat $ALRC_HOME/Changelog.al.txt
 }
-function al_runtest () {
-  bash ~/.shortcuts/alrc.test
-}
 function alcat () {
   cat $ALRC_HOME/$ALRC_SOURCE
 }
