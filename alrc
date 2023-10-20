@@ -43,6 +43,9 @@ _main() {
     env)
       source $ALRC_HOME/env.sh
       ;;
+    test)
+       bash $HOME/.shortcuts/alrc.test
+       ;;
     *)
       echo "Unknown arguments" > /dev/stderr
       _usage
