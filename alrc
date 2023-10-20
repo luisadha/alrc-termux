@@ -43,7 +43,7 @@ _main() {
     env)
       source $ALRC_HOME/env.sh
       ;;
-    test)
+    in|init|test)
        bash $HOME/.shortcuts/alrc.test
        ;;
     *)
