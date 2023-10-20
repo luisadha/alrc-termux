@@ -7,7 +7,6 @@ echo -e "${reset}∆"
 
 : INITIAL 'ALIASES'
 . ~/.aliases > /dev/null 2>&1; #myTermux Configuration
-alias al_source_profile='source ~/.bash_profile'
 
 alias code-server='env NODE_OPTIONS="--require $HOME/android_as_server.js" code-server' # by fmway
 ##
