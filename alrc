@@ -14,7 +14,7 @@ _usage() {
   echo -e " i\tinstall\t\t install alrc-termux to your termux"
   echo -e " up\tupdate\t\t update alrc-termux"
   echo -e " un\tuninstall\t uninstall alrc-termux from your termux"
-  echo -e " in\tinit\tinit directly from file ~/.shortcuts/alrc.test to load .bash_profile templates."
+  echo -e " in\tinit\t\tinit directly from file ~/.shortcuts/alrc.test to load .bash_profile templates."
   echo -e " env\t\t\t display environment for alrc-termux"
   echo
   echo -e "Example :"
