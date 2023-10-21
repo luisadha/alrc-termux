@@ -15,6 +15,10 @@ alrc_install() {
   _run git clone "$REPO" "$ALRC_HOME"
   [ -e "$HOME/.local/bin/alrc" ] && _run rm -v "$HOME/.local/bin/alrc"
   _run ln -sv "$ALRC_HOME/alrc" "$HOME/.local/bin/alrc"
+
+  [ -f $HOME/.shortcuts/alrc.test ] && _run rm -v "$HOME/.shortcuts/alrc.test"
+  _run ln -sv "$ALRC_HOME/test/.shortcuts/alrc.test" "$HOME/.shortcuts/alrc.test"
+  
   echo
   echo "alrc installed successfully"
   echo "please add $ALRC_HOME/env.sh or alrc environment to your bash config"
