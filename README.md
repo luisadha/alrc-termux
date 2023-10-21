@@ -27,7 +27,7 @@ INSTALLATION
 
 A. Termux
 ---------
-- *Automatic*
+- *Automatic (**recommended**)*
 
 ```sh
 export PATH="$PATH:$HOME/.local/bin"; curl -fSsL https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh | bash
