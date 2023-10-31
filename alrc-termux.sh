@@ -490,7 +490,7 @@ alias luisadha='bash $HOME/luisadha/luisadha-interactive-script.sh' # run collec
 
 alias pickaxe='find . -type f | pick | xargs xdg-open'
 alias peg='eval $(fc -ln 1 | pick)'
-alias drawercli="launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | lolcat -r"
+#alias drawercli="launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | lolcat -r"
 # install an app termuxlauncher before using this alias
 
 # plugins
