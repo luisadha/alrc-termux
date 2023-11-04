@@ -628,7 +628,7 @@ if [ -z "$opti" ]; then
 
 elif [ "$opti" == "shuffle" ] || [ "$opti" == "play" ]; then
 cd ~
-termux-media-player play "$(realpath "$(busybox ls ~/**/*.mp3 | shuf -n1)" )" > $ALRC_HOME/cache/$$_title-songs.txt;
+termux-media-player play "$(realpath "$(busybox ls ~/**/*.mp3 | shuf -n1)" )" > $ALRC_HOME/cache/title-songs.txt;
 cd - &>/dev/null;
 elif [ "$opti" == "help" ]; then
   help;
