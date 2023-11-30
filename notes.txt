@@ -1,3 +1,8 @@
+4.1.0
+- Unsource anonying functions
+- Add file to $ALRC_HOME/lib/remove_addon_files.sh
+
+
 4.0.11
 - Add more aliases
 

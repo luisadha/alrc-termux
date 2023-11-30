@@ -157,6 +157,24 @@ function al_set_window() {
     title="$*"
     echo -ne "\033]0;$title \007"
 }
+function al_fetchSongInfo() {
+isPlaying() {
+
+ termux-media-player info | awk '{print $2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15}' | grep -v "Position:" | xargs
+ }
+isPlayingEdit() {
+termux-media-player info | awk '{print $2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15}' | grep -v "Playing" | grep -v "Position:" | xargs
+}
+
+if [ $(isPlaying | awk '{print $1}') == "Playing" ]; then
+ echo "$(isPlayingEdit) (Memutar)"
+elif [ $(isPlaying | awk '{print $1}') == "Paused" ]; then
+ echo "$(isPlaying)" |  awk '{gsub("Paused", ""); print $0 " (Dijeda)"}'
+else
+ echo "unknown $(isPlaying)" | cut -d" " -f1
+ fi
+}
+
 function al() {
 local my_terminal="$(echo $(dirname ${PREFIX:=$SYSROOT}))"
 local uptimes="$(busybox uptime -s)" > /dev/null 2>&1;
@@ -201,6 +219,7 @@ ghi=$(echo "${icon} uptime >> ${uptimes}" | wc -L); ihg=$(echo "$COLUMNS - $ghi"
 hij=$(echo "${icon} battery >> ${batteries}" | wc -L); jih=$(echo "$COLUMNS - $hij" | bc);
 ijk=$(echo "${icon} packages >> ${packages_termux}" | wc -L); kji=$(echo "$COLUMNS - $ijk" | bc);
 jkl=$(echo "${icon} bash source >> ${ALRC_SOURCE}" | wc -L); lkj=$(echo "$COLUMNS - $jkl" | bc);
+mno=$(echo "${icon} songs >> $(al_fetchSongInfo)" | wc -L); onm=$(echo "$COLUMNS - $mno" | bc);
 
 ENV="${ENV:-"/system/etc/mkshrc"}"
 test $ENV;
@@ -215,6 +234,7 @@ $(printf %"$COLUMNS"s |tr " " "-")
 | term >> ${TERM}$(printf %"$edc"s "$icon" )
 | date >> $(date)$(printf %"$fed"s "$icon" )
 | shell >> ${shell}$(printf %"$gfe"s "$icon" )
+| songs >> $(al_fetchSongInfo)$(printf %"$onm"s "$icon" )
 | kernel >> $(uname -r)$(printf %"$hgf"s "$icon" )
 | uptime >> ${uptimes}$(printf %"$ihg"s "$icon" )
 | battery >> ${batteries}$(printf %"$jih"s "$icon" )
@@ -643,6 +663,7 @@ termux-media-player stop;
  else
 echo "see: \`${FUNCNAME[0]} help' more details."
 fi
+unset -f help
 }
 declare -f -x brandomusicx
 function brandomusic {
@@ -881,6 +902,7 @@ fi
 }
 declare -f -x alvar
 
+generate_addon_files() {
 set +o noclobber
 export PATH="${PATH}:$HOME/.local/bin"
 ADDON_BRANDO="brandomusic-cache-clear.sh"
@@ -921,7 +943,9 @@ EOF
 
 chmod +x $HOME/.local/bin/$ADDON_BRANDO
 chmod +x $HOME/.local/bin/$CHECKIP_FILES
+}
 
+generate_addon_files;
 #if ! source ctypes.sh; then
 #    echo "please install ctypes.sh to continue"
  #fi

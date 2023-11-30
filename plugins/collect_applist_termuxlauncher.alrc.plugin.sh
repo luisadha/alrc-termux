@@ -1,5 +1,5 @@
 # Copyright (c) 2023 Luisadha, GNU GPLv3
-function al_collect_applist() {
+function collect_applist() {
   echo -e "Collecting..." ; sleep 1 ;
 
 if [[ -f ~/storage/shared/termuxlauncher/.apps-launcher ]] ; then echo -e "Collected\nlist installed apps :" ; echo ;
