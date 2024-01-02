@@ -1,6 +1,8 @@
 4.1.0
 - Unsource anonying functions
 - Add file to $ALRC_HOME/lib/remove_addon_files.sh
+- Add file to $ALRC_HOME/lib/alfetch.sh
+
 
 
 4.0.11

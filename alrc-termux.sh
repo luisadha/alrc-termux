@@ -18,8 +18,9 @@
  # set -xv
 
 
-export ALRC_VERSION="4.0.12"
-ALRC_UDATE='19/10/23 06:48:58 WIB'
+export ALRC_VERSION="4.1.0"
+
+ALRC_UDATE='25/12/23 21:43:11 WIB'
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
 
@@ -225,10 +226,19 @@ ENV="${ENV:-"/system/etc/mkshrc"}"
 test $ENV;
 if [ $? -eq 0 ]; then
 
+
+
+
+  : "AKU DISINI"
+
 echo -e "
 Hello $(basename $SHELL)
-Welcome to: ${my_terminal:-"Termux "}
-$(printf %"$COLUMNS"s |tr " " "-")
+Welcome to: ${my_terminal:-"Termux "}"
+
+if [ "$ALRC_USE_ALFETCH" == "true" ]; then
+  alfetch.sh
+else
+echo -e "$(printf %"$COLUMNS"s |tr " " "-")
 | os >> $(uname -so)$(printf %"$cba"s "$icon" )
 | arch >> $(uname -m)$(printf %"$dcb"s "$icon" )
 | term >> ${TERM}$(printf %"$edc"s "$icon" )
@@ -241,6 +251,9 @@ $(printf %"$COLUMNS"s |tr " " "-")
 | packages >> ${packages_termux}$(printf %"$kji"s "$icon" )
 | bash source >> ${ALRC_SOURCE}$(printf %"$lkj"s "$icon" )
 $(printf %"$COLUMNS"s |tr " " "-") ";
+fi
+
+
 
 : place customisations above this line
 
@@ -514,6 +527,7 @@ alias peg='eval $(fc -ln 1 | pick)'
 # install an app termuxlauncher before using this alias
 
 # plugins
+alias al_include_drawercli='source $ALRC_HOME/plugins/drawercli.alrc.plugin.sh'
 alias al_include_collect_applist='source $ALRC_HOME/plugins/al_collect_applist_termuxlauncher.alrc.plugin.sh'
 alias al_include_alcat='echo '_alcat' >> ~/.bash_history && source $ALRC_HOME/$ALRC_SOURCE'
 alias al_include_brandomusicv='source $ALRC_HOME/plugins/brandomusicv.alrc.plugin.sh'
