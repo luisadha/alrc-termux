@@ -41,6 +41,13 @@ clone this repository
 export PATH="$PATH:$HOME/.local/bin"; git clone https://codeberg.org/luisadha/alrc-termux.git ~/.local/share/alrc-termux
 ```
 
+if you use github
+
+```sh
+export PATH="$PATH:$HOME/.local/bin"; git clone https://github.com/luisadha/alrc-termux.git ~/.local/share/alrc-termux
+```
+
+
 and linking alrc to your ~/.local/bin path
 
 ```sh
