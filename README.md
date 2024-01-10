@@ -27,7 +27,7 @@ INSTALLATION
 
 A. Termux
 ---------
-- *Automatic (**recommended**)*
+- *Automatic*
 
 ```sh
 export PATH="$PATH:$HOME/.local/bin"; curl -fSsL https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh | bash
@@ -41,7 +41,7 @@ clone this repository
 export PATH="$PATH:$HOME/.local/bin"; git clone https://codeberg.org/luisadha/alrc-termux.git ~/.local/share/alrc-termux
 ```
 
-if you use github
+if you use github (**recommended**)
 
 ```sh
 export PATH="$PATH:$HOME/.local/bin"; git clone https://github.com/luisadha/alrc-termux.git ~/.local/share/alrc-termux
