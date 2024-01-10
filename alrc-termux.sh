@@ -20,7 +20,7 @@
 
 export ALRC_VERSION="4.1.1"
 
-ALRC_UDATE='25/12/23 21:43:11 WIB'
+ALRC_UDATE='10/01/24 22:27:11 WIB'
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
 
