@@ -12,9 +12,7 @@ EOF
 }
 
 function download_drawercli() {
-
-echo
-if [[ ! -x $(command -v drawercli 2> /dev/null) ]]; then
+if [ ! -x $(command -v drawercli 2>/dev/null) ]; then
   
    echo -en "Downloading.. ";
 
@@ -29,9 +27,8 @@ fi
 
   function ask() {
 
-  
-
-  read -p "${1} ${2}? [Y/n] " SWITCH_CASE
+  echo -e "${1} ${2}? [Y/n] " 
+  read SWITCH_CASE
 
   case "$SWITCH_CASE" in
 
@@ -50,7 +47,7 @@ fi
 
     * )
       echo " Unknown '${SWITCH_CASE}'"
-      switchCase ${1} ${2} ${3}
+      ask ${1} ${2} ${3}
     ;;
 
   esac
@@ -75,7 +72,8 @@ main() {
 if type drawercli &> /dev/null; then
   present=true
   onCreate
-else present=false;
+else 
+present=false;
   ask "Are you sure to download" "the drawercli package?" download_drawercli 
  fi
 }
