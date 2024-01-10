@@ -121,16 +121,13 @@ BUGS
 ----
 - The al option, namely al_ab, cannot be exported to environment variables. I don't know why that can.
 - On my device The imjpgrand automation feature won't consistently select the image viewer even if I press "Select always" in the end the solution was that one of the apps had to be uninstalled. I kept the zarchiver viewer and deleted the other one.
-- Other Brandomusic variants cannot be combined with animation.sh, except BrandomusicX.
 - Be careful installing other dotfiles, it can cause unwanted bugs/errors due to misconfiguration. first uninstall alrc-termux if you want to try using other dotfiles. termux-desktop causes imjpgrand to not work and other weird bugs.
-
-- Cannot playing song in app com.miui.player latest version (recomendation version com.miui.player v6.4.20i)
 
 
 
 ROADMAP
 -------
-I'd like to add more plugins for upcoming updates.
+I'd like to add more, aliases, function and plugins for upcoming updates.
 
 CONTRIBUTION
 ------------
