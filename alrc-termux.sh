@@ -177,34 +177,14 @@ else
 }
 
 function al() {
+local _cur_cols=$(tput cols);
 local my_terminal="$(echo $(dirname ${PREFIX:=$SYSROOT}))"
 local uptimes="$(busybox uptime -s)" > /dev/null 2>&1;
 local batt="$(termux-battery-status 2>&1 | grep -cq 'command not found' || termux-battery-status | head -n 3 | awk '{print $2}' | tail -n 1| sed 's/,/%/g' )"
 local prefix="$PREFIX/bin" 2> /dev/null;
 local sysroot="$SYSROOT/bin" 2> /dev/null;
-
-
 local batteries="${batt:-$(echo "unknown")}" > /dev/null 2>&1;
 
-# local packages="$(ls /system/bin/| wc -l) (bin) / $(ls /system/xbin/ | wc -l) (xbin)" > /dev/null 2>&1;
-local packages_termux="$(command ls ${prefix} 2>/dev/null | wc -l || command ls ${sysroot} 2>/dev/null | wc -l) (usr/bin) " &>/dev/null;
-local shell="$(echo "$0" |awk '{gsub(/.*[/]|[.].*/, "", $0)} 1')              ";
-# Rentan
-# 
-
-#local batteries="$(termux-battery-status | head -n 3 | awk '{print $2}' | tail -n 1| sed 's/,/%/g')"
-
-#local my_terminal="$(ps | grep 'term' | awk '{print $9}')"
-#
-#
-#local packages_termux="$(ls /data/data/com.termux/files/usr/bin | wc -l) (termux usr/bin) " &>/dev/null;
-#     
-#
-#local uptimes="$(busybox uptime -s)"
-#
-#local shell="$(echo "$0" |awk '{gsub(/.*[/]|[.].*/, "", $0)} 1')
-#";
-#'@
 
 export opt="$1"
 if [ -z "$opt" ]; then
@@ -233,7 +213,7 @@ if [ $? -eq 0 ]; then
 
 echo -e "
 Hello $(basename $SHELL)
-Welcome to: ${my_terminal:-"Termux "}"
+Welcome to: ${my_terminal:-"Termux "}" | fold -w$_cur_cols;
 
 if [ "$ALRC_USE_ALFETCH" == "true" ]; then
   alfetch.sh
@@ -250,14 +230,14 @@ echo -e "$(printf %"$COLUMNS"s |tr " " "-")
 | battery >> ${batteries}$(printf %"$jih"s "$icon" )
 | packages >> ${packages_termux}$(printf %"$kji"s "$icon" )
 | bash source >> ${ALRC_SOURCE}$(printf %"$lkj"s "$icon" )
-$(printf %"$COLUMNS"s |tr " " "-") ";
+$(printf %"$COLUMNS"s |tr " " "-") " | fold -w$_cur_cols;
 fi
 
 
 
 : place customisations above this line
 
-echo "alrc: al is a $(type -t al), More informations? you can type \`whatisal'"
+echo "alrc: al is a $(type -t al), More informations? you can type \`whatisal'" | fold -w$_cur_cols;
 echo
 else
 echo "Your device isn't Android"
