@@ -30,7 +30,7 @@ A. Termux
 - *Automatic*
 
 ```sh
-export PATH="$PATH:$HOME/.local/bin"; curl -fSsL https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh | bash
+export PATH="$PATH:$HOME/.local/bin"; curl -fSsL https://github.com/luisadha/alrc-termux/raw/branch/main/install.sh | bash
 ```
 
 - *Manual*
@@ -38,7 +38,7 @@ export PATH="$PATH:$HOME/.local/bin"; curl -fSsL https://codeberg.org/luisadha/a
 clone this repository
 
 ```sh
-export PATH="$PATH:$HOME/.local/bin"; git clone https://codeberg.org/luisadha/alrc-termux.git ~/.local/share/alrc-termux
+export PATH="$PATH:$HOME/.local/bin"; git clone https://github.com/luisadha/alrc-termux.git ~/.local/share/alrc-termux
 ```
 
 if you use github (**recommended**)
