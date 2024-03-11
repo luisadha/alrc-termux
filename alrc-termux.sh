@@ -18,7 +18,7 @@
  # set -xv
 
 
-export ALRC_VERSION="4.1.0"
+export ALRC_VERSION="4.2.1"
 
 ALRC_UDATE='25/12/23 21:43:11 WIB'
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
