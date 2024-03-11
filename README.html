@@ -1,0 +1,152 @@
+<h1 id="alrc-termux-automations-with-.bash_profile">&lt;| alrc-termux |
+automations with .bash_profile |&gt;</h1>
+<h2 id="name">NAME</h2>
+<p>Alrc-termux is a sourceable file like .bashrc but separate from
+it.</p>
+<h2 id="description">DESCRIPTION</h2>
+<p>Used for interactive login automation purposes that will display the
+information of your device when opening a terminal session (Termux). It
+was originally created to replace user customization .bashrc but now
+there’s no need to do that anymore. Just call through the source in
+.bashrc or .bash_profile.</p>
+<p><a href="https://www.youtube.com/shorts/9X6naGKNOys"><img
+src="https://img.youtube.com/vi/9X6naGKNOys/0.jpg"
+alt="Shorts Video" /></a></p>
+<h2 id="installation">INSTALLATION</h2>
+<h3 id="requirements">REQUIREMENTS</h3>
+<ul>
+<li>Install the application with the <a
+href="https://f-droid.org/packages/com.termux/">Termux App</a>, <a
+href="https://f-droid.org/packages/com.termux.api/">Termux API</a>, the
+<a href="https://f-droid.org/packages/com.termux.widget/">Termux
+Widget</a> and the Optional Termux Float</li>
+<li>Enough basic tools like grep, sed, gawk, bc, cut and more.</li>
+<li>Ran `termux-setup-storage’ first and Uncomment or write
+<code>allow-external-apps = true</code> in
+~/.termux/termux.properties.</li>
+<li>This requires the environment variable export
+PATH=“$PATH:/system/bin” set to be used for the `input’ and `am’
+commands.</li>
+<li>Built-in music player that is strong enough to be able to play in
+the termux environment or Dialog Music Player app’s in F-Droid market,
+mine builtin Music apps com.miui.player (v6.4.20i).</li>
+<li>Install third party apps, Choose one for the image media viewer
+(Zarchiver image viewer or <a
+href="https://f-droid.org/packages/org.voidptr.swpieview/">Swpieview</a>
+on F-DROID) If your default gallery application is not strong enough to
+run on the Termux application.</li>
+</ul>
+<h2 id="a.-termux">A. Termux</h2>
+<ul>
+<li><em>Automatic (<strong>recommended</strong>)</em></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PATH</span><span class="st">:</span><span class="va">$HOME</span><span class="st">/.local/bin&quot;</span><span class="kw">;</span> <span class="ex">curl</span> <span class="at">-fSsL</span> https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div>
+<ul>
+<li><em>Manual</em></li>
+</ul>
+<p>clone this repository</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PATH</span><span class="st">:</span><span class="va">$HOME</span><span class="st">/.local/bin&quot;</span><span class="kw">;</span> <span class="fu">git</span> clone https://codeberg.org/luisadha/alrc-termux.git ~/.local/share/alrc-termux</span></code></pre></div>
+<p>and linking alrc to your ~/.local/bin path</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc</span></code></pre></div>
+<p>and then follow step <a href="#usage">usage</a> or try the following
+alternatives <a href="#test">one line command</a></p>
+<ul>
+<li><p><em>Uninstall</em></p>
+<pre><code>alrc uninstall</code></pre></li>
+<li><p><em>Updates</em></p>
+<pre><code>alrc updates</code></pre></li>
+</ul>
+<h2 id="b.-other-platform-termux-based">B. Other Platform Termux
+based</h2>
+<p>If you install alrc-termux in another place like fork termux. You can
+replace/remove the shebang! so you can continue the installation
+process. But it is highly recommended to install it in Termux
+environment</p>
+<h2 id="usage">USAGE</h2>
+<h3 id="usage-1">usage:</h3>
+<p>Copy the following code snippet, paste it into the terminal. This
+will add the configuration directly to your .bash_profile</p>
+<pre class="text"><code>echo &#39; export PATH=&quot;$PATH:$HOME/.local/bin:/system/bin&quot; &#39; &gt;&gt; ~/.bash_profile
+
+echo &#39; source &lt;(~/.local/bin/alrc env)&gt; /dev/null 2&gt;&amp;1; &#39; &gt;&gt; ~/.bash_profile
+
+echo &#39; al;&#39; &gt;&gt; ~/.bash_profile</code></pre>
+<pre class="text"><code>
+chsh -s bash &amp;&amp; login      change to bash shell and exit
+
+whatisal                   print this help message and return</code></pre>
+<h3 id="templates">Templates</h3>
+<blockquote>
+<p>Use the templates folder for config recommendations</p>
+</blockquote>
+<h3 id="test-testing">Test &amp; Testing</h3>
+<h4 id="test">test</h4>
+<blockquote>
+<p>GUI: Test with the termux widget. If you don’t want to mess up your
+.bash_profile, put the file
+~/local/share/alrc-termux/test/.shortcuts/alrc.test To
+~/.shortcuts/alrc.test Then make the Termux widget run from there, if it
+doesn’t show up do the refresh.</p>
+</blockquote>
+<blockquote>
+<p>CLI: shot on terminal with</p>
+</blockquote>
+<pre><code>bash ~/.shortcuts/alrc.test </code></pre>
+<h4 id="testing">testing</h4>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Termux</li>
+<li><input type="checkbox" disabled="" />AndroidIDE (Terminal) But some
+gui features and features that require fire extinguishers won’t
+work.</li>
+<li><input type="checkbox" disabled="" />Nix-on-droid But some gui
+features and features that require fire extinguishers won’t work.</li>
+<li><input type="checkbox" disabled="" />Proot-distro
+(Experimental)</li>
+<li><input type="checkbox" disabled="" />Replit (Just for testing
+purposes)</li>
+<li><input type="checkbox" disabled="" />Wayland (Not working Alif
+said)</li>
+</ul>
+<h2 id="bugs">BUGS</h2>
+<ul>
+<li><p>The al option, namely al_ab, cannot be exported to environment
+variables. I don’t know why that can.</p></li>
+<li><p>On my device The imjpgrand automation feature won’t consistently
+select the image viewer even if I press “Select always” in the end the
+solution was that one of the apps had to be uninstalled. I kept the
+zarchiver viewer and deleted the other one.</p></li>
+<li><p>Other Brandomusic variants cannot be combined with animation.sh,
+except BrandomusicX.</p></li>
+<li><p>Be careful installing other dotfiles, it can cause unwanted
+bugs/errors due to misconfiguration. first uninstall alrc-termux if you
+want to try using other dotfiles. termux-desktop causes imjpgrand to not
+work and other weird bugs.</p></li>
+<li><p>Cannot playing song in app com.miui.player latest version
+(recomendation version com.miui.player v6.4.20i)</p></li>
+</ul>
+<h2 id="roadmap">ROADMAP</h2>
+<p>I’d like to add more plugins for upcoming updates.</p>
+<h2 id="contribution">CONTRIBUTION</h2>
+<p>Feedback, contributors, pull requests are all very welcome.</p>
+<h3 id="thanks-reference">Thanks &amp; Reference</h3>
+<ul>
+<li><p>God</p></li>
+<li><p>Contributor</p></li>
+<li><p>Termux Apps https://github.com/termux/termux-app</p></li>
+<li><p>Termuxlauncher Plugin Dependencies
+https://github.com/amsitlab/termuxlauncher/releases</p></li>
+<li><p>Mkshrc (Inspirations)
+https://forum.xda-developers.com/t/shell-mksh-scripting-mksh-r50e-static-full-mkshrc_mods.2770804/</p></li>
+<li><p>Many internet source</p></li>
+</ul>
+<h2 id="author-and-contributor">AUTHOR AND CONTRIBUTOR</h2>
+<p><strong>Luis Adha</strong></p>
+<p><strong>Fmways</strong></p>
+<h2 id="license">LICENSE</h2>
+<p>Copyright © 2023 Adharudin (Luis Adha). License GPLv3+: GNU GPL
+version 3 or later http://gnu.org/licenses/gpl.html. This is free
+software: you are free to change and redistribute it. There is NO
+WARRANTY, to the extent permitted by law.</p>
+<p>This project is licensed under the <a
+href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0 License</a>.
+Please refer to the license link for more information.</p>
