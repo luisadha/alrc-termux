@@ -41,11 +41,11 @@ clone this repository
 export PATH="$PATH:$HOME/.local/bin"; git clone https://github.com/luisadha/alrc-termux.git ~/.local/share/alrc-termux
 ```
 
-if you use github (**recommended**)
+<!--if you use github (**recommended**)
 
 ```sh
 export PATH="$PATH:$HOME/.local/bin"; git clone https://github.com/luisadha/alrc-termux.git ~/.local/share/alrc-termux
-```
+``` -->
 
 
 and linking alrc to your ~/.local/bin path
