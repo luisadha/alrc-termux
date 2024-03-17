@@ -1,4 +1,5 @@
-function _create_config() {
+
+: "function _create_config() {
   cat <<- "EOF" > $HOME/.drawercli_aliases
 # Generate by plugin drawercli.plugin.alrc
 # require termuxlauncher app
@@ -77,9 +78,14 @@ present=false;
   ask "Are you sure to download" "the drawercli package?" download_drawercli 
  fi
 }
+echo "drawercli added"
+type drawercli
 main
 unset -f main
 unset -f ask
 unset -f onCreate
 unset -f download_drawercli
-unset -f _create_config
+unset -f _create_config 
+"
+echo "Under maintenance!"
+

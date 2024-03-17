@@ -9,3 +9,4 @@ alias brandomusicxz='termux-media-player play "\$(realpath "\${ARG:-\$(busybox l
 brandomusicxz_present=true
 EOF
 fi
+echo "zshrc just modified"

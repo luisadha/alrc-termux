@@ -10,4 +10,4 @@ sed -n '/--list|-l)/,/\;\;/p' /sdcard/termuxlauncher/.apps-launcher | sed '1d;$d
 else echo "Error: Please install Termuxlauncher.apk's available project termuxlauncher at https://github.com/amsitlab/termuxlauncher/releases" ; fi
 
 }
-
+echo "collect_applist() Added."

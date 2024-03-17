@@ -1,3 +1,5 @@
+#! bash alrc-termux.module
+
 unset -f generate_addon_files
 rm -f ~/.local/bin/brandomusic-cache-clear.sh
 rm -f ~/.local/bin/check_ip_publics

@@ -1,3 +1,4 @@
+#! python alrc-termux.module
 # Automations by @luisadha
 from halo import Halo
 import subprocess

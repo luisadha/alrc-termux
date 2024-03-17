@@ -18,9 +18,9 @@
  # set -xv
 
 
-export ALRC_VERSION="4.2.1"
+export ALRC_VERSION="4.3.0"
 
-ALRC_UDATE='11/03/24 23:38:11 WIB'
+ALRC_UDATE='17/03/24 23:35:11 WIB'
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
 
@@ -28,13 +28,14 @@ export ALRC_SOURCE="$(basename ${ALRC_HOME}.sh)"
 
 export ALRC_SCRIPT="$ALRC_HOME/$ALRC_SOURCE"
 
-for p in $ALRC_HOME/lib; do
-        [[ -d $p/. ]] || continue
-        [[ :$PATH: = *:$p:* ]] || PATH=$p:$PATH
-done
+#for p in $ALRC_HOME/lib; do
+#        [[ -d $p/. ]] || continue
+#        [[ :$PATH: = *:$p:* ]] || #PATH=$p:$PATH
+#done
 
-chmod +x $ALRC_HOME/lib/*
+#chmod +x $ALRC_HOME/lib/*
 
+source $ALRC_HOME/lib/plugin_handler.sh
 source $ALRC_HOME/lib/check_dependency.sh
 
 check_dependency xdg-open
@@ -236,7 +237,8 @@ Hello $(basename $SHELL)
 Welcome to: ${my_terminal:-"Termux "}"
 
 if [ "$ALRC_USE_ALFETCH" == "true" ]; then
-  alfetch.sh
+ 
+ source $ALRC_HOME/lib/alfetch.sh
 else
 echo -e "$(printf %"$COLUMNS"s |tr " " "-")
 | os >> $(uname -so)$(printf %"$cba"s "$icon" )
@@ -526,14 +528,8 @@ alias peg='eval $(fc -ln 1 | pick)'
 #alias drawercli="launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | lolcat -r"
 # install an app termuxlauncher before using this alias
 
-# plugins
-alias al_include_drawercli='source $ALRC_HOME/plugins/drawercli.alrc.plugin.sh'
-alias al_include_collect_applist='source $ALRC_HOME/plugins/al_collect_applist_termuxlauncher.alrc.plugin.sh'
-alias al_include_alcat='echo '_alcat' >> ~/.bash_history && source $ALRC_HOME/$ALRC_SOURCE'
-alias al_include_brandomusicv='source $ALRC_HOME/plugins/brandomusicv.alrc.plugin.sh'
-alias al_include_brandomusicxz='source $ALRC_HOME/plugins/brandomusicxforzsh.alrc.plugin.sh'
-alias al_exclude_brandomusic='source $ALRC_HOME/plugins/al_disable_brandomusic_legacy.alrc.plugin.sh'
-alias al_exclude_brandomusicx='source $ALRC_HOME/plugins/al_disable_brandomusic_extended.alrc.plugin.sh'
+
+
 ## FUNCTION
 function check_ip_privates() {
   # by luisadha
@@ -1001,7 +997,7 @@ generate_addon_files;
 # STDERR_FILENO: readonly variable
 #
 #
-unset p
+#unset p
 
  set +o history
 

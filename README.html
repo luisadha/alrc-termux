@@ -38,14 +38,19 @@ run on the Termux application.</li>
 </ul>
 <h2 id="a.-termux">A. Termux</h2>
 <ul>
-<li><em>Automatic (<strong>recommended</strong>)</em></li>
+<li><em>Automatic</em></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PATH</span><span class="st">:</span><span class="va">$HOME</span><span class="st">/.local/bin&quot;</span><span class="kw">;</span> <span class="ex">curl</span> <span class="at">-fSsL</span> https://codeberg.org/luisadha/alrc-termux/raw/branch/main/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PATH</span><span class="st">:</span><span class="va">$HOME</span><span class="st">/.local/bin&quot;</span><span class="kw">;</span> <span class="ex">curl</span> <span class="at">-fSsL</span> https://github.com/luisadha/alrc-termux/raw/branch/main/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div>
 <ul>
 <li><em>Manual</em></li>
 </ul>
 <p>clone this repository</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PATH</span><span class="st">:</span><span class="va">$HOME</span><span class="st">/.local/bin&quot;</span><span class="kw">;</span> <span class="fu">git</span> clone https://codeberg.org/luisadha/alrc-termux.git ~/.local/share/alrc-termux</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PATH</span><span class="st">:</span><span class="va">$HOME</span><span class="st">/.local/bin&quot;</span><span class="kw">;</span> <span class="fu">git</span> clone https://github.com/luisadha/alrc-termux.git ~/.local/share/alrc-termux</span></code></pre></div>
+<!--if you use github (**recommended**)
+
+```sh
+export PATH="$PATH:$HOME/.local/bin"; git clone https://github.com/luisadha/alrc-termux.git ~/.local/share/alrc-termux
+``` -->
 <p>and linking alrc to your ~/.local/bin path</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> ~/.local/share/alrc-termux/alrc ~/.local/bin/alrc</span></code></pre></div>
 <p>and then follow step <a href="#usage">usage</a> or try the following
@@ -109,23 +114,20 @@ said)</li>
 </ul>
 <h2 id="bugs">BUGS</h2>
 <ul>
-<li><p>The al option, namely al_ab, cannot be exported to environment
-variables. I don’t know why that can.</p></li>
-<li><p>On my device The imjpgrand automation feature won’t consistently
+<li>The al option, namely al_ab, cannot be exported to environment
+variables. I don’t know why that can.</li>
+<li>On my device The imjpgrand automation feature won’t consistently
 select the image viewer even if I press “Select always” in the end the
 solution was that one of the apps had to be uninstalled. I kept the
-zarchiver viewer and deleted the other one.</p></li>
-<li><p>Other Brandomusic variants cannot be combined with animation.sh,
-except BrandomusicX.</p></li>
-<li><p>Be careful installing other dotfiles, it can cause unwanted
+zarchiver viewer and deleted the other one.</li>
+<li>Be careful installing other dotfiles, it can cause unwanted
 bugs/errors due to misconfiguration. first uninstall alrc-termux if you
 want to try using other dotfiles. termux-desktop causes imjpgrand to not
-work and other weird bugs.</p></li>
-<li><p>Cannot playing song in app com.miui.player latest version
-(recomendation version com.miui.player v6.4.20i)</p></li>
+work and other weird bugs.</li>
 </ul>
 <h2 id="roadmap">ROADMAP</h2>
-<p>I’d like to add more plugins for upcoming updates.</p>
+<p>I’d like to add more, aliases, function and plugins for upcoming
+updates.</p>
 <h2 id="contribution">CONTRIBUTION</h2>
 <p>Feedback, contributors, pull requests are all very welcome.</p>
 <h3 id="thanks-reference">Thanks &amp; Reference</h3>

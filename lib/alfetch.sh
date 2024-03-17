@@ -10,6 +10,9 @@ ALFETCH_CONF_VCODE='005'
 # ~ Fix bug minor
 # ~ Replace tr to sed
 
+unalias fetch
+unalias battery
+
 reset="\033[0m"
 gray="\033[1;90m"
 red="\033[1;31m"
@@ -93,11 +96,16 @@ abi() {
 }"
 
 ismytermux() {
-[ -d ~/.config/mytermux ] && ls -d ~/.config/mytermux | grep -o "mytermux" || echo "mytermux not installed yet!"; }
+if [ -d ~/.config/mytermux ]; then \ls -d ~/.config/mytermux | grep -o "mytermux"
+else
+ echo "mytermux not installed yet!"; 
+fi
+}
 mytermux_font() {
- cat ~/.config/mytermux/fonts/used.log | sed "s/\.ttf//g"; }
+ \cat ~/.config/mytermux/fonts/used.log | sed "s/\.ttf//g"; }
 mytermux_colorscheme() {
-  cat ~/.config/mytermux/colorscheme/used.log | sed "s/\.colors//g"; }
+  \cat ~/.config/mytermux/colorscheme/used.log | sed "s/\.colors//g"; }
+
 song() {
 isPlaying() {
 
@@ -110,19 +118,22 @@ termux-media-player info | awk '{print $2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$
 if [ $(isPlaying | awk '{print $1}') == "Playing" ]; then        echo "$(isPlayingEdit)"
 elif [ $(isPlaying | awk '{print $1}') == "Paused" ]; then       echo "$(isPlaying)" |  awk '{gsub("Paused", ""); print $0 " (Dijeda)"}'
 else                                                             echo "No $(isPlaying)"
-fi; }
+fi; 
+}
 os() {
   echo -n "$(uname -so)"; }
 term() {
   echo -n "$TERM"; }
 arch() {
  uname -m || dpkg --print-architecture; }
-date() {
-  command date; }
+get_date() {
+  command date; 
+}
 battery() {
  local batt="$(termux-battery-status 2>&1 | grep -cq 'command not found' || termux-battery-status | head -n 3 | awk '{print $2}' | tail -n 1 | sed 's/,/%/g')";
     local batteries="${batt:-$(echo "unknown")}" > /dev/null 2>&1;
-    echo -n "$batteries"; }
+    echo -n "$batteries"; 
+}
 battery_state() {
 if [ $(termux-battery-status | grep "status" | cut -d":" -f2 | tr "[:upper:]" "[:lower:]" | sed "s/\,//g" | sed "s/\"//g" | xargs | sed "s/^/D/g" | cut -c 1,3-12) == "Discharging" ]; then
 echo "Discharging"

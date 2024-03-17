@@ -2,7 +2,7 @@
 # Ran through Termux: Widget
 
 
-exec bash --init-file ~/.local/share/alrc-termux/templates/templates.bash_profile
+bash --init-file ~/.local/share/alrc-termux/templates/templates.bash_profile
 
 echo "load from.. (templates.bash_profile)"
 echo 
