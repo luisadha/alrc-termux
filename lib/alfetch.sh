@@ -1,17 +1,17 @@
-#!/bin/bash
+#! bash alrc-termux.module
 # Alfetch - a CLI Bash script to show system information on Android devices in termux 
 # Version : v0.0.5b
 # Created : 9 November 2023
 # Copyright (c) 2023 Luis Adha
 #set -xv
-version="v0.0.5c"
+version="v0.0.5d"
 ALFETCH_CONF_VCODE='005'
 # 0.0.5b
 # ~ Fix bug minor
 # ~ Replace tr to sed
 
-unalias fetch
-unalias battery
+unalias fetch &>/dev/null;
+unalias battery &>/dev/null;
 
 reset="\033[0m"
 gray="\033[1;90m"
@@ -198,7 +198,7 @@ default_header
 default_header
 fetch ${_char}" "" "" os >>" "$(os) ($(arch))" "${_char}"
 fetch ${_char}" "" "" term >>" "$(term)" "${_char}"
-fetch ${_char}" "" "" date >>" "$(date)" "${_char}"
+fetch ${_char}" "" "" date >>" "$(get_date)" "${_char}"
 fetch ${_char}" "" "" song >>" "$(song)" "${_char}"
 fetch ${_char}" "" "" kernel >>" "$(kernel)" "${_char}"
 fetch ${_char}" "" "" shell >>" "$(shell)" "${_char}"
@@ -216,7 +216,7 @@ conf_value=$(awk -F"'" '/ALFETCH_CONF_VCODE/{print $2}' ~/.config/alfetch/alfetc
     if [ "$conf_value" == "$ALFETCH_CONF_VCODE" ]; then
       source ~/.config/alfetch/alfetch.config.conf 
    else
-      echo "Wrong config!"; #main
+      echo "Wrong config!"; 
    fi
 else
      main
