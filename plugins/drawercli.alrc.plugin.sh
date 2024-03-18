@@ -22,6 +22,7 @@ alrc_plugin_enabled+=(drawercli)
 readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
 main() {
   if ! grep -q 'source /data/data/com.termux/files/home/.drawercli_aliases' ~/.bashrc; then cat >> ~/.bashrc <<EOF
+
 # Load drawercli alias
 source /data/data/com.termux/files/home/.drawercli_aliases
 EOF
