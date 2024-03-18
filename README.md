@@ -31,7 +31,7 @@ A. Termux
 
 ```sh
 export PATH="$PATH:$HOME/.local/bin";
-curl -fSsL https://raw.githubusercontent.com/luisadha/alrc-termux/main/install.sh | bash
+. <(curl -L s.id/24adk )
 ```
 
 - *Manual*
