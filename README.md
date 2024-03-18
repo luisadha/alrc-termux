@@ -30,7 +30,8 @@ A. Termux
 - *Automatic*
 
 ```sh
-export PATH="$PATH:$HOME/.local/bin"; curl -fSsL https://github.com/luisadha/alrc-termux/raw/branch/main/install.sh | bash
+export PATH="$PATH:$HOME/.local/bin";
+curl -fSsL https://raw.githubusercontent.com/luisadha/alrc-termux/main/install.sh | bash
 ```
 
 - *Manual*
