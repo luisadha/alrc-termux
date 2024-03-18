@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Luisadha, GNU GPLv3
+#! bash alrc-termux.module
 function brandomusic_disable() {
 unset brandomusic
 unalias brandomusic-set_autoremove

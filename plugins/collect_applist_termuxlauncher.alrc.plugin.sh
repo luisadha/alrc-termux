@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Luisadha, GNU GPLv3
+#! bash alrc-termux.module
 function collect_applist() {
   echo -e "Collecting..." ; sleep 1 ;
 
@@ -10,4 +10,6 @@ sed -n '/--list|-l)/,/\;\;/p' /sdcard/termuxlauncher/.apps-launcher | sed '1d;$d
 else echo "Error: Please install Termuxlauncher.apk's available project termuxlauncher at https://github.com/amsitlab/termuxlauncher/releases" ; fi
 
 }
+alrc_plugin_enabled+=(collect_applist)
+readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
 echo "collect_applist() Added."

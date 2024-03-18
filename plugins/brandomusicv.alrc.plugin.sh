@@ -1,11 +1,11 @@
+#! bash alrc-termux.module
 #BrandomusicV offers a better version of BrandomusicQ at least it doesn't require a change to the export PATH="$PATH:/system/bin" for the input command keyevent but uses an environment variable. Read more (readme.md)
 
 # Copyright (c) 2023 Luisadha, GNU GPLv3
 
 set +o noclobber
-brandomusicv()
+function brandomusicv()
 {
-
   # Testing on Musik com.miui.player (6.4.20i)
   # Testing on Dialog Music Player phone.vishnu.dialogmusicplayer (v2.1.1)
 
@@ -53,6 +53,7 @@ EOF
             rm -f "${tmp}";
             fi
             cd - &> /dev/null
+           return
         ;;
         *)
           
@@ -62,4 +63,7 @@ EOF
             return 0
         ;;
     esac
+return
 }
+alrc_plugin_enabled+=(brandomusicv)
+readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)

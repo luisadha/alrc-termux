@@ -1,4 +1,4 @@
-
+#! bash alrc-termux.module
 #set -o errexit
 set -e
 i_install() {
@@ -16,51 +16,42 @@ i_setup() {
 i_succ() {
   echo "Successfull, drawercli package has been installed!"
 }
-
 i_found() {
-#echo "udah ada nih"
+echo "1 files Added at ~/.shortcuts."
 return 1
 }
-
+alrc_plugin_enabled+=(drawercli)
+readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
 main() {
-set -e
-  if ! grep -q 'alrc_plugin_enabled=(drawercli)' ~/.bashrc; then cat >> ~/.bashrc <<EOF
-
-alrc_plugin_enabled=(drawercli)
+  if ! grep -q 'source /data/data/com.termux/files/home/.drawercli_aliases' ~/.bashrc; then cat >> ~/.bashrc <<EOF
+# Load drawercli alias
+source /data/data/com.termux/files/home/.drawercli_aliases
 EOF
-  else
-     i_found
-  fi
-  
-}
-main
-
 if [[ ! -x $(command -v alfetch 2> /dev/null) ]];
   then
-   #i_install
+   
   if timeout 10s curl -fSsl "https://raw.githubusercontent.com/luisadha/drawercli/main/drawercli.sh" -o ~/.local/bin/drawercli 2> /dev/null && chmod +x ~/.local/bin/drawercli; 
   then
  i_install
   else      echo -n "Failed. Timeout or network issue.";
     
   fi
+
 fi
 set +o noclobber
 sleep 1
 i_setup
-if ! grep -q 'termuxlauncher_config=true' ~/.bashrc; then
+if ! grep -q 'source /data/data/com.termux/files/home/storage/shared/termuxlauncher/.apps-launcher 2> /dev/null' ~/.bashrc; then
 cat >> ~/.bashrc <<EOF
 
-# Init termuxlauncher & drawercli aliases
-source $HOME/storage/shared/termuxlauncher/.apps-launcher 2> /dev/null 
-source $HOME/.drawercli_aliases
-termuxlauncher_config=true
+# Init termuxlauncher
+source /data/data/com.termux/files/home/storage/shared/termuxlauncher/.apps-launcher 2> /dev/null
 EOF
 fi
 
   if [ ! -f ~/.drawercli_aliases ]; then
 cat <<- "EOF" > ~/.drawercli_aliases
-# Generate by plugin drawercli.plugin.alrc
+# Generate by plugin drawercli.alrc.plugin.sh
 # require termuxlauncher app
 
 alias apps='drawercli'
@@ -75,5 +66,17 @@ i_linkin
     ln -s ~/.local/bin/drawercli ~/.shortcuts/drawercli 2>/dev/null;
   install ~/.shortcuts/drawercli ~/.shortcuts/drawercli.app 2>/dev/null;
 i_succ
+  else
+    set +e
+     i_found
+  fi
+  
+}
+main
 
-
+unset -f i_install
+unset -f i_succ
+unset -f i_setup
+unset -f i_linkin
+unset -f i_found
+unset -f main

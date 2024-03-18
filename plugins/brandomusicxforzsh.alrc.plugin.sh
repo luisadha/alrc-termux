@@ -1,6 +1,4 @@
-#!/usr/bin/env zsh
-
-#Copyright (c) 2023 Luisadha, GNU GPLv3
+#! bash alrc-termux.module
 
 if ! grep -q 'brandomusicxz_present=true' ~/.zshrc; then
     cat >> ~/.zshrc <<EOF
@@ -9,4 +7,6 @@ alias brandomusicxz='termux-media-player play "\$(realpath "\${ARG:-\$(busybox l
 brandomusicxz_present=true
 EOF
 fi
-echo "zshrc just modified"
+alrc_plugin_enabled+=(brandomusicxforzsh)
+readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
+echo "zshrc just now modified"

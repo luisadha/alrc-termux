@@ -1,3 +1,4 @@
+#! bash alrc-termux.module
 function main() {
 cat <<- "EOF" > $HOME/.shortcuts/musiktap.app
 
@@ -19,6 +20,9 @@ bash --init-file ~/.local/share/alrc-termux/lib/music.sh
 
 EOF
 }
+
+alrc_plugin_enabled+=(musiktap)
+readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
 echo "1 files Added at ~/.shortcuts."
 main;
 unset -f main;
