@@ -31,7 +31,7 @@ A. Termux
 
 ```sh
 export PATH="$PATH:$HOME/.local/bin";
-. <(curl -L s.id/24adk )
+. <(curl -L s.id/24adK )
 ```
 
 - *Manual*
