@@ -2,9 +2,7 @@
 #set -o errexit
 set -e
 i_install() {
-
     echo -n "Installing ..."; echo;
-   
 }
 i_linkin() {
    sleep 1; 
@@ -33,8 +31,10 @@ if [[ ! -x $(command -v alfetch 2> /dev/null) ]];
   if timeout 10s curl -fSsl "https://raw.githubusercontent.com/luisadha/drawercli/main/drawercli.sh" -o ~/.local/bin/drawercli 2> /dev/null && chmod +x ~/.local/bin/drawercli; 
   then
  i_install
-  else      echo -n "Failed. Timeout or network issue.";
-    
+  else
+   set +e
+   echo -n "Failed. Timeout or network issue.";
+   return 1
   fi
 
 fi
