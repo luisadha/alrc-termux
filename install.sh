@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # By fmway
 
-REPO="https://codeberg.org/luisadha/alrc-termux.git"
+REPO="https://github.com/luisadha/alrc-termux.git"
 
 ALRC_HOME="$HOME/.local/share/alrc-termux"
 
