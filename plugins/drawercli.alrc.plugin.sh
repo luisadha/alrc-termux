@@ -42,11 +42,11 @@ fi
 set +o noclobber
 sleep 1
 i_setup
-if ! grep -q 'source /data/data/com.termux/files/home/storage/shared/termuxlauncher/.apps-launcher 2> /dev/null' ~/.bashrc; then
+if ! grep -q 'source /data/data/com.termux/files/home/storage/shared/termuxlauncher/.apps-launcher' ~/.bashrc; then
 cat >> ~/.bashrc <<EOF
 
 # Init termuxlauncher
-source /data/data/com.termux/files/home/storage/shared/termuxlauncher/.apps-launcher 2> /dev/null
+source /data/data/com.termux/files/home/storage/shared/termuxlauncher/.apps-launcher
 EOF
 fi
 
