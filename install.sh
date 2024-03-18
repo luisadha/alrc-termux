@@ -1,5 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
-# By fmway
+
+# By Luisadha x fmway
+
 
 REPO="https://github.com/luisadha/alrc-termux.git"
 
