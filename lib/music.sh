@@ -11,9 +11,6 @@ source <(~/.local/bin/alrc env)> /dev/null 2>&1;
 #       \ al_notify() dan
 #        \ lolcrab_gradient_shuf
 
-# OPTION SHELL
-set +o errexit # Tidak langsung keluar dari shell, beritahu bahwa program telah selesai jika keluaran bernilai selain nol
-
 # SETUP CONFIG IN ~/.SHORTCUTS/MUSIKTAP.APP
 ##! MOHON JANGAN UNKOMENTAR BAGIAN INI, INI SEKEDAR ARAHAN  UNTUK KONFIGURASI
 # Setting di konfigurasi
