@@ -18,9 +18,9 @@
  # set -xv
 
 
-export ALRC_VERSION="4.3.0"
+export ALRC_VERSION="4.3.2"
 
-ALRC_UDATE='17/03/24 23:35:11 WIB'
+ALRC_UDATE='25/03/24 00:38:11 WIB'
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
 
@@ -35,6 +35,7 @@ export ALRC_SCRIPT="$ALRC_HOME/$ALRC_SOURCE"
 
 #chmod +x $ALRC_HOME/lib/*
 
+source $ALRC_HOME/lib/ext_command_helper.sh
 source $ALRC_HOME/lib/plugin_handler.sh
 source $ALRC_HOME/lib/check_dependency.sh
 
@@ -226,19 +227,16 @@ mno=$(echo "${icon} songs >> $(al_fetchSongInfo)" | wc -L); onm=$(echo "$COLUMNS
 ENV="${ENV:-"/system/etc/mkshrc"}"
 test $ENV;
 if [ $? -eq 0 ]; then
-
-
-
-
   : "AKU DISINI"
-
-echo -e "
-Hello $(basename $SHELL)
-Welcome to: ${my_terminal:-"Termux "}"
+#echo -e "
+#Hello $(basename $SHELL)
+#Welcome to: ${my_terminal:-"Termux "}"
 
 if [ "$ALRC_USE_ALFETCH" == "true" ]; then
+source "$ALRC_HOME/lib/alfetch.sh"
+
  
- source $ALRC_HOME/lib/alfetch.sh
+
 else
 echo -e "$(printf %"$COLUMNS"s |tr " " "-")
 | os >> $(uname -so)$(printf %"$cba"s "$icon" )
@@ -254,13 +252,7 @@ echo -e "$(printf %"$COLUMNS"s |tr " " "-")
 | bash source >> ${ALRC_SOURCE}$(printf %"$lkj"s "$icon" )
 $(printf %"$COLUMNS"s |tr " " "-") ";
 fi
-
-
-
-: place customisations above this line
-
-echo "alrc: al is a $(type -t al), More informations? you can type \`whatisal'"
-echo
+#echo "alrc: al is a $(type -t al), More informations? you can type \`whatisal'"
 else
 echo "Your device isn't Android"
 return 1
@@ -356,10 +348,10 @@ elif [ "$opt" == "sar" ]; then
   esac
 
 elif [ "$opt" == "cpu_arch" ]; then #bug 2722_234b {not consist result }
-  echo "this options require internet connection!"
+ # echo "this options require internet connection!"
   echo "$OPTARG"
   echo
-  curl -sS "https://en.m.wikipedia.org/wiki/ARM_architecture_family?action=raw" | grep -Eoi "name         = ARM 64/32-bit" | sed 's/ //g' | cut -c"6-" | sed 's/\/32-bit//g';
+  #curl -sS "https://en.m.wikipedia.org/wiki/ARM_architecture_family?action=raw" | grep -Eoi "name         = ARM 64/32-bit" | sed 's/ //g' | cut -c"6-" | sed 's/\/32-bit//g';
   export  al_"$opt"="$(curl $_)"
 
 elif [ "$opt" == "vndk" ]; then
@@ -374,6 +366,7 @@ fi
 
 
 }
+
 function whatisal() {
 
 al_runmanual
@@ -406,7 +399,22 @@ usage#2: whatisal print this help message and return
 # ----- ALRC MISC ------- #
 # -------------------------------- #
 source $0 > /dev/null 2>&1 && until false; do sleep 1; done
-al_set_window "successfully script called via source"; al; 
+al_set_window "successfully script called via source"; 
+
+case "$ALRC_MOTD_USE_BOXES" in
+"")
+al;
+  ;;
+"random")
+ boxes -s ${COLUMNS}x$(al | wc -l) -d $(al_shuf_boxes_design) <(al)
+   
+   ;;
+*)
+boxes -s ${COLUMNS}x$(al | wc -l) -d $ALRC_MOTD_USE_BOXES <(al)
+   ;;
+ esac
+
+
 # --------------------------------- #
 
 # ----- BASHRC ---------- #
@@ -440,7 +448,7 @@ alias brandomusic+set_autoremove="sed 's/\ brandomusic-cache-clear\.sh/\#\ brand
 # alias al
 #
 alias al_activate='source <(~/.local/bin/alrc env)'; 
-alias al_login='source $ALRC_HOME/$ALRC_SOURCE; set -o history';
+
 alias alcatalias='alcat | grep -e "^alias"'; 
 alias aligrep='alias | grep';
 
@@ -472,6 +480,7 @@ alias lt='exa --icons --tree'
 alias lta='exa --icons --tree -lgha'
 alias lol='echo 'your\ mom''
 alias neodistro='neofetch --ascii_distro'
+alias fix_lolcrab_gradient='fold -w$COLUMNS | lolcrab -ag'
 alias check_jpgfiles='cd $OLDPWD; cd /sdcard; printf "%s %s %s %s\n" "$(find . ! -readable -prune -o -name "*.jpg" -type f -print | wc -l)" "totals .jpg" "files on /sdcard"; cd - &>/dev/null;'
 alias check_emptyfolder='cd $OLDPWD; cd /sdcard; printf "%s %s %s %s\n" "$(find . ! -readable -prune -o -type d -empty -print | wc -l)" "totals empty " "folder on /sdcard"; cd - &>/dev/null;'
 alias check_emptyfiles='cd $OLDPWD; cd /sdcard; printf "%s %s %s %s\n" "$(find . ! -readable -prune -o -type f -empty -print | wc -l)" "totals empty " "files on /sdcard"; cd - &>/dev/null;'
@@ -492,6 +501,7 @@ alias proot-dinstalled='cd /data/data/com.termux/files/usr/var/lib/proot-distro/
 alias proot-dlogin='proot-distro login '
 # alias al_refresh_profile='source /data/data/com.termux/files/home/.bash_profile' #for refresh profile
 alias vendor='getprop ro.product.manufacturer'
+alias mfiles='am start -n 'me.zhanghai.android.files/.filelist.FileListActivity' --user 0 &> /dev/null'
 # add periode 28-29 March
 alias loghis='echo 'login' >> ~/.bash_history; login'
 # convert loghis to login in body .bash_history
@@ -911,15 +921,6 @@ else
 fi
 }
 declare -f -x alvar
-# 11 Maret 2024
-function lolcrab_gradient_shuf() {
-# by luisadha
-# depenName=lolcrab
-# depenVersion=0.3.1
-local LOLCRAB_GRADIENT_LIST=("cividis" "cool" "cubehelix" "fruits" "inferno" "magma" "plasma" "rainbow" "rd-yl-gn" "sinebow" "spectral" "turbo" "viridis" "warm")
-for i in ${LOLCRAB_GRADIENT_LIST[@]}; do echo "$i"; done | fold -s | shuf -n1;
-}
-declare -f -x lolcrab_gradient_shuf
 
 # fkill - kill processes - list only the ones you can kill. Modified the earlier script.
 function fkill() {
@@ -937,7 +938,33 @@ function fkill() {
 }
 
 declare -f -x fkill
-
+function cd() {
+  # interactive cd by @mgild 
+    if [[ "$#" != 0 ]]; then
+        builtin cd "$@";
+        return
+    fi
+    while true; do
+        local lsd=$(echo ".." && command ls -p | grep '/$' | sed 's;/$;;')
+        local dir="$(printf '%s\n' "${lsd[@]}" |
+            fzf --reverse --preview '
+                __cd_nxt="$(echo {})";
+                __cd_path="$(echo $(pwd)/${__cd_nxt} | sed "s;//;/;")";
+                echo $__cd_path;
+                echo;
+                command ls -p --color=always "${__cd_path}";
+        ')"
+        [[ ${#dir} != 0 ]] || return 0
+        builtin cd "$dir" &> /dev/null
+    done
+}
+declare -f -x cd
+function generate_abstraction()
+{
+file="$1"
+timg "$file" | lolcrab -a
+}
+declare -f -x generate_abstraction
 generate_addon_files() {
 set +o noclobber
 export PATH="${PATH}:$HOME/.local/bin"
@@ -982,22 +1009,10 @@ chmod +x $HOME/.local/bin/$CHECKIP_FILES
 }
 
 generate_addon_files;
-#if ! source ctypes.sh; then
-#    echo "please install ctypes.sh to continue"
- #fi
-
-# source ctypes.sh
-# if any error of these, fix with alias fixctypes-source
-# bash: declare: NULL: readonly variable
-  #       bash: declare:
-# STDIN_FILENO: readonly variable             bash: declar
-   #   e:
-# TDOUT_FILENO: readonly variable            bash: declare
-    #  :
-# STDERR_FILENO: readonly variable
-#
-#
-#unset p
 
  set +o history
+
+
+
+
 

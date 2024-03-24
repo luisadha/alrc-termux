@@ -53,6 +53,9 @@ _fill_blank=$(printf %"$_calc"s | sed "s/ /$_draw_char/g")
 #printf %"$_min_cols"s && echo "$_char"
 #printf %"$_min_cols"s && echo -e "$_char\rHELLO WORD"
 #printf %"$_min_cols"s && echo -e "$_char\r${_char} HELLO WORD"
+border() {
+al_status_boxes_border;
+}
 : "
 user() {
 echo -n "$USER"
@@ -185,7 +188,7 @@ function use_color() {
 
 function move_space() {   
   local arg1=$1;                                             
-  printf '%*s%s\n' ${arg1:-0} " "                             
+  printf '%*s%s' ${arg1:-0} " "                             
 }
 
 function default_header() {
@@ -194,8 +197,9 @@ function default_header() {
 }
 
 function main() {
+#default_header
 default_header
-default_header
+fetch ${_char}" "" ""▢ motd-border >>" "boxes ($(border))" "${_char}"
 fetch ${_char}" "" "" os >>" "$(os) ($(arch))" "${_char}"
 fetch ${_char}" "" "" term >>" "$(term)" "${_char}"
 fetch ${_char}" "" "" date >>" "$(get_date)" "${_char}"
@@ -208,13 +212,23 @@ fetch ${_char}" "" "" packages >>" "$(packages)" "${_char}"
 default_header
 }
 
+
+
 [ ! -d ~/.config/alfetch ] && mkdir -p ~/.config/alfetch #&& echo berhasi  lbuat
+
+
+
+
 
 if [ -f ~/.config/alfetch/alfetch.config.conf ]; then #echo found
 
 conf_value=$(awk -F"'" '/ALFETCH_CONF_VCODE/{print $2}' ~/.config/alfetch/alfetch.config.conf)
+
     if [ "$conf_value" == "$ALFETCH_CONF_VCODE" ]; then
+
+
       source ~/.config/alfetch/alfetch.config.conf 
+
    else
       echo "Wrong config!"; 
    fi

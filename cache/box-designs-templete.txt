@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List of Box Designs - boxes</title>
+    <meta name="robots" content="index,follow" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="List of Box Designs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Command line ASCII boxes unlimited!" />
+<meta property="og:description" content="Command line ASCII boxes unlimited!" />
+<link rel="canonical" href="https://boxes.thomasjensen.com/v2.3.0/box-designs.html" />
+<meta property="og:url" content="https://boxes.thomasjensen.com/v2.3.0/box-designs.html" />
+<meta property="og:site_name" content="boxes" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="List of Box Designs" />
+<meta name="twitter:site" content="@tj_impl" />
+<meta name="twitter:creator" content="@tj_impl" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","dateModified":"2024-02-17T13:00:00+00:00","description":"Command line ASCII boxes unlimited!","headline":"List of Box Designs","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://boxes.thomasjensen.com/images/boxes-sq-256.png"}},"url":"https://boxes.thomasjensen.com/v2.3.0/box-designs.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/css/boxes.css">
+    <script async defer data-domain="boxes.thomasjensen.com" src="https://thomasjensen.com/js/script.js"></script>
+</head>
+<body class="longContent">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-xl">
+    <a class="navbar-brand" href="/"><img src="/images/boxes-bar.png" alt="boxes"></a>
+    <span class="navbar-text d-none d-sm-inline mr-auto">Command line ASCII boxes unlimited!</span>
+    <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <!-- The navigation is only shown on SM or smaller (else in sidebar): -->
+            <li class="nav-item dropdown d-inline d-md-none">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false">Project</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/blog/">What's New</a>
+                    <a class="dropdown-item" href="/releases.html">Release Notes</a>
+                    <a class="dropdown-item" href="https://github.com/ascii-boxes/boxes/blob/master/LICENSE">License</a>
+                    <a class="dropdown-item" href="/faq.html">F.A.Q.</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown d-inline d-md-none">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false">Usage</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/download.html">Download</a>
+                    <a class="dropdown-item" href="/examples.html">Examples</a>
+                    <a class="dropdown-item" href="/editors.html">Editor Integration</a>
+                    <a class="dropdown-item" href="/boxes-man-1.html">Manual Page</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown d-inline d-md-none">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false">Box Designs</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/config-general.html">General Concept</a>
+                    <a class="dropdown-item" href="/config-syntax.html">Config File Syntax</a>
+                    <a class="dropdown-item" href="/config-step.html">Step-by-Step</a>
+                    <a class="dropdown-item" href="/config-best-practices.html">Best Practices</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/box-designs.html">List of Designs</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown d-inline d-md-none">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false">Contributing</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/contributing.html">Contributing</a>
+                    <a class="dropdown-item" href="/build.html">Building</a>
+                    <a class="dropdown-item" href="/testing.html">Testing</a>
+                    <a class="dropdown-item" href="/team.html">Team</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="https://github.com/ascii-boxes/boxes/">GitHub</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+
+<main class="page-content" aria-label="Content">
+<div class="wrapper">
+<div class="container-xl">
+    <div class="row">
+    <div class="col-md-3 pt-3 d-none d-md-inline"><div class="sidebar">
+    
+    <div class="row">
+        <div class="sidebar-heading mr-lg-5">Project</div>
+        <ul class="mr-lg-5">
+            <li><a href="/blog/">What's New</a></li>
+            <li><a href="/releases.html">Release Notes</a></li>
+            <li><a href="https://github.com/ascii-boxes/boxes/blob/master/LICENSE">License</a></li>
+            <li><a href="/faq.html">F.A.Q.</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="sidebar-heading mr-lg-5">Usage</div>
+        <ul class="mr-lg-5">
+            <li><a href="/download.html">Download</a></li>
+            <li><a href="/examples.html">Examples</a></li>
+            <li><a href="/editors.html">Editor Integration</a></li>
+            <li><a href="/boxes-man-1.html">Manual Page</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="sidebar-heading mr-lg-5">Box Designs</div>
+        <ul class="mr-lg-5">
+            <li><a href="/config-general.html">General Concept</a></li>
+            <li><a href="/config-syntax.html">Config File Syntax</a></li>
+            <li><a href="/config-step.html">Step-by-Step</a></li>
+            <li><a href="/config-best-practices.html">Best Practices</a></li>
+            <li class="current"><a href="/box-designs.html">List of Designs</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="sidebar-heading mr-lg-5">Contributing</div>
+        <ul class="mr-lg-5">
+            <li><a href="/contributing.html">Contributing</a></li>
+            <li><a href="/build.html">Building</a></li>
+            <li><a href="/testing.html">Testing</a></li>
+            <li><a href="/team.html">Team</a></li>
+            <li><a href="https://github.com/ascii-boxes/boxes/">GitHub</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+    <div class="col-md-9 pt-3">
+    <h1>Box Designs</h1>
+
+<form>
+    <div class="form-group mt-4 mb-0 row">
+        <div class="col-4 col-md-3 col-xl-2">
+            <label for="bxVersionSelect" class="form-label"><i>Boxes</i> Version:</label>
+        </div>
+        <div class="col-4 col-md-3 col-lg-2">
+            <select class="form-control form-select" id="bxVersionSelect">
+                <option value="v2.3.0" selected>v2.3.0</option>
+                <option value="v2.2.1">v2.2.1</option>
+                <option value="v2.2.0">v2.2.0</option>
+                <option value="v2.1.1">v2.1.1</option>
+                <option value="v2.1.0">v2.1.0</option>
+                <option value="v2.0.0">v2.0.0</option>
+                <option value="v1.3">v1.3</option>
+                <option value="v1.2">v1.2</option>
+                <option value="v1.1.2">v1.1.2</option>
+                <option value="v1.0">v1.0</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+<script>
+    document.getElementById("bxVersionSelect").onchange = function() {
+        if (this.selectedIndex >= 0) {
+            window.location.href = '/' + this.value + '/box-designs.html';
+        }        
+    };
+</script>
+
+<div class="form-group">
+    <label class="col-form-label" for="pagTagFilter">Tag:</label>
+    <ul class="pagination pagination-sm flex-wrap" id="pagTagFilter">
+        <li class="page-item active">
+            <a class="page-link" href="/v2.3.0/box-designs.html">(all)</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-artwork.html">artwork</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-box.html">box</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-color.html">color</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-comment.html">comment</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-large.html">large</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-programming.html">programming</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-scroll.html">scroll</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-sign.html">sign</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-simple.html">simple</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-speech.html">speech</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="/v2.3.0/box-designs-unicode.html">unicode</a>
+        </li></ul>
+    <small class="form-text text-muted">72 matching designs</small>
+</div>
+
+    
+        
+        <a name="lua-box"></a>
+        <a name="sql-box"></a>
+        
+    <h3 id="ada-box">ada-box (lua-box, sql-box)<a href="#ada-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>---------------
+--           --
+--           --
+---------------</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Neil Bird</p>
+    
+        
+        <a name="lua-cmt"></a>
+        <a name="sql-cmt"></a>
+        
+    <h3 id="ada-cmt">ada-cmt (lua-cmt, sql-cmt)<a href="#ada-cmt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>--
+-- regular Ada
+-- comments
+--</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Neil Bird</p>
+    
+    <h3 id="ansi">ansi<a href="#ansi"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre><code>┌──────────────────────┐
+│                      │
+│                      │
+│                      │
+│                      │
+│                      │
+│                      │
+│                      │
+└──────────────────────┘</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by chorpler</p>
+    
+    <h3 id="ansi-dashed">ansi-dashed<a href="#ansi-dashed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre><code>┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐
+┊                      ┊
+┊                      ┊
+┊                      ┊
+┊                      ┊
+┊                      ┊
+┊                      ┊
+┊                      ┊
+└╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by chorpler</p>
+    
+    <h3 id="ansi-double">ansi-double<a href="#ansi-double"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre><code>╔══════════════════════╗
+║                      ║
+║                      ║
+║                      ║
+║                      ║
+║                      ║
+║                      ║
+║                      ║
+╚══════════════════════╝</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by chorpler</p>
+    
+    <h3 id="ansi-heavy">ansi-heavy<a href="#ansi-heavy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre><code>┏━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      ┃
+┃                      ┃
+┃                      ┃
+┃                      ┃
+┃                      ┃
+┃                      ┃
+┃                      ┃
+┗━━━━━━━━━━━━━━━━━━━━━━┛</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by chorpler</p>
+    
+    <h3 id="ansi-heavy-dashed">ansi-heavy-dashed<a href="#ansi-heavy-dashed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre><code>┏╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┓
+┋                      ┋
+┋                      ┋
+┋                      ┋
+┋                      ┋
+┋                      ┋
+┋                      ┋
+┋                      ┋
+┗╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┛</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by chorpler</p>
+    
+    <h3 id="ansi-rounded">ansi-rounded<a href="#ansi-rounded"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre><code>╭──────────────────────╮
+│                      │
+│                      │
+│                      │
+│                      │
+│                      │
+│                      │
+│                      │
+╰──────────────────────╯</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by chorpler</p>
+    
+    <h3 id="ansi-rounded-dashed">ansi-rounded-dashed<a href="#ansi-rounded-dashed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre><code>╭╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╮
+┊                      ┊
+┊                      ┊
+┊                      ┊
+┊                      ┊
+┊                      ┊
+┊                      ┊
+┊                      ┊
+╰╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╯</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by chorpler</p>
+    
+    <h3 id="bear">bear<a href="#bear"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-large.html"><button type="button" class="btn btn-outline-primary btn-sm">large</button></a>
+        <a href="/v2.3.0/box-designs-sign.html"><button type="button" class="btn btn-outline-primary btn-sm">sign</button></a>
+        </p>
+    <pre><code>                     ,---.           ,---.
+                    / /&quot;`.\.--&quot;&quot;&quot;--./,&#39;&quot;\ \
+                    \ \    _       _    / /
+                     `./  / __   __ \  \,&#39;
+                      /    /_O)_(_O\    \
+                      |  .-&#39;  ___  `-.  |
+                   .--|       \_/       |--.
+                 ,&#39;    \   \   |   /   /    `.
+                /       `.  `--^--&#39;  ,&#39;       \
+             .-&quot;&quot;&quot;&quot;&quot;-.    `--.___.--&#39;     .-&quot;&quot;&quot;&quot;&quot;-.
+.-----------/         \------------------/         \--------------.
+| .---------\         /------------------\         /------------. |
+| |          `-`--`--&#39;                    `--&#39;--&#39;-&#39;             | |
+| |                                                             | |
+| |                                                             | |
+| |                                                             | |
+| |                                                             | |
+| |                                                             | |
+| |                                                             | |
+| |                                                             | |
+| |                                                             | |
+| |_____________________________________________________________| |
+|_________________________________________________________________|
+                   )__________|__|__________(
+                  |            ||            |
+                  |____________||____________|
+                    ),-----.(      ),-----.(  hjw
+                  ,&#39;   ==.   \    /  .==    `.
+                 /            )  (            \
+                 `===========&#39;    `===========&#39;</code></pre>
+    <p>Artwork by Hayley Jane Wakenshaw</p>
+    
+    <h3 id="boxquote">boxquote<a href="#boxquote"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>,----[ mp3-wav ]
+| #!/bin/sh
+| # konvertiert im aktuellen Verzeichnis .mp3 in .wav
+| for i in *.mp3; do
+|   mpg123 -v  --stereo --rate 44100 -w &quot;`basename &quot;$i&quot; .mp3`&quot;.wav &quot;$i&quot;
+| done
+`----</code></pre>
+    <p>Artwork and <i>boxes</i> config by Christian Molls</p>
+    
+    <h3 id="boy">boy<a href="#boy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-sign.html"><button type="button" class="btn btn-outline-primary btn-sm">sign</button></a>
+        </p>
+    <pre><code>                .-&quot;&quot;&quot;-.
+               / .===. \
+               \/ 6 6 \/
+               ( \___/ )
+  _________ooo__\_____/______________
+ /                                   \
+|   joan stark   spunk1111@juno.com   |
+|     VISIT MY ASCII ART GALLERY:     |
+| http://www.geocities.com/SoHo/7373/ |
+ \_______________________ooo_________/
+                |  |  |
+                |_ | _|
+                |  |  |
+                |__|__|  jgs
+                /-&#39;Y&#39;-\
+               (__/ \__)</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="c">c<a href="#c"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>/*************/
+/*           */
+/*           */
+/*************/</code></pre>
+    <p>Artwork is public domain</p>
+    
+    <h3 id="c-cmt">c-cmt<a href="#c-cmt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>/*                               */
+/*     regular C language        */
+/*     comments                  */
+/*                               */</code></pre>
+    <p>Artwork is public domain</p>
+    
+    <h3 id="c-cmt2">c-cmt2<a href="#c-cmt2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>/*
+ *  regular C language
+ *  comments
+ */</code></pre>
+    <p>Artwork is public domain</p>
+    
+    <h3 id="caml">caml<a href="#caml"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>(*************)
+(*           *)
+(*           *)
+(*************)</code></pre>
+    <p>Artwork and <i>boxes</i> config by Michael Tiernan</p>
+    
+    <h3 id="capgirl">capgirl<a href="#capgirl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-sign.html"><button type="button" class="btn btn-outline-primary btn-sm">sign</button></a>
+        </p>
+    <pre><code>                .-&quot;```&quot;-.
+               /_______; \
+              (_________)\|
+              / / a a \ \(_)
+             / ( \___/ ) \
+  ________ooo\__\_____/__/___________
+ /                                   \
+|   joan stark   spunk1111@juno.com   |
+|     VISIT MY ASCII ART GALLERY:     |
+|      http://www.ascii-art.com       |
+ \________________________ooo________/
+             /           \
+            /:.:.:.:.:.:.:\
+                |  |  |
+                \==|==/  jgs
+                /-&#39;Y&#39;-\
+               (__/ \__)</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="cat">cat<a href="#cat"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-sign.html"><button type="button" class="btn btn-outline-primary btn-sm">sign</button></a>
+        </p>
+    <pre><code>              /\             /\
+             |`\\_,--=&quot;=--,_//`|
+             \ .&quot;  :&#39;. .&#39;:  &quot;. /
+            ==)  _ :  &#39;  : _  (==
+              |&gt;/O\   _   /O\&lt;|
+              | \-&quot;~` _ `~&quot;-/ |   jgs
+             &gt;|`===. \_/ .===`|&lt;
+       .-&quot;-.   \===&#39;  |  &#39;===/   .-&quot;-.
+.-----{&#39;. &#39;`}---\,  .-&#39;-.  ,/---{.&#39;. &#39;}-----.
+ )    `&quot;---&quot;`     `~-===-~`     `&quot;---&quot;`    (
+(                 joan  stark               )
+ )           &lt; spunk1111@juno.com &gt;        (
+(              ASCII ART GALLERY:           )
+ ) &lt; http://www.geocities.com/SoHo/7373/ &gt; (
+&#39;-------------------------------------------&#39;</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="cc">cc<a href="#cc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>/****************
+ *              *
+ *              *
+ ****************/</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Bas van Gils</p>
+    
+    <h3 id="columns">columns<a href="#columns"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code> __^__                 __^__
+( ___ )---------------( ___ )
+ | / |                 | \ |
+ | / |                 | \ |
+ | / |                 | \ |
+ |___|                 |___|
+(_____)---------------(_____)</code></pre>
+    <p>Artwork by (unknown artist)</p>
+    
+    <h3 id="cowsay">cowsay<a href="#cowsay"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-speech.html"><button type="button" class="btn btn-outline-primary btn-sm">speech</button></a>
+        </p>
+    <pre><code> _____________________________
+/                             \
+|  Boxes can have the cow too |
+\                             /
+ -----------------------------
+    \   ^__^
+     \  (oo)\_______
+        (__)\       )\/\
+            ||----w |
+            ||     ||</code></pre>
+    <p>Artwork by Tony Monroe, coded for <i>boxes</i> by David Yang</p>
+    
+    <h3 id="critical">critical<a href="#critical"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-color.html"><button type="button" class="btn btn-outline-primary btn-sm">color</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre class="bxBgToggle" id="critical-sample"><code><span style="color: #cd0000">▄▄</span><span style="color: #e5e5e5; background-color: #cd0000"> CRITICAL </span><span style="color: #cd0000">▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄</span>
+<span style="color: #cd0000">█</span><span style="color: #e5e5e5; background-color: #800000">                                               </span><span style="color: #cd0000; background-color: #800000">█</span>
+<span style="color: #cd0000">█</span><span style="color: #e5e5e5; background-color: #800000">  Coolant levels below minimum.                </span><span style="color: #cd0000; background-color: #800000">█</span>
+<span style="color: #cd0000">█</span><span style="color: #e5e5e5; background-color: #800000">  Disengage main drive and stop for repairs.   </span><span style="color: #cd0000; background-color: #800000">█</span>
+<span style="color: #cd0000">█</span><span style="color: #e5e5e5; background-color: #800000">                                               </span><span style="color: #cd0000; background-color: #800000">█</span>
+<span style="color: #cd0000">▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀</span></code><div
+            onmouseover="this.parentNode.classList.add('bxDark');" 
+            onmouseout="this.parentNode.classList.remove('bxDark');"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M279.1 512c78.8 0 151-35.8 198.8-94.8 28.3-34.8-2.6-85.7-46.2-77.4-82.3 15.7-158.3-47.3-158.3-130.8 0-48.4 26.1-92.3 67.4-115.8 38.7-22.1 29-80.8-15-88.9A257.9 257.9 0 0 0 279.1 0c-141.4 0-256 114.6-256 256 0 141.4 114.6 256 256 256zm0-464c13 0 25.7 1.2 38 3.5-54.8 31.2-91.7 90-91.7 157.6 0 113.8 103.6 199.2 215.3 177.9C402.6 434 344.4 464 279.1 464c-114.9 0-208-93.1-208-208s93.1-208 208-208z"/></svg></div></pre><p>Artwork and <i>boxes</i> config by Thomas Jensen</p>
+    
+    <h3 id="diamonds">diamonds<a href="#diamonds"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code>       /\          /\          /\          /\
+    /\//\\/\    /\//\\/\    /\//\\/\    /\//\\/\
+ /\//\\\///\\/\//\\\///\\/\//\\\///\\/\//\\\///\\/\
+//\\\//\/\\///\\\//\/\\///\\\//\/\\///\\\//\/\\///\\
+\\//\/                                        \/\\//
+ \/                                              \/
+ /\                                              /\
+//\\      joan stark   spunk1111@juno.com       //\\
+\\//    http://www.geocities.com/SoHo/7373/     \\//
+ \/                                              \/
+ /\                                              /\
+//\\/\                                        /\//\\
+\\///\\/\//\\\///\\/\//\\\///\\/\//\\\///\\/\//\\\//
+ \/\\///\\\//\/\\///\\\//\/\\///\\\//\/\\///\\\//\/
+    \/\\//\/    \/\\//\/    \/\\//\/    \/\\//\/
+       \/          \/          \/     jgs  \/</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="dog">dog<a href="#dog"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-sign.html"><button type="button" class="btn btn-outline-primary btn-sm">sign</button></a>
+        </p>
+    <pre><code>            __   _,--=&quot;=--,_   __
+           /  \.&quot;    .-.    &quot;./  \
+          /  ,/  _   : :   _  \/` \
+          \  `| /o\  :_:  /o\ |\__/
+           `-&#39;| :=&quot;~` _ `~&quot;=: |
+              \`     (_)     `/ jgs
+       .-&quot;-.   \      |      /   .-&quot;-.
+.-----{     }--|  /,.-&#39;-.,\  |--{     }-----.
+ )    (_)_)_)  \_/`~-===-~`\_/  (_(_(_)    (
+(                joan  stark                )
+ )          &lt; spunk1111@juno.com &gt;         (
+(             ASCII ART GALLERY:            )
+ ) &lt; http://www.geocities.com/SoHo/7373/ &gt; (
+&#39;-------------------------------------------&#39;</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="dragon">dragon<a href="#dragon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        </p>
+    <pre><code>       ,                                                     .  ,
+    ._/),                                                   .(\/),
+    ii// )/)     ,-=-.       ,-=-.       ,-=-.       ,-=-.     (\/|/)
+,^=-9 ,//) )=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;/ }/)
+ &quot;&quot;_,),,/ &quot;      ,-=-.       ,-=-.       ,-=-.       ,-=-.      ,/`~
+  &quot;&quot;&quot; )))\))=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;
+           &lt;&lt;  &lt;&lt;                             &lt;&lt;   &lt;&lt;
+         ((( &gt;((( &gt;                         ((( &gt; ((( &gt;
+                          HERE BE DRAGONS
+          ,                                                     .  ,
+       ._/),                                                   .(\/),
+    ii// )/)     ,-=-.       ,-=-.       ,-=-.       ,-=-.     (\/|/)
+,^=-9 ,//) )=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;/ }/)
+ &quot;&quot;_,),,/ &quot;      ,-=-.       ,-=-.       ,-=-.       ,-=-.      ,/`~
+  &quot;&quot;&quot; )))\))=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;&#39;     &#39;&quot;=-=&quot;
+           &lt;&lt;  &lt;&lt;                             &lt;&lt;   &lt;&lt;
+ gpyy    ((( &gt;((( &gt;                         ((( &gt; ((( &gt;</code></pre>
+    <p>Artwork by Glory Py Yip (Glory Moon)</p>
+    
+    <h3 id="f90-box">f90-box<a href="#f90-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>!!!!!!!!!!!!!
+!           !
+!           !
+!!!!!!!!!!!!!</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Matt Thompson</p>
+    
+    <h3 id="f90-cmt">f90-cmt<a href="#f90-cmt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>!
+!  regular comments used in Fortran 90+
+!</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Matt Thompson</p>
+    
+    <h3 id="face">face<a href="#face"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-large.html"><button type="button" class="btn btn-outline-primary btn-sm">large</button></a>
+        </p>
+    <pre><code> .--(0)    (0)--.
+(       \/       )
+(     \____/     )
+(                )
+( face face face )
+( face face face )
+ &#39;--------------&#39;</code></pre>
+    <p>Artwork and <i>boxes</i> config by Dmitry Bolshakov</p>
+    
+    <h3 id="fence">fence<a href="#fence"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code> /\ /\ /\ /\ /\
+|__|__|__|__|__|
+|  |  |  |  |  |
+|  | fence  |  |
+|__|__|__|__|__|
+|__|__|__|__|__|</code></pre>
+    <p>Artwork and <i>boxes</i> config by Dmitry Bolshakov</p>
+    
+    <h3 id="girl">girl<a href="#girl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-sign.html"><button type="button" class="btn btn-outline-primary btn-sm">sign</button></a>
+        </p>
+    <pre><code>                .-&quot;&quot;&quot;-.
+               / .===. \
+              / / a a \ \
+             / ( \___/ ) \
+  ________ooo\__\_____/__/___________
+ /                                   \
+|   joan stark   spunk1111@juno.com   |
+|     VISIT MY ASCII ART GALLERY:     |
+| http://www.geocities.com/SoHo/7373/ |
+ \________________________ooo________/
+             /           \
+            /:.:.:.:.:.:.:\
+                |  |  |
+                \==|==/  jgs
+                /-&#39;Y&#39;-\
+               (__/ \__)</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="headline">headline<a href="#headline"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        </p>
+    <pre><code>/*************/
+/*           */
+/*           */
+/*************/</code></pre>
+    <p>Artwork and <i>boxes</i> config by Thomas Jensen</p>
+    
+    <h3 id="html">html<a href="#html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>&lt;!-- - - - - - - - - - - --&gt;
+&lt;!--                     --&gt;
+&lt;!--                     --&gt;
+&lt;!--                     --&gt;
+&lt;!-- - - - - - - - - - - --&gt;</code></pre>
+    <p>Artwork is public domain</p>
+    
+    <h3 id="html-cmt">html-cmt<a href="#html-cmt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>&lt;!--                                     --&gt;
+&lt;!-- regular comments used in HTML files --&gt;
+&lt;!--                                     --&gt;</code></pre>
+    <p>Artwork is public domain</p>
+    
+    <h3 id="ian_jones">ian_jones<a href="#ian_jones"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-sign.html"><button type="button" class="btn btn-outline-primary btn-sm">sign</button></a>
+        </p>
+    <pre><code>                            \\\///
+                           / _  _ \
+                         (| (.)(.) |)
+.----------------------.OOOo--()--oOOO.-----------------.
+|                                                       |
+| Your Text Here Your Text Here Your Text Here Your Tex |
+| Your Text Here Your Text Here Your Text Here Your Tex |
+| Your Text Here Your Text Here Your Text Here Your Tex |
+| Your Text Here Your Text Here Your Text Here Your Tex |
+|                                                       |
+&#39;--------------------.oooO------------------------------&#39;
+                      (   )   Oooo.
+                       \ (    (   )
+                        \_)    ) /
+                              (_/</code></pre>
+    <p>Artwork by (unknown artist), coded for <i>boxes</i> by Karl E. Jorgensen</p>
+    
+    <h3 id="important">important<a href="#important"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code> /\ !!!!!!!!!!! /\
+|! |           |! |
+|! | important |! |
+|__|           |__|
+(__)!!!!!!!!!!!(__)</code></pre>
+    <p>Artwork and <i>boxes</i> config by Dmitry Bolshakov</p>
+    
+    <h3 id="important2">important2<a href="#important2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code> /\  /\ !!!!!!!!!!!! /\  /\
+|! ||! |!!!!!!!!!!!!|! ||! |
+|! ||! |            |! ||! |
+|! ||! | important2 |! ||! |
+|! ||! |            |! ||! |
+|__||__|!!!!!!!!!!!!|__||__|
+(__)(__)!!!!!!!!!!!!(__)(__)</code></pre>
+    <p>Artwork and <i>boxes</i> config by Dmitry Bolshakov</p>
+    
+    <h3 id="important3">important3<a href="#important3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code> /\  /\  /\ !!!!!!!!!!!! /\  /\  /\
+|! ||! ||! |!!!!!!!!!!!!|! ||! ||! |
+|! ||! ||! |!!!!!!!!!!!!|! ||! ||! |
+|! ||! ||! |            |! ||! ||! |
+|! ||! ||! | important3 |! ||! ||! |
+|! ||! ||! |            |! ||! ||! |
+|! ||! ||! |!!!!!!!!!!!!|! ||! ||! |
+|__||__||__|!!!!!!!!!!!!|__||__||__|
+(__)(__)(__)!!!!!!!!!!!!(__)(__)(__)</code></pre>
+    <p>Artwork and <i>boxes</i> config by Dmitry Bolshakov</p>
+    
+    <h3 id="info">info<a href="#info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-color.html"><button type="button" class="btn btn-outline-primary btn-sm">color</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre class="bxBgToggle" id="info-sample"><code><span style="color: #0000ee">▄▄</span><span style="color: #e5e5e5; background-color: #0000ee"> INFO </span><span style="color: #0000ee">▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄</span>
+<span style="color: #0000ee">█</span>                                               <span style="color: #0000ee">█</span>
+<span style="color: #0000ee">█</span>  This is an informational message.            <span style="color: #0000ee">█</span>
+<span style="color: #0000ee">█</span>  Don't worry about it.                        <span style="color: #0000ee">█</span>
+<span style="color: #0000ee">█</span>                                               <span style="color: #0000ee">█</span>
+<span style="color: #0000ee">▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀</span></code><div
+            onmouseover="this.parentNode.classList.add('bxDark');" 
+            onmouseout="this.parentNode.classList.remove('bxDark');"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M279.1 512c78.8 0 151-35.8 198.8-94.8 28.3-34.8-2.6-85.7-46.2-77.4-82.3 15.7-158.3-47.3-158.3-130.8 0-48.4 26.1-92.3 67.4-115.8 38.7-22.1 29-80.8-15-88.9A257.9 257.9 0 0 0 279.1 0c-141.4 0-256 114.6-256 256 0 141.4 114.6 256 256 256zm0-464c13 0 25.7 1.2 38 3.5-54.8 31.2-91.7 90-91.7 157.6 0 113.8 103.6 199.2 215.3 177.9C402.6 434 344.4 464 279.1 464c-114.9 0-208-93.1-208-208s93.1-208 208-208z"/></svg></div></pre><p>Artwork and <i>boxes</i> config by Thomas Jensen</p>
+    
+    <h3 id="java-cmt">java-cmt<a href="#java-cmt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>//
+// regular Java
+// comments
+//</code></pre>
+    <p>Artwork is public domain</p>
+    
+    <h3 id="javadoc">javadoc<a href="#javadoc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>/**
+ *  Javadoc Comments
+ *
+ */</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Ted Berg</p>
+    
+    <h3 id="jstone">jstone<a href="#jstone"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>/*----------------+
+ | toast is yummy |
+ +----------------*/</code></pre>
+    <p>Artwork by schallee_@_darkmist.net, coded for <i>boxes</i> by Ed Schaller</p>
+    
+    <h3 id="lisp-cmt">lisp-cmt<a href="#lisp-cmt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>;;
+;;  regular comments used in Lisp
+;;</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Vijay Lakshminarayanan</p>
+    
+    <h3 id="mouse">mouse<a href="#mouse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-sign.html"><button type="button" class="btn btn-outline-primary btn-sm">sign</button></a>
+        </p>
+    <pre><code>            .--,       .--,
+           ( (  \.---./  ) )
+            &#39;.__/o   o\__.&#39;
+               {=  ^  =}
+                &gt;  -  &lt;
+ ___________.&quot;&quot;`-------`&quot;&quot;.____________
+/                                      \
+\ o          joan stark        O       /
+/          spunk1111@juno.com          \
+\          ascii art gallery           /
+/ http://www.geocities.com/SoHo/7373/  \
+\______________________________________/
+              ___)( )(___  jgs
+             (((__) (__)))</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="normand">normand<a href="#normand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-large.html"><button type="button" class="btn btn-outline-primary btn-sm">large</button></a>
+        </p>
+    <pre><code>        __,:,__               __,:,__               __,:,__    Normand    __,:,__
+     ,ad88P`Y88ba,         ,ad88P`Y88ba,         ,ad88P`Y88ba,         ,ad88P`Y88ba,
+   ad88888&#39; `88888ba     ad88888&#39; `88888ba     ad88888&#39; `88888ba     ad88888&#39; `88888ba
+ ,d88888P&#39;   `Y88888b, ,d88888P&#39;   `Y88888b, ,d88888P&#39;   `Y88888b, ,d88888P&#39;   `Y88888b,
+,d888P&quot;&#39;       `&quot;Y888b,d888P&quot;&#39;       `&quot;Y888b,d888P&quot;&#39;       `&quot;Y888b,d888P&quot;&#39;       `&quot;Y888b,
+:([&quot;               ``&quot;:&quot;&#39;&#39;               ``&quot;:&quot;&#39;&#39;               ``&quot;:&quot;&#39;&#39;               &quot;]):
+`Y88ba,                                                                           ,ad88P&#39;
+ `88888ba                                                                       ad88888&#39;
+  `Y88888b,                                                                   ,d88888P&#39;
+    `&quot;Y888b,    Thank you for visiting https://asciiart.website/             ,d888P&quot;&#39;
+        &quot;]):    This ASCII pic can be found at                               :([&quot;
+     ,ad88P&#39;    https://asciiart.website/?art=art%20and%20design/borders     `Y88ba,
+   ad88888&#39;                                                                   `88888ba
+ ,d88888P&#39;                                                                     `Y88888b,
+,d888P&quot;&#39;                                                                         `&quot;Y888b,
+:([&quot;               __,:,__               __,:,__               __,:,__               &quot;]):
+`Y88ba,         ,ad88P`Y88ba,         ,ad88P`Y88ba,         ,ad88P`Y88ba,         ,ad88P&#39;
+ `88888ba     ad88888&#39; `88888ba     ad88888&#39; `88888ba     ad88888&#39; `88888ba     ad88888&#39;
+  `Y88888b, ,d88888P&#39;   `Y88888b, ,d88888P&#39;   `Y88888b, ,d88888P&#39;   `Y88888b, ,d88888P&#39;
+    `&quot;Y888b,d888P&quot;&#39;       `&quot;Y888b,d888P&quot;&#39;       `&quot;Y888b,d888P&quot;&#39;       `&quot;Y888b,d888P&quot;&#39;
+        ``&quot;:&quot;&#39;&#39;               ``&quot;:&quot;&#39;&#39;               ``&quot;:&quot;&#39;&#39;   Veilleux    ``&quot;:&quot;&#39;&#39;</code></pre>
+    <p>Artwork by Normand Veilleux</p>
+    
+    <h3 id="nuke">nuke<a href="#nuke"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code>                        _ ._  _ , _ ._
+                      (_ &#39; ( `  )_  .__)
+                    ( (  (    )   `)  ) _)
+                   (__ (_   (_ . _) _) ,__)
+                       `~~`\ &#39; . /`~~`
+                       ,::: ;   ; :::,
+                      &#39;:::::::::::::::&#39;
+ _________________jgs______/_ __ \________________________
+|                                                         |
+|                 BAD, BAD, BUG HERE :-)                  |
+|_________________________________________________________|</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="parchment">parchment<a href="#parchment"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-scroll.html"><button type="button" class="btn btn-outline-primary btn-sm">scroll</button></a>
+        </p>
+    <pre><code> ________________________
+/\                       \
+\_|                       |
+  |                       |
+  |                       |
+  |   ____________________|_
+   \_/_____________________/</code></pre>
+    <p>Artwork by (unknown artist)</p>
+    
+    <h3 id="peek">peek<a href="#peek"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        </p>
+    <pre><code>/*       _\|/_
+         (o o)
+ +----oOO-{_}-OOo---------------------+
+ |                                    |
+ | C function headers?                |
+ |                                    |
+ |                                    |
+ +-----------------------------------*/</code></pre>
+    <p>Artwork by (unknown artist)</p>
+    
+    <h3 id="pound-cmt">pound-cmt<a href="#pound-cmt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>#
+#  regular comments used in Perl, Shell scripts, etc.
+#</code></pre>
+    <p>Artwork is public domain</p>
+    
+    <h3 id="right">right<a href="#right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>This can be used for marking code changes with your initials
+(I don&#39;t like it, but some people work this way):
+for (j=0; j&lt;blank_count; ++j)        /* XX */
+    fprintf (opt.outfile, &quot;\n&quot;);     /* XX */
+blank_count = 0;                     /* XX */</code></pre>
+    <p>Artwork and <i>boxes</i> config by Thomas Jensen</p>
+    
+    <h3 id="santa">santa<a href="#santa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-sign.html"><button type="button" class="btn btn-outline-primary btn-sm">sign</button></a>
+        </p>
+    <pre><code>                 .-&quot;``&quot;-.
+                /______; \
+               {_______}\|
+               (/ a a \)(_)
+               (.-.).-.)
+  _______ooo__(    ^    )____________
+ /             &#39;-.___.-&#39;             \
+|             joan stark              |
+|         spunk1111@juno.com          |
+|         ASCII ART GALLERY:          |
+|      http://www.ascii-art.com       |
+ \________________________ooo________/
+               |_  |  _|  jgs
+               \___|___/
+               {___|___}
+                |_ | _|
+                /-&#39;Y&#39;-\
+               (__/ \__)</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="scroll">scroll<a href="#scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-large.html"><button type="button" class="btn btn-outline-primary btn-sm">large</button></a>
+        <a href="/v2.3.0/box-designs-scroll.html"><button type="button" class="btn btn-outline-primary btn-sm">scroll</button></a>
+        </p>
+    <pre><code> / ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \
+|  /~~\                                           /~~\  |
+|\ \   |                                         |   / /|
+| \   /|                                         |\   / |
+|  ~~  |                                         |  ~~  |
+|      |                                         |      |
+|      |                                         |      |
+|      |                                         |      |
+|      |                                         |      |
+|      |                                         |      |
+ \     |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|     /
+  \   /                                           \   /
+   ~~~                                             ~~~</code></pre>
+    <p>Artwork by (unknown artist)</p>
+    
+    <h3 id="scroll-akn">scroll-akn<a href="#scroll-akn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-scroll.html"><button type="button" class="btn btn-outline-primary btn-sm">scroll</button></a>
+        </p>
+    <pre><code> /&quot;\/\_..---------------------------------._/\/&quot;\
+(     _|| ||| Scroll-AKN...          ||| ||_     )
+ \_/\/ || ------------------------------ || \/\_/
+       || Original Design by &quot;akn&quot; (???) ||
+       || Implemented in boxes by:       ||
+       ||     -~{ Tristano Ajmone }~-    ||
+ /&quot;\/\_|----------------------------------|_/\/&quot;\
+(     _|                                  |_     )
+ \_/\/ `----------------------------------&#39; \/\_/</code></pre>
+    <p>Artwork by akn, coded for <i>boxes</i> by Tristano Ajmone</p>
+    
+    <h3 id="shell">shell<a href="#shell"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>#############
+#           #
+#           #
+#############</code></pre>
+    <p>Artwork is public domain</p>
+    
+    <h3 id="simple">simple<a href="#simple"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>*************
+*           *
+*           *
+*************</code></pre>
+    <p>Artwork is public domain</p>
+    
+    <h3 id="spring">spring<a href="#spring"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        </p>
+    <pre><code>      ,
+  /\^/`\
+ | \/   |
+ | |    |               SPRING IS IN THE AIR!              jgs
+ \ \    /                                                _ _
+  &#39;\\//&#39;                                               _{ &#39; }_
+    ||                      joan stark                { `.!.` }
+    ||                  &lt;spunk1111@juno.com&gt;          &#39;,_/Y\_,&#39;
+    ||  ,                                               {_,_}
+|\  ||  |\                                                |
+| | ||  | |              ASCII ART GALLERY:             (\|  /)
+| | || / /      &lt;http://www.geocities.com/SoHo/7373/&gt;    \| //
+ \ \||/ /                                                 |//
+  `\\//`   \\   \./    \\ /     //    \\./   \\   //   \\ |/ /
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="stark1">stark1<a href="#stark1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code>=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+^   -,                ,-. .          .    ^
+^    | ,-. ,-. ;-.    `-, |- ,-. ;-. | &#39;  ^
+^  , | | | ,-| | |    , ; |  ,-| |   |`.  ^
+^  `-&#39; `-&#39; `-^ &#39; ^    `-&#39; `- `-^ &#39;   ` `  ^
+^          Spunk1111@juno.com             ^
+^      ,-.             .   . . . .        ^
+^      `-, ;-. . . ;-. | &#39; | | | |        ^
+^      , ; | | | | | | |`. | | | |        ^
+^      `-&#39; |-&#39; `-^ &#39; ^ ` ` ` ` ` `        ^
+^          `                              ^
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= jgs</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="stark2">stark2<a href="#stark2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code>.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@-:.
+.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@-:.
+.:-@    ____        (_,      _,  _,  _,  _,                        @-:.
+.:-@   (-(__`,_    ,_ |_,     |   |   |   |    Spunk1111@juno.com  @-:.
+.:-@    ____)|_)|_|| || \__, _|_ _|_ _|_ _|_                       @-:.
+.:-@   (    _|       |_,                                           @-:.
+.:-@       (            ____,         ____        (_,              @-:.
+.:-@                   (-| _  _ ,_   (-(__`_|_ _ ,_ |_,            @-:.
+.:-@                  _  |(_)(_|| |   ____) | (_||  | \_,          @-:.
+.:-@                 (__/            (      |_,                    @-:.
+.:-@                                                               @-:.
+.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@-:. jgs
+.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@.:-@-:.</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="stone">stone<a href="#stone"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>+-------------+
+|    stone    |
++-------------+</code></pre>
+    <p>Artwork and <i>boxes</i> config by Fredrik Steen</p>
+    
+    <h3 id="sunset">sunset<a href="#sunset"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code>                          .
+                     .    |    .
+                      \   |   /
+                  &#39;.   \  &#39;  /   .&#39;
+                    &#39;. .&#39;```&#39;. .&#39;
+&lt;&gt;.............:::::::`.......`:::::::................&lt;&gt;
+&lt;&gt;:   ., .., . . .  . .  .  .  .  .  . joan stark    :&lt;&gt;
+&lt;&gt;:  :,  :.&#39; : : :`.: :.&#39;  `: `: `: `:  spunk1111    :&lt;&gt;
+&lt;&gt;:  ,.; :   `.&#39; : `: : `.  :  :  :  :   @juno.com   :&lt;&gt;
+&lt;&gt;:..................................................:&lt;&gt; jgs
+&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+    
+    <h3 id="tex-box">tex-box<a href="#tex-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>%=============%
+% TeX is love %
+% Tex is life %
+%=============%</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Nic H</p>
+    
+    <h3 id="tex-cmt">tex-cmt<a href="#tex-cmt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>%
+% regular TeX/LaTeX
+% comments
+%</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Nic H</p>
+    
+    <h3 id="tux">tux<a href="#tux"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-speech.html"><button type="button" class="btn btn-outline-primary btn-sm">speech</button></a>
+        </p>
+    <pre><code> _________________
+/                 \
+|  Tux talks too  |
+\                 /
+ -----------------
+    \
+     \
+         .--.
+        |o_o |
+        |:_/ |
+       //   \ \
+      (|     | )
+     /&#39;\_   _/`\
+     \___)=(___/</code></pre>
+    <p>Artwork by Tony Monroe, coded for <i>boxes</i> by David Yang</p>
+    
+    <h3 id="twisted">twisted<a href="#twisted"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-large.html"><button type="button" class="btn btn-outline-primary btn-sm">large</button></a>
+        </p>
+    <pre><code>._____. ._____. .________________________________________. ._____. ._____.
+| ._. | | ._. | | .____________________________________. | | ._. | | ._. |
+| !_| |_|_|_! | | !____________________________________! | | !_| |_|_|_! |
+!___| |_______! !________________________________________! !___| |_______!
+.___|_|_| |____________________________________________________|_|_| |___.
+| ._____| |________________________________________________________| |_. |
+| !_! | | |                                                    | | ! !_! |
+!_____! | | * * * * * * * * * * * TWISTED * * * * * * * * * *  | | !_____!
+._____. | | -----------------------|-------------------------  | | ._____.
+| ._. | | | Just another cool ascii frame, brought to you by:  | | | ._. |
+| | | | | |                                                    | | | | | |
+| | | | | |              -~{ Tristano Ajmone }~-               | | | | | |
+| !_! | | | -----------------------|-------------------------  | | ! !_! |
+!_____! | | Derived from an ascii frame originally created by: | | !_____!
+._____. | |                                                    | | ._____.
+| ._. | | |               -~{ Michael Naylor }~                | | | ._. |
+| !_| |_|_|____________________________________________________| |_|_|_! |
+!___| |________________________________________________________| |_______!
+.___|_|_| |___. .________________________________________. .___|_|_| |___.
+| ._____| |_. | | .____________________________________. | | ._____| |_. |
+| !_! | | !_! | | !____________________________________! | | !_! | | !_! |
+!_____! !_____! !________________________________________! !_____! !_____!</code></pre>
+    <p>Artwork by Michael Naylor, coded for <i>boxes</i> by Tristano Ajmone</p>
+    
+    <h3 id="underline">underline<a href="#underline"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>// Bla, foo bar!
+// ~~~~~~~~~~~~~</code></pre>
+    <p>Artwork and <i>boxes</i> config by Elmar Loos</p>
+    
+    <h3 id="unicornsay">unicornsay<a href="#unicornsay"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-speech.html"><button type="button" class="btn btn-outline-primary btn-sm">speech</button></a>
+        </p>
+    <pre><code> _________________________________
+/                                 \
+|     E L E C T R O L Y T E S     |
+\___________________________  __&#39;\
+                            |/   \\
+                             \    \\  .
+                                  |\\/|
+                                  / &quot; &#39;\
+                                  . .   .
+                                 /    ) |
+                                &#39;  _.&#39;  |
+                                &#39;-&#39;/    \</code></pre>
+    <p>Artwork by (unknown artist), coded for <i>boxes</i> by Mike Meyer</p>
+    
+    <h3 id="unicornthink">unicornthink<a href="#unicornthink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-speech.html"><button type="button" class="btn btn-outline-primary btn-sm">speech</button></a>
+        </p>
+    <pre><code> _________________________________
+/                                 \
+|     E L E C T R O L Y T E S     |
+\______________________________ &#39;\
+                           ()    \\
+                             O    \\  .
+                               o  |\\/|
+                                  / &quot; &#39;\
+                                  . .   .
+                                 /    ) |
+                                &#39;  _.&#39;  |
+                                &#39;-&#39;/    \</code></pre>
+    <p>Artwork by (unknown artist), coded for <i>boxes</i> by Mike Meyer</p>
+    
+    <h3 id="vim-box">vim-box<a href="#vim-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+&quot; Header seperator on your vim config&#39;s file (.vimrc) &quot;
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</code></pre>
+    <p>Artwork is public domain, coded for <i>boxes</i> by Ricky Anderson</p>
+    
+    <h3 id="vim-cmt">vim-cmt<a href="#vim-cmt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-comment.html"><button type="button" class="btn btn-outline-primary btn-sm">comment</button></a>
+        <a href="/v2.3.0/box-designs-programming.html"><button type="button" class="btn btn-outline-primary btn-sm">programming</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        </p>
+    <pre><code>&quot;
+&quot; comments used in the vim editor&#39;s config file (.vimrc)
+&quot;</code></pre>
+    <p>Artwork by Bram Moolenaar</p>
+    
+    <h3 id="warning">warning<a href="#warning"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-color.html"><button type="button" class="btn btn-outline-primary btn-sm">color</button></a>
+        <a href="/v2.3.0/box-designs-simple.html"><button type="button" class="btn btn-outline-primary btn-sm">simple</button></a>
+        <a href="/v2.3.0/box-designs-unicode.html"><button type="button" class="btn btn-outline-primary btn-sm">unicode</button></a>
+        </p>
+    <pre class="bxBgToggle" id="warning-sample"><code><span style="color: #cdcd00">▄▄</span><span style="color: #000000; background-color: #cdcd00"> WARNING </span><span style="color: #cdcd00">▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄</span>
+<span style="color: #cdcd00">█</span>                                               <span style="color: #cdcd00">█</span>
+<span style="color: #cdcd00">█</span>  Sub-zero temperatures expected.              <span style="color: #cdcd00">█</span>
+<span style="color: #cdcd00">█</span>  Please drive carefully.                      <span style="color: #cdcd00">█</span>
+<span style="color: #cdcd00">█</span>                                               <span style="color: #cdcd00">█</span>
+<span style="color: #cdcd00">▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀</span></code><div
+            onmouseover="this.parentNode.classList.add('bxDark');" 
+            onmouseout="this.parentNode.classList.remove('bxDark');"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M279.1 512c78.8 0 151-35.8 198.8-94.8 28.3-34.8-2.6-85.7-46.2-77.4-82.3 15.7-158.3-47.3-158.3-130.8 0-48.4 26.1-92.3 67.4-115.8 38.7-22.1 29-80.8-15-88.9A257.9 257.9 0 0 0 279.1 0c-141.4 0-256 114.6-256 256 0 141.4 114.6 256 256 256zm0-464c13 0 25.7 1.2 38 3.5-54.8 31.2-91.7 90-91.7 157.6 0 113.8 103.6 199.2 215.3 177.9C402.6 434 344.4 464 279.1 464c-114.9 0-208-93.1-208-208s93.1-208 208-208z"/></svg></div></pre><p>Artwork and <i>boxes</i> config by Thomas Jensen</p>
+    
+    <h3 id="weave">weave<a href="#weave"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        <a href="/v2.3.0/box-designs-large.html"><button type="button" class="btn btn-outline-primary btn-sm">large</button></a>
+        </p>
+    <pre><code>          _       _       _       _       _       _       _       _       _       _       _
+ .-&quot;-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-,_,-&#39;_`-,.
+(  ,-&#39;_,-&lt;.&gt;-&#39;_,-&lt;.&gt;-&#39;_,-&lt;.&gt;-&#39;_,-&lt;.&gt;-&#39;_,-&lt;.&gt;-&#39;_,-&lt;.&gt;-&#39;_,-&lt;.&gt;-&#39;_,-&lt;.&gt;-&#39;_,-&lt;.&gt;-&#39;_,-&lt;.&gt;-&#39;_,-~-} ;.
+ \ \.&#39;_&gt;-._`-&lt;_&gt;-._`-&lt;_&gt;-._`-&lt;_&gt;-._`-&lt;_&gt;-._`-&lt;_&gt;-._`-&lt;_&gt;-._`-&lt;_&gt;-._`-&lt;_&gt;-._`-&lt;_&gt;-._`-._~--. \ .
+ /\ \/ ,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._`./ \ \ .
+dc(`/ /                                                                                `/ /.) ) .
+ \ \ / \                                                                               / / \ / .
+  \ \&#39;) )                                                                             ( (,\ \ .
+ / \ / /     Thank you for visiting https://asciiart.website/                          \ / \ \ .
+( (`/ /      This ASCII pic can be found at                                             / /.) ) .
+ \ \ / \     https://asciiart.website/index.php?art=art%20and%20design/borders         / / \ / .
+  \ \&#39;) )                                                                             ( (,\ \ .
+ / \ / /                                                                               \ / \ \ .
+( (`/ /                                                                                 / /.) ) .
+ \ \ / \       _       _       _       _       _       _       _       _       _       / / \ /.
+  \ `.\ `-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_`-._,-&#39;_/,\ \ .
+ ( `. `,~-._`-&lt;,&gt;-._`-&lt;,&gt;-._`-&lt;,&gt;-._`-&lt;,&gt;-._`-&lt;,&gt;-._`-&lt;,&gt;-._`-&lt;,&gt;-._`-&lt;,&gt;-._`-&lt;,&gt;-._`-=,&#39; ,\ \ .
+  `. `&#39;_,-&lt;_&gt;-&#39;_,-&lt;_&gt;-&#39;_,-&lt;_&gt;-&#39;_,-&lt;_&gt;-&#39;_,-&lt;_&gt;-&#39;_,-&lt;_&gt;-&#39;_,-&lt;_&gt;-&#39;_,-&lt;_&gt;-&#39;_,-&lt;_&gt;-&#39;_,-&lt;_&gt;-&#39;_,&quot;-&#39; ; .
+    `-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-._,-&#39; `-.-&#39; .</code></pre>
+    <p>Artwork by dc</p>
+    
+    <h3 id="whirly">whirly<a href="#whirly"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code> .+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.
+(                                                             )
+ )                                                           (
+(                                                             )
+ &quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;+.+&quot;</code></pre>
+    <p>Artwork by (unknown artist)</p>
+    
+    <h3 id="xes">xes<a href="#xes"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"/></svg></a></h3>
+<p><a href="/v2.3.0/box-designs-artwork.html"><button type="button" class="btn btn-outline-primary btn-sm">artwork</button></a>
+        <a href="/v2.3.0/box-designs-box.html"><button type="button" class="btn btn-outline-primary btn-sm">box</button></a>
+        </p>
+    <pre><code>        &lt;\/&gt;&lt;\/&gt;&lt;\/&gt;
+    &lt;\/&gt;&lt;/\&gt;&lt;/\&gt;&lt;/\&gt;&lt;\/&gt;
+    &lt;/\&gt;            &lt;/\&gt;
+ &lt;\/&gt;                  &lt;\/&gt;
+ &lt;/\&gt;                  &lt;/\&gt;
+&lt;\/&gt;                    &lt;\/&gt;
+&lt;/\&gt;                    &lt;/\&gt;
+ &lt;\/&gt;                  &lt;\/&gt;
+ &lt;/\&gt;                  &lt;/\&gt;
+    &lt;\/&gt;            &lt;\/&gt;
+    &lt;/\&gt;&lt;\/&gt;&lt;\/&gt;&lt;\/&gt;&lt;/\&gt;
+jgs     &lt;/\&gt;&lt;/\&gt;&lt;/\&gt;</code></pre>
+    <p>Artwork by Joan G. Stark</p>
+
+<small class="text-muted">Where the coder of the <i>boxes</i> config is not explicitly listed
+        it is "Thomas Jensen".</small>
+
+    <div class="card card-narrow bx-page-metadata mt-4">
+        <div class="card-body">
+            <p class="card-text text-muted">
+                <span class="stats-part">Page created: April  6, 1999</span>
+                <span class="stats-part">Last updated: February 17, 2024</span>
+            </p>
+        </div>
+    </div>
+    </div></div>
+</div>
+</div>
+</main>
+
+<footer class="footer footer-moving bg-light"
+    ><div class="container-fluid"><div class="row">
+    <div class="col text-center text-muted">
+        <div class="footer-part"><b>boxes</b> &copy;&nbsp;1999-2024 <a href="https://thomasjensen.com"
+            target="_blank"><span class="d-none d-sm-inline">Thomas&nbsp;Jensen</span><span class="d-inline d-sm-none">T.J.</span></a><span
+                class="d-none d-sm-inline"> and the</span><span class="d-inline d-sm-none">,</span>
+            <i>boxes</i> <span class="d-none d-sm-inline">contributors</span><span class="d-inline d-sm-none">contribs</span><span
+                class="footer-sep">●</span></div><div class="footer-part"><a
+                    href="/website-attribution.html">website license attribution</a></div>
+    </div></div></div
+></footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" crossorigin="anonymous"
+        integrity="sha384-Qg00WFl9r0Xr6rUqNLv1ffTSSKEFFCDCKVyHZ+sVt8KuvG99nWw5RNvbhuKgif9z"></script>
+<script src="https://unpkg.com/@popperjs/core@2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"></script>
+</body>
+</html>
