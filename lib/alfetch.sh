@@ -197,7 +197,7 @@ function default_header() {
 }
 
 function main() {
-#default_header
+#default_header p
 default_header
 fetch ${_char}" "" ""▢ motd-border >>" "boxes ($(border))" "${_char}"
 fetch ${_char}" "" "" os >>" "$(os) ($(arch))" "${_char}"
