@@ -5,6 +5,7 @@
 # COMMENTS ONLY AVAILABLE IN BAHASA (INDONESIAN LANGUAGE)
 
 # IMPORT 
+source ~/@/@t.me/luisadha/module/alrc-termux/lib/ext_command_helper.sh
 source <(~/.local/bin/alrc env)> /dev/null 2>&1; 
 #     \ ini akan mengimpor fungsi
 #      \ brandomusic(),
@@ -22,7 +23,7 @@ source <(~/.local/bin/alrc env)> /dev/null 2>&1;
 # VARIABLE
 export PATH="$PATH:~/.cargo/bin"
 #mediaPlayerProccess=$(termux-media-player info)
-getRandom=$(lolcrab_gradient_shuf)
+getRandom=$(al_shuf_lolcrab_gradient)
 
 # CHECK DEPENDENCIES
 check_dependency lolcrab
