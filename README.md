@@ -18,11 +18,9 @@ INSTALLATION
 ### REQUIREMENTS
 - Install the application with the [Termux App](https://f-droid.org/packages/com.termux/),
 [Termux API](https://f-droid.org/packages/com.termux.api/), the [Termux Widget](https://f-droid.org/packages/com.termux.widget/) and the Optional Termux Float
-- Enough basic tools like grep, sed, gawk, bc, cut and more.
+- Enough basic tools like git, curl, grep, sed, gawk, bc, cut and more.
 - Ran \`termux-setup-storage' first and Uncomment or write `allow-external-apps = true` in ~/.termux/termux.properties.
 - This requires the environment variable export PATH="$PATH:/system/bin " set to be used for the \`input' and \`am' commands.
-- Built-in music player that is strong enough to be able to play in the termux environment or Dialog Music Player app's in F-Droid market, mine builtin Music apps com.miui.player (v6.4.20i).
-- Install third party apps, Choose one for the image media viewer (Zarchiver image viewer or [Swpieview](https://f-droid.org/packages/org.voidptr.swpieview/) on F-DROID) If your default gallery application is not strong enough to run on the Termux application.
 
 
 A. Termux
