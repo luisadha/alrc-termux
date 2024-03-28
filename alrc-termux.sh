@@ -15,7 +15,7 @@
 # Do not call me when any sh there, source only!
 
  
- # set -xv
+#  set -xv
 
 
 export ALRC_VERSION="4.3.2"
@@ -35,7 +35,7 @@ export ALRC_SCRIPT="$ALRC_HOME/$ALRC_SOURCE"
 
 #chmod +x $ALRC_HOME/lib/*
 
-source $ALRC_HOME/lib/ext_command_helper.sh
+# source $ALRC_HOME/lib/ext_command_helper.sh
 source $ALRC_HOME/lib/plugin_handler.sh
 source $ALRC_HOME/lib/check_dependency.sh
 
@@ -233,11 +233,17 @@ if [ $? -eq 0 ]; then
 #Welcome to: ${my_terminal:-"Termux "}"
 
 if [ "$ALRC_USE_ALFETCH" == "true" ]; then
+setterm --cursor off
+setterm --linewrap off
+echo -ne '\n'
 source "$ALRC_HOME/lib/alfetch.sh"
 
  
 
 else
+    [[ $ALRC_MOTD_USE_BOXES == random && $ALRC_MOTD_USE_BOXES == $ALRC_MOTD_USE_BOXES ]] &&
+echo -e "Plugin boxes tidak benar-benar aktif, karena anda belum menyetel variable \$ALRC_USE_ALFETCH Lanjutkan menggunakan motd bawaan?" && read REPLY
+
 echo -e "$(printf %"$COLUMNS"s |tr " " "-")
 | os >> $(uname -so)$(printf %"$cba"s "$icon" )
 | arch >> $(uname -m)$(printf %"$dcb"s "$icon" )
@@ -402,16 +408,31 @@ source $0 > /dev/null 2>&1 && until false; do sleep 1; done
 al_set_window "successfully script called via source"; 
 
 case "$ALRC_MOTD_USE_BOXES" in
-"")
-al;
-  ;;
+"") al      ;; 
 "random")
- boxes -s ${COLUMNS}x$(al | wc -l) -d $(al_shuf_boxes_design) <(al)
-   
+set +o noclobber
+setterm --cursor off
+setterm --linewrap off
+echo -ne '\n'
+#echo -e "motd mode\n" > $ALRC_HOME/cache/cached_border.dat
+source $ALRC_HOME/lib/ext_command_helper.sh;        al_include_boxes_motd_custom; 
+al | boxes -d $(al_shuf_boxes_design);
+setterm --cursor on
+setterm --linewrap on
+echo -ne '\n'
    ;;
 *)
-boxes -s ${COLUMNS}x$(al | wc -l) -d $ALRC_MOTD_USE_BOXES <(al)
-   ;;
+set +o noclobber
+setterm --cursor off
+setterm --linewrap off
+echo -ne '\n'
+#echo -e "motd mode\n" > $ALRC_HOME/cache/cached_border.dat
+source $ALRC_HOME/lib/ext_command_helper.sh; al_include_boxes_motd_custom; 
+al | boxes -d $ALRC_MOTD_USE_BOXES
+setterm --cursor on
+setterm --linewrap on
+echo -ne '\n'
+      ;;
  esac
 
 
@@ -1012,7 +1033,8 @@ generate_addon_files;
 
  set +o history
 
-
+setterm --cursor on
+setterm --linewrap on
 
 
 
