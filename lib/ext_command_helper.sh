@@ -44,9 +44,16 @@ last_border_used=$(for i in ${BOXES_DESIGN[@]};
     done | fold -s | shuf -n1)
 export last_border_used
   echo "$last_border_used" && echo "$last_border_used" > $ALRC_HOME/cache/cached_border.dat
+
 }
-al_status_boxes_border() {
-if [ $(env | grep 'ALRC_MOTD_USE_BOXES') ]; then
+# SARAN JANGAN PAKAI FITUR CACHE GAK REALTIME OUTPUTNYA
+al_info_boxes_border() {
+if [ "$ALRC_MOTD_USE_BOXES" == "random" ]; then
  cat $ALRC_HOME/cache/cached_border.dat
 fi
+}
+al_fix_term() {
+setterm --cursor on
+setterm --linewrap on
+echo -ne '\n'
 }

@@ -1,18 +1,22 @@
 #! bash alrc-termux.module
 # Alfetch - a CLI Bash script to show system information on Android devices in termux 
-# Version : v0.0.5b
-# Created : 9 November 2023
+# Version : v1.0.0
+# Created : 26 Maret 2024
 # Copyright (c) 2023 Luis Adha
 #set -xv
-version="v0.0.5d"
-ALFETCH_CONF_VCODE='005'
+
 # 0.0.5b
 # ~ Fix bug minor
 # ~ Replace tr to sed
+# 1.0.0
+# ~ Integrate with plugin alrc-termux
+# ~ Compatible with pipe to another program, like boxes
+
 
 unalias fetch &>/dev/null;
-unalias battery &>/dev/null;
-
+#unalias battery &>/dev/null;
+version="v1.0.0"
+ALFETCH_CONF_VCODE='100'
 reset="\033[0m"
 gray="\033[1;90m"
 red="\033[1;31m"
@@ -32,70 +36,72 @@ cl6="${cyan}"
 cl7="${white}"
 cl9="${reset}"
 num="2"
-_s1_char='┌'
-_p2_char='┘'
-_s2_char='└'
-_p1_char='┐'
-_char='|'
-_draw_char='─' #━' # ─ # - # =
-_amazing_char_def="${cl0}  ${cl1} ${cl2} ${cl3} ${cl4} ${cl5} ${reset}"
-_amazing_char=${_amazing_char:-$_amazing_char_def}
-_len_char=$(echo "$_char" | wc -L)
+
+upper_left_corner='┌'; bottom_left_corner='└';
+upper_right_corner_='┐'; bottom_right_corner='┘';
+border='|'; h_line='─' #━' # ─ # - # =
+pretty_bar_const="${cl0}  ${cl1} ${cl2} ${cl3} ${cl4} ${cl5} ${reset}"
+pretty_bar_custom=${pretty_bar_custom:-$pretty_bar_const}
+_len_char=$(echo "$border" | wc -L)
 _cur_cols=$(tput cols) # $(stty size | cut -d" " -f2)
 _min_cols=$(echo "$(tput cols) - $_len_char" | bc)
-_len_amazing_char=$(echo -e "$_amazing_char" | wc -w)
-_final_amazing_char=$(echo -e "$_len_amazing_char * 2" | bc)
-_calc=$(echo -e "$_min_cols - $_final_amazing_char" | bc)
-_fill_blank=$(printf %"$_calc"s | sed "s/ /$_draw_char/g")
+_len_pretty_bar_custom=$(echo -e "$pretty_bar_custom" | wc -w)
+_final_pretty_bar_custom=$(echo -e "$_len_pretty_bar_custom * 2" | bc)
+_calc=$(echo -e "$_min_cols - $_final_pretty_bar_custom" | bc)
+_fill_blank=$(printf %"$_calc"s | sed "s/ /$h_line/g")
 
 
 # example usage
 #printf %"$_min_cols"s && echo "$_char"
 #printf %"$_min_cols"s && echo -e "$_char\rHELLO WORD"
 #printf %"$_min_cols"s && echo -e "$_char\r${_char} HELLO WORD"
-border() {
-al_status_boxes_border;
+
+get_border() {
+local FETCH_BORDER=${ALRC_MOTD_USE_BOXES:-$(echo 'cannot fetch border info')}
+local GET_BORDER=$(al_info_boxes_border 2>/dev/null)
+echo "${GET_BORDER:-$FETCH_BORDER}"
 }
+
 : "
-user() {
+get_user() {
 echo -n "$USER"
 }
-init() {
+get_init() {
 
 }
-gpu() {
+get_gpu() {
 
 } "
-cpu() {
+get_cpu() {
   CPUINFO="$(cat /proc/cpuinfo | grep 'Hardware' | awk '{print $3,$6}')"
   echo -n "$CPUINFO"
 }
 : "
-storage() {
+get_storage() {
 
 } "
-dpkgs() {
+get_dpkgs() {
   echo -n "$(dpkg --get-selections | wc -l) (dpkg)"
 }
 
-ram() {
+get_ram() {
 echo -n "$(free -m | awk '/Mem/{print $3"MiB / "$2}')MiB"
 }
 : "
-model() {
+get_model() {
 
 } 
-android_version() {
+get_android_version() {
 
 }
-sdk() {
+get_sdk() {
 
 } 
 
-baseband() {
+get_baseband() {
 }
 
-abi() {
+get_abi() {
 }"
 
 ismytermux() {
@@ -109,7 +115,7 @@ mytermux_font() {
 mytermux_colorscheme() {
   \cat ~/.config/mytermux/colorscheme/used.log | sed "s/\.colors//g"; }
 
-song() {
+get_song() {
 isPlaying() {
 
  termux-media-player info | awk '{print $2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15}' | grep -v "Position:" | xargs
@@ -123,16 +129,16 @@ elif [ $(isPlaying | awk '{print $1}') == "Paused" ]; then       echo "$(isPlayi
 else                                                             echo "No $(isPlaying)"
 fi; 
 }
-os() {
+get_os() {
   echo -n "$(uname -so)"; }
-term() {
+get_term() {
   echo -n "$TERM"; }
-arch() {
+get_arch() {
  uname -m || dpkg --print-architecture; }
 get_date() {
   command date; 
 }
-battery() {
+get_battery() {
  local batt="$(termux-battery-status 2>&1 | grep -cq 'command not found' || termux-battery-status | head -n 3 | awk '{print $2}' | tail -n 1 | sed 's/,/%/g')";
     local batteries="${batt:-$(echo "unknown")}" > /dev/null 2>&1;
     echo -n "$batteries"; 
@@ -142,15 +148,18 @@ if [ $(termux-battery-status | grep "status" | cut -d":" -f2 | tr "[:upper:]" "[
 echo "Discharging"
 else
 echo "Charging"
-fi; }
-uptimes() {
- uptime --pretty; }
-packages() {
+fi; 
+}
+get_uptime() {
+ uptime --pretty; 
+}
+get_packages() {
  local prefix="$PREFIX/bin" 2> /dev/null;
  local sysroot="$SYSROOT/bin" 2> /dev/null;
  local packages_termux="$(command ls ${prefix} 2> /dev/null | wc -l || command ls ${sysroot} 2> /dev/null | wc -l) (usr/bin) " &> /dev/null;
- echo -n "$packages_termux"; }
-shell() {
+ echo -n "$packages_termux";
+ }
+get_shell() {
 if [ "$(basename "$SHELL")" = "bash" ]; then
   bash_version=$(bash --version | grep 'bash' | head -n1 | awk '{print $4}' | sed 's/\(.*\)(1)-release.*/\1/')
   echo -n "bash $bash_version";
@@ -158,10 +167,12 @@ elif [ "$(basename "$SHELL")" = "zsh" ]; then
   echo "zsh $ZSH_VERSION";
 else
   echo "unknown";
-fi; }
+fi;
+ }
 
-kernel() {
-  uname -r; }
+get_kernel() {
+  uname -r; 
+}
 
 
 
@@ -178,7 +189,7 @@ function header() {
 
 function footer() {
   local pre_char="$1" suf_char="$2" add_char="$3"
-  printf %"${_min_cols}"s | sed "s/ /${add_char}/g" && echo -e "${pre_char}\r${suf_char}"$_fill_blank"${_amazing_char}"
+  printf %"${_min_cols}"s | sed "s/ /${add_char}/g" && echo -e "${pre_char}\r${suf_char}"$_fill_blank"${pretty_bar_custom}"
 }
 
 function use_color() {
@@ -186,7 +197,7 @@ function use_color() {
   lolcrab -c "$arg1"
 }
 
-function move_space() {   
+function padding() {   
   local arg1=$1;                                             
   printf '%*s%s' ${arg1:-0} " "                             
 }
@@ -197,28 +208,29 @@ function default_header() {
 }
 
 function main() {
-#default_header p
+setterm --cursor off
+setterm --linewrap off
+#default_header
 default_header
-fetch ${_char}" "" ""▢ motd-border >>" "boxes ($(border))" "${_char}"
-fetch ${_char}" "" "" os >>" "$(os) ($(arch))" "${_char}"
-fetch ${_char}" "" "" term >>" "$(term)" "${_char}"
-fetch ${_char}" "" "" date >>" "$(get_date)" "${_char}"
-fetch ${_char}" "" "" song >>" "$(song)" "${_char}"
-fetch ${_char}" "" "" kernel >>" "$(kernel)" "${_char}"
-fetch ${_char}" "" "" shell >>" "$(shell)" "${_char}"
-fetch ${_char}" "" "" battery >>" "$(battery)" "${_char}"
-fetch ${_char}" "" "" uptime >>" "$(uptime)" "${_char}"
-fetch ${_char}" "" "" packages >>" "$(packages)" "${_char}"
+fetch "$border"\       "▢ boxes-border >>"" $(get_border)"\                  "$border"
+fetch "$border"\       " os >>"""""""""""" $(get_os) ($(get_arch))"\       "$border"
+fetch "$border"\       " term >>"""""""""" $(get_term)"\               "$border"
+fetch "$border"\       " date >>"""""""""" $(get_date)"\           "$border"
+fetch "$border"\       " song >>"""""""""" $(get_song)"\               "$border"
+fetch "$border"\       " kernel >>"""""""" $(get_kernel)"\             "$border"
+fetch "$border"\       " shell >>"""""""" $(get_shell)"\               "$border"
+fetch "$border"\       " battery >>"""""" $(get_battery)"\             "$border"
+fetch "$border"\       " uptime >>"""""" $(get_uptime)"\               "$border"
+fetch "$border"\       " packages >>"""" $(get_packages)"\             "$border"
 default_header
+setterm --cursor on
+setterm --linewrap on
+echo -ne '\n'
 }
 
 
 
-[ ! -d ~/.config/alfetch ] && mkdir -p ~/.config/alfetch #&& echo berhasi  lbuat
-
-
-
-
+[ ! -d ~/.config/alfetch ] && mkdir -p ~/.config/alfetch
 
 if [ -f ~/.config/alfetch/alfetch.config.conf ]; then #echo found
 
