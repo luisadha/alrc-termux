@@ -1,4 +1,4 @@
-# <| alrc-termux | automations with .bash_profile |>
+# <| alrc-termux |>
 
 NAME
 ----
