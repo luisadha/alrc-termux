@@ -26,7 +26,7 @@ main() {
 # Load drawercli alias
 source /data/data/com.termux/files/home/.drawercli_aliases
 EOF
-if [[ ! -x $(command -v alfetch 2> /dev/null) ]];
+if [[ ! -x $(command -v drawercli 2> /dev/null) ]];
   then
    
   if timeout 10s curl -fSsl "https://raw.githubusercontent.com/luisadha/drawercli/main/drawercli.sh" -o ~/.local/bin/drawercli 2> /dev/null && chmod +x ~/.local/bin/drawercli; 
