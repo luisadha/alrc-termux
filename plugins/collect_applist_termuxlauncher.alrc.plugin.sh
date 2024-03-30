@@ -10,6 +10,8 @@ sed -n '/--list|-l)/,/\;\;/p' /sdcard/termuxlauncher/.apps-launcher | sed '1d;$d
 else echo "Error: Please install Termuxlauncher.apk's available project termuxlauncher at https://github.com/amsitlab/termuxlauncher/releases" ; fi
 
 }
-alrc_plugin_enabled+=(collect_applist)
+plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
+alrc_plugin_enabled+=($plugin_shortname)
 readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
+unset plugin_shortname
 echo "collect_applist() Added."
