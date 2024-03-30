@@ -18,8 +18,10 @@ i_found() {
 echo "1 files Added at ~/.shortcuts."
 return 1
 }
-alrc_plugin_enabled+=(drawercli)
+plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
+alrc_plugin_enabled+=($plugin_shortname)
 readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
+unset plugin_shortname
 main() {
   if ! grep -q 'source /data/data/com.termux/files/home/.drawercli_aliases' ~/.bashrc; then cat >> ~/.bashrc <<EOF
 
