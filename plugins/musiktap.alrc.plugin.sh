@@ -20,9 +20,11 @@ bash --init-file ~/.local/share/alrc-termux/lib/music.sh
 
 EOF
 }
-
-alrc_plugin_enabled+=(musiktap)
+plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
+alrc_plugin_enabled+=($plugin_shortname)
 readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
+
 echo "1 files Added at ~/.shortcuts."
 main;
 unset -f main;
+unset plugin_shortname
