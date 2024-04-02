@@ -1,20 +1,34 @@
 #! bash alrc-termux.module
 
-if [ ! "$ALRC_MOTD_USE_BOXES" == "random" ]; then
-  alias al='setterm --cursor on; al | sort -i | boxes -d $ALRC_MOTD_USE_BOXES; set -o history;'
-else
+: " Alhamdulillah fix"
+: " Perbaikan pada perilaku fungsi al() yang sebelumnya terdapat bug setterm --linewrap gak mau on "
 # Beritahu bahwa plugin ini telah diaktifkan dengan array
 plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
 alrc_plugin_enabled+=($plugin_shortname)
 readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
+    function al_motd() { 
+      unalias al; 
+      source $ALRC/alrc-termux.sh;
+    }; 
+    declare -f -x al_motd
 
-# Periksa kondisi jika plugin ini aktif maka akan memodifikasi fungsi al ke alias al
+if [ ! "$ALRC_MOTD_USE_BOXES" == "random" ]; then
+  
+    alias al='al_opt'
+    export al='al_motd'
+
+else # random
+# Perubahan perilaku pemanggilan al() sebagai default diubah ke $al dan mengembalikan fitur al OPTION lagi yang sebelumnya tidak dapat dikompromi
 if [[ "${alrc_plugin_enabled[@]}" =~ "$plugin_shortname" ]]; then
-
-    alias al='al | sort -i | boxes -d $(al_shuf_boxes_design); set -o history; setterm --cursor on;';
+# mungkin dapat digunakan kembali
+# al_redirect="al not available when you enable boxes plugin, but you can type \$al instead \`al'"
+#al_redirect="Mohon gunakan \$al alih-alih 'al'"
+    alias al='al_opt'
+    export al='al_motd'
+  fi
+  
 fi
-unset plugin_shortname
-fi
+unset -n plugin_shortname
 #ping -c 1 -w 5 google.com &>/dev/null || echo -e "${warn}WARN:${reset}: This action requires an active ${italic}internet${reset} connection.\n"
 # Periksa apakah sudah ada file template border jika tidak maka mendownload automatis
 if [ ! -f $ALRC_HOME/cache/box-designs-templete.txt ]; then

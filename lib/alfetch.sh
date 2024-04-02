@@ -11,7 +11,9 @@
 # 1.0.0
 # ~ Integrate with plugin alrc-termux
 # ~ Compatible with pipe to another program, like boxes
-
+# 1.0.1
+# - remove tr in default_header
+# - fix bug in default_header
 
 unalias fetch &>/dev/null;
 #unalias battery &>/dev/null;
@@ -57,7 +59,7 @@ _fill_blank=$(printf %"$_calc"s | sed "s/ /$h_line/g")
 #printf %"$_min_cols"s && echo -e "$_char\r${_char} HELLO WORD"
 
 get_border() {
-local FETCH_BORDER=${ALRC_MOTD_USE_BOXES:-$(echo 'cannot fetch border info')}
+local FETCH_BORDER=${ALRC_MOTD_USE_BOXES:-$(echo "border by alfetch")}
 local GET_BORDER=$(al_info_boxes_border 2>/dev/null)
 echo "${GET_BORDER:-$FETCH_BORDER}"
 }
@@ -203,16 +205,16 @@ function padding() {
 }
 
 function default_header() {
-
-  printf %"$COLUMNS"s | tr " " "-"
+  printf %"$COLUMNS"s | sed "s/ /$h_line/g"
+echo
 }
 
 function main() {
 setterm --cursor off
 setterm --linewrap off
-#default_header
+
 default_header
-fetch "$border"\       "▢ boxes-border >>"" $(get_border)"\                  "$border"
+fetch "$border"\       " border >>"" $(get_border)"\                  "$border"
 fetch "$border"\       " os >>"""""""""""" $(get_os) ($(get_arch))"\       "$border"
 fetch "$border"\       " term >>"""""""""" $(get_term)"\               "$border"
 fetch "$border"\       " date >>"""""""""" $(get_date)"\           "$border"

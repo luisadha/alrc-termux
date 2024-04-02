@@ -13,4 +13,4 @@ alias al_exclude_brandomusic='source $ALRC_HOME/plugins/.al_disable_brandomusic_
 alias al_exclude_brandomusicx='source $ALRC_HOME/plugins/.al_disable_brandomusic_extended.alrc.plugin.sh'
 
 # Other plugin
-alias al_include_alcat='echo '_alcat' >> ~/.bash_history && source $ALRC_HOME/$ALRC_SOURCE'
+alias al_include_alcat='echo '_alcat' >> ~/.bash_history; source $ALRC_HOME/alrc-termux.sh; '
