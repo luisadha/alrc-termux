@@ -214,7 +214,7 @@ setterm --cursor off
 setterm --linewrap off
 
 default_header
-fetch "$border"\       " border >>"" $(get_border)"\                  "$border"
+fetch "$border"\       "▢ border >>"" $(get_border)"\                  "$border"
 fetch "$border"\       " os >>"""""""""""" $(get_os) ($(get_arch))"\       "$border"
 fetch "$border"\       " term >>"""""""""" $(get_term)"\               "$border"
 fetch "$border"\       " date >>"""""""""" $(get_date)"\           "$border"
