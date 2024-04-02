@@ -1,4 +1,4 @@
-# <| alrc-termux |>
+# <| alrc-termux |> 1 New plugin added called boxes, try it now!
 
 NAME
 ----
