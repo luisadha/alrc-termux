@@ -2,7 +2,7 @@
 # ---BASH EXECUTECHECK--- #
 
 # name:.alrc autoload for initial command at Terminal emulator, but this for Termux.
-# version : alrc v3.2.2 (19/06/2023) UTC+7
+# version : alrc since v3.2.2 (19/06/2023) UTC+7
 # license : GNU/GPLv3
 # copyright (c) 2023 @adharudin14@gmail.com
 
@@ -19,9 +19,9 @@
 #  set -xv
 
 
-export ALRC_VERSION="4.3.2"
+export ALRC_VERSION="4.3.3"
 
-ALRC_UDATE='25/03/24 00:38:11 WIB'
+ALRC_UDATE='02/04/24 13:51 WIB'
 # export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
 
