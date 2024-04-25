@@ -1,5 +1,6 @@
 #! bash alrc-termux.module
 
+set +o noclobber
 
 ## LOLCRAB GRADIENT TEMPLATE
 al_print_lolcrab_gradient_available() {
