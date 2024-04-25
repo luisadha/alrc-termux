@@ -19,11 +19,14 @@
 #  set -xv
 
 
-export ALRC_VERSION="4.3.3"
+export ALRC_VERSION="4.3.3b"
 
-ALRC_UDATE='02/04/24 13:51 WIB'
-# export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
+ALRC_UDATE='26/04/24 00:54 WIB'
+if [ "$ALRC_USE_ENV_PATH" == "true" ]; then
+export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
+else
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
+fi
 
 export ALRC_SOURCE="$(basename ${ALRC_HOME}.sh)"
 
