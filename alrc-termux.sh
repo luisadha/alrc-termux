@@ -22,8 +22,12 @@
 export ALRC_VERSION="4.3.3b"
 
 ALRC_UDATE='26/04/24 00:54 WIB'
+
 if [ "$ALRC_USE_ENV_PATH" == "true" ]; then
 export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
+# kode diatas akan error jika ada file .env dimanapun atau plugin env diaktifkan solusi unset saja ALRC_USE_ENV_PATH dan gunakan ALRC_HOME dengan nilai default
+
+
 else
 export ALRC_HOME="$HOME/.local/share/alrc-termux"
 fi
