@@ -8,7 +8,7 @@ alrc_plugin_enabled+=($plugin_shortname)
 readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
     function al_motd() { 
       unalias al; 
-      source $ALRC/alrc-termux.sh;
+      source $ALRC_HOME/alrc-termux.sh;
     }; 
     declare -f -x al_motd
 
