@@ -36,11 +36,11 @@ alias app_refesh='drawercli -r'
 alias app_wallpaper='drawercli -w'
 EOF
   fi
-    ln -s $(type -p drawercli) ~/.shortcuts/drawercli
+    ln -s $(type -p drawercli) ~/.shortcuts/drawercli 2>/dev/null;
     install ~/.shortcuts/drawercli ~/.shortcuts/drawercli.app 2>/dev/null;
     echo -e "1 files Added at ~/.shortcuts." 
 }
-if check_dependency drawercli; then
+if check_dependency drawercli 2>/dev/null; then
 main
 else
     echo '[alrc-termux] drawercli not found, please install it from https://github.com/luisadha/drawercli '
