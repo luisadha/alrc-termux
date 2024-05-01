@@ -40,7 +40,7 @@ EOF
     install ~/.shortcuts/drawercli ~/.shortcuts/drawercli.app 2>/dev/null;
     echo -e "1 files Added at ~/.shortcuts." 
 }
-if $(type -p drawercli); then
+if check_dependency drawercli; then
 main
 else
     echo '[alrc-termux] drawercli not found, please install it from https://github.com/luisadha/drawercli '
