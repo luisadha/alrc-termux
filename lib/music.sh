@@ -5,7 +5,7 @@
 # COMMENTS ONLY AVAILABLE IN BAHASA (INDONESIAN LANGUAGE)
 
 # IMPORT 
-source ~/@/@t.me/luisadha/module/alrc-termux/lib/ext_command_helper.sh
+source ${ALRC_HOME}/lib/ext_command_helper.sh
 source <(~/.local/bin/alrc env)> /dev/null 2>&1; 
 #     \ ini akan mengimpor fungsi
 #      \ brandomusic(),
