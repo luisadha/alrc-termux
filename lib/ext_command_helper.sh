@@ -47,7 +47,7 @@ export last_border_used
   echo "$last_border_used" && echo "$last_border_used" > $ALRC_HOME/cache/cached_border.dat
 
 }
-# SARAN JANGAN PAKAI FITUR CACHE GAK REALTIME OUTPUTNYA
+
 al_info_boxes_border() {
 if [ "$ALRC_MOTD_USE_BOXES" == "random" ]; then
  cat $ALRC_HOME/cache/cached_border.dat
