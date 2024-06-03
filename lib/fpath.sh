@@ -423,3 +423,30 @@ file="$1"
 timg "$file" | lolcrab -a
 }
 declare -f -x generate_abstraction
+
+
+function hide_soft_keyboard() {
+  local DIR="/system/bin"
+  [[ ! "${PATH//:/ }" =~ "$DIR" ]] && return 127
+  local self=${FUNCNAME[0]}
+  local detect_soft_keyboard="Pilih metode masukan";
+  local detect_hard_keyboard="Mengonfigurasi keyboard fisik"
+  local hard_key="Your using external keyboard"
+    termux-reload-settings
+
+    local if_input_soft=$(termux-notification-list | grep "$detect_soft_keyboard" | awk '{gsub("title", ""); print $0 " "}' | sed 's/[":,]//g' | xargs)
+    local if_input_hard=$(termux-notification-list | grep "$detect_hard_keyboard" | awk '{gsub("title", ""); print $0 " "}' | sed 's/[":,]//g' | xargs)
+
+    if [ "$(termux-notification-list)" == "" ]; then
+      echo "Please grant the Access Notifications"
+      return 1
+    elif [ "$if_input_soft" == "${detect_soft_keyboard}" ]; then
+      input keyevent 4
+      termux-reload-settings
+      return 0
+    elif [ "$if_input_hard" == "${detect_hard_keyboard}" ]; then
+    echo $hard_key
+    termux-reload-settings
+  fi
+}
+declare -f -x hide_soft_keyboard
