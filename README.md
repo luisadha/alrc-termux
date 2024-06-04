@@ -1,13 +1,8 @@
 # <| alrc-termux |> 1 New plugin added called boxes, try it now!
 
-NAME
-----
-Alrc-termux is a sourceable file like .bashrc but separate from it. 
-
 DESCRIPTION
 -----------
-Used for interactive login automation purposes that will display the information of your device when opening a terminal session (Termux). 
-It was originally created to replace user customization .bashrc but now there's no need to do that anymore. Just call through the source in .bashrc or .bash_profile.
+Alrc-termux is a framework designed to enrich the Termux user experience by providing bash shell configuration and useful plugins."
 
 
 [![Shorts Video](https://img.youtube.com/vi/9X6naGKNOys/0.jpg)](https://www.youtube.com/shorts/9X6naGKNOys)
