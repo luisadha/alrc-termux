@@ -95,7 +95,7 @@ whatisal                   print this help message and return
 ```
 
 ### Templates
-> Use the templates folder for config recommendations or [online config example](https://luisadha.my.id)
+> Use the templates [folder](https://github.com/luisadha/alrc-termux/tree/main/templates) for config recommendations or [online config example](https://luisadha.my.id)
 
 ### Test & Testing
 #### test
