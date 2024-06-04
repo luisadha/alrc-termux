@@ -95,7 +95,7 @@ whatisal                   print this help message and return
 ```
 
 ### Templates
-> Use the templates folder for config recommendations or online config at luisadha.my.id
+> Use the templates folder for config recommendations or [online config example](https://luisadha.my.id)
 
 ### Test & Testing
 #### test
