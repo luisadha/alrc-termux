@@ -19,12 +19,12 @@
 #  set -xv
 
 
-export ALRC_VERSION="4.3.3e"
+export ALRC_VERSION="4.3.3b"
 
 ALRC_UDATE='26/04/24 00:54 WIB'
 
 if [ "$ALRC_USE_ENV_PATH" == "true" ]; then
-export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && "${ZTMEXLUIS_MOD}"/${module_name}-${module_version}/alrc-termux.sh)"
+export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
 # kode diatas akan error jika ada file .env dimanapun atau plugin env diaktifkan solusi unset saja ALRC_USE_ENV_PATH dan gunakan ALRC_HOME dengan nilai default
 export ALRC_SOURCE="alrc-termux.sh"
 export ALRC_SCRIPT="$ALRC_HOME/$ALRC_SOURCE"
