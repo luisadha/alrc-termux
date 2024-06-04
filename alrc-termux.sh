@@ -75,9 +75,9 @@ echo -e "${warn}WARN:${reset} The ${underline}boxes_motd_custom${reset} plugin i
 
 
 function al_about_author() {
-  echo -e "Created by : @luisadha " >&2;
-  echo -e "Contrib. : @fmways " >&2;
-  echo -e "Copyright (c) 2023" >&2;
+  echo -e "Created by : \@luisadha " >&2;
+  echo -e "Contrib. : \@fmways " >&2;
+  echo -e "Copyright \(c\) 2023" >&2;
 }
 # echo "${info}INFO${reset}: This is an ${bold}info${reset} message"                ┆ 50 # echo "${error}ERROR${reset}: This is an ${underline}error${reset} message"
 # echo "${warn}WARN${reset}: This is a ${italic}warning${reset} message"       
