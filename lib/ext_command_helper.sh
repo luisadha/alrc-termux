@@ -1,5 +1,14 @@
 #! bash alrc-termux.module
 
+## BASH-PREXEC USAGE
+preexec() { 
+  echo -e "just typed $1\n";
+}
+
+precmd() { 
+  echo -e "┌[$(date +%x)] Hari ini" && hide_soft_keyboard;
+}
+
 set +o noclobber
 
 ## LOLCRAB GRADIENT TEMPLATE
