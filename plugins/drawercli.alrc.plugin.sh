@@ -2,9 +2,11 @@
 #! bash alrc-termux.module
 set +o noclobber
 plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
+ps=${plugin_shortname}
 alrc_plugin_enabled+=($plugin_shortname)
 readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
 unset plugin_shortname
+unset ps
 
 main() {
   if ! grep -q 'source /data/data/com.termux/files/home/.drawercli_aliases' ~/.bashrc; then
@@ -38,7 +40,8 @@ EOF
   fi
     ln -s $(type -p drawercli) ~/.shortcuts/drawercli 2>/dev/null;
     install ~/.shortcuts/drawercli ~/.shortcuts/drawercli.app 2>/dev/null;
-    echo -e "1 files Added at ~/.shortcuts." 
+    echo -e "alrc-termux: Plugin ${ps} successfully loadded!"
+    echo -e "1 \"${ps}.app\" files Added at ~/.shortcuts." 
 }
 if check_dependency drawercli 2>/dev/null; then
 main
