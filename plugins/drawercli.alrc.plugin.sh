@@ -42,7 +42,7 @@ EOF
     ln -s $(type -p drawercli) ~/.shortcuts/drawercli 2>/dev/null;
     install ~/.shortcuts/drawercli ~/.shortcuts/drawercli.app 2>/dev/null;
     echo -e "alrc-termux: Plugin ${ps} successfully loadded!"
-    echo -e "1 \"${ps}.app\" files Added at ~/.shortcuts." 
+    echo -e "+1 \"${ps}.app\" file added at ~/.shortcuts" 
 }
 if check_dependency drawercli 2>/dev/null; then
 main
