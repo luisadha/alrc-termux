@@ -2,13 +2,14 @@
 #! bash alrc-termux.module
 set +o noclobber
 plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
-ps=${plugin_shortname}
+
 alrc_plugin_enabled+=($plugin_shortname)
 readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
-unset plugin_shortname
-unset ps
+
+
 
 main() {
+local ps=${plugin_shortname}
   if ! grep -q 'source /data/data/com.termux/files/home/.drawercli_aliases' ~/.bashrc; then
 
 cat >> ~/.bashrc <<EOF
@@ -48,4 +49,5 @@ main
 else
     echo '[alrc-termux] drawercli not found, please install it from https://github.com/luisadha/drawercli '
 fi
-    unset -f main
+unset -f main
+unset plugin_shortname
