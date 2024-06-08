@@ -1,3 +1,4 @@
+#! bash alrc-termux.module
 if [[ ! ${bash_preexec_imported:-${__bp_imported:-}} ]]; then
   source "$ALRC_HOME/tools/bash-preexec.sh"
 
@@ -6,8 +7,12 @@ if [[ ! ${bash_preexec_imported:-${__bp_imported:-}} ]]; then
   readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
 echo -e "alrc-termux: Plugin ${ps} successfully activated!\n"
 echo -e "Trying to check precmd & preexec contents if any... ";
-echo -e "${preexec_functions[@]}\n"
-echo -e "${precmd_functions[@]}"
+type precmd | head -n 1
+type preexec | head -n 1
+if [ $? -eq 1 ]; then
+ echo -e "For how to use it visit this repository https://github.com/rcaloras/bash-preexec"
+fi
+ 
   unset ps
   unset plugin_shortname
 fi
