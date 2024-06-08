@@ -6,7 +6,7 @@ if [[ ! ${bash_preexec_imported:-${__bp_imported:-}} ]]; then
  ps=${plugin_shortname} alrc_plugin_enabled+=($plugin_shortname)
   readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
 echo -e "alrc-termux: Plugin ${ps} successfully loadded!\n"
-echo -e "\tTrying to check precmd & preexec functions if any... ";
+echo -e "Trying to check precmd & preexec functions if any... ";
 if [ "$(type -t precmd)" == "function" ] && [ "$(type -t preexec)" == "function" ]; then
     echo -e "${info}INFO:${reset} Present"
   else
