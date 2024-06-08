@@ -1,4 +1,4 @@
-# <| alrc-termux |> 1 New plugin added called boxes, try it now!
+# +2 New plugin added called bash-preexec and boxes, try it now!
 
 DESCRIPTION
 -----------
