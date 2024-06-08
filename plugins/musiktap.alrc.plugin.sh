@@ -24,9 +24,8 @@ bash --init-file ~/.local/share/alrc-termux/lib/music.sh
 # Tidak pakai source karena pasti bakal error
 
 EOF
+echo "+1 \"${ps}.app\" file added at ~/.shortcuts"
 }
-
-echo "+1 \"${ps}.app\" files Added at ~/.shortcuts."
 main;
 unset -f main;
 unset plugin_shortname
