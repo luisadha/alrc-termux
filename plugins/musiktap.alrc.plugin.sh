@@ -24,6 +24,7 @@ bash --init-file ~/.local/share/alrc-termux/lib/music.sh
 # Tidak pakai source karena pasti bakal error
 
 EOF
+echo -e "alrc-termux: Plugin ${ps} successfully loadded!"
 echo "+1 \"${ps}.app\" file added at ~/.shortcuts"
 }
 main;
