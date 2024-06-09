@@ -447,7 +447,7 @@ function hide_soft_keyboard() {
       termux-reload-settings
       return 0
     elif [ "$if_input_hard" == "${detect_hard_keyboard}" ]; then
-    echo -e "${loname}: ${hard_key_string}.
+    echo -e "${loname}: ${hard_key_string}."
     termux-reload-settings
   fi
 }
