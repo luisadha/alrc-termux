@@ -2,7 +2,8 @@
 
 # By Luisadha x fmway
 
-
+PREFIX="/data/data/com.termux/files/usr"
+TERMUX_BIN="${PREFIX}/bin"
 REPO="https://github.com/luisadha/alrc-termux.git"
 
 ALRC_HOME="$HOME/.local/share/alrc-termux"
@@ -15,8 +16,8 @@ _run() {
 
 alrc_install() {
   _run git clone "$REPO" "$ALRC_HOME"
-  [ -e "$HOME/.local/bin/alrc" ] && _run rm -v "$HOME/.local/bin/alrc"
-  _run ln -sv "$ALRC_HOME/alrc" "$HOME/.local/bin/alrc"
+  [ -e "${TERMUX_BIN}/alrc" ] && _run rm -v "${TERMUX_BIN}/alrc"
+  _run ln -sv "$ALRC_HOME/alrc" "${TERMUX_BIN}/alrc"
 
   [ -f $HOME/.shortcuts/alrc.test ] && _run rm -v "$HOME/.shortcuts/alrc.test"
   _run ln -sv "$ALRC_HOME/test/.shortcuts/alrc.test" "$HOME/.shortcuts/alrc.test"
