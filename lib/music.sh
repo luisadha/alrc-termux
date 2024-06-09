@@ -5,12 +5,9 @@
 # COMMENTS ONLY AVAILABLE IN BAHASA (INDONESIAN LANGUAGE)
 
 # IMPORT 
-source /data/data/com.termux/files/home/.local/share/alrc-termux/lib/ext_command_helper.sh
-source /data/data/com.termux/files/home/.local/share/alrc-termux/lib/check_dependency.sh 
-#     \ ini akan mengimpor fungsi
-#      \ brandomusic(),
-#       \ al_notify() dan
-#        \ lolcrab_gradient_shuf
+bash --init-file /data/data/com.termux/files/home/.local/share/alrc-termux/lib/ext_command_helper.sh
+bash --init-file /data/data/com.termux/files/home/.local/share/alrc-termux/lib/check_dependency.sh 
+bash --init-file /data/data/com.termux/files/home/.local/share/alrc-termux/alrc-termux.sh &>/dev/null
 
 # SETUP CONFIG IN ~/.SHORTCUTS/MUSIKTAP.APP
 ##! MOHON JANGAN UNKOMENTAR BAGIAN INI, INI SEKEDAR ARAHAN  UNTUK KONFIGURASI
