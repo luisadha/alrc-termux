@@ -6,7 +6,7 @@
 
 # IMPORT 
 source /data/data/com.termux/files/home/.local/share/alrc-termux/lib/ext_command_helper.sh
-source <(~/.local/bin/alrc env)> /dev/null 2>&1; 
+source /data/data/com.termux/files/home/.local/share/alrc-termux/lib/check_dependency.sh 
 #     \ ini akan mengimpor fungsi
 #      \ brandomusic(),
 #       \ al_notify() dan
