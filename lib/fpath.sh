@@ -431,7 +431,7 @@ function hide_soft_keyboard() {
   local self=${FUNCNAME[0]}
   local detect_soft_keyboard="Pilih metode masukan";
   local detect_hard_keyboard="Mengonfigurasi keyboard fisik"
-  local hard_key="Your using external keyboard"
+  local hard_key_string="Your using external keyboard"
     termux-reload-settings
 
     local if_input_soft=$(termux-notification-list | grep "$detect_soft_keyboard" | awk '{gsub("title", ""); print $0 " "}' | sed 's/[":,]//g' | xargs)
@@ -447,7 +447,7 @@ function hide_soft_keyboard() {
       termux-reload-settings
       return 0
     elif [ "$if_input_hard" == "${detect_hard_keyboard}" ]; then
-    echo $hard_key
+    echo -e "${loname}: ${hard_key_string}.
     termux-reload-settings
   fi
 }
