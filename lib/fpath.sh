@@ -446,7 +446,7 @@ timg "$file" | lolcrab -a
 declare -f -x al.generate_abstraction;
 alias generate_abstraction='al.generate_abstraction';
 
-function al.hide_soft_keyboard() {
+function hide_soft_keyboard() {
   local DIR="/system/bin"
   [[ ! "${PATH//:/ }" =~ "$DIR" ]] && return 127
   local self=${FUNCNAME[0]}
@@ -472,5 +472,4 @@ function al.hide_soft_keyboard() {
     termux-reload-settings
   fi
 }
-declare -f -x al.hide_soft_keyboard;
-alias hide_soft_keyboard='al.hide_soft_keyboard';
+declare -f -x hide_soft_keyboard;
