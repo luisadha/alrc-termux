@@ -1,21 +1,14 @@
 ## FUNCTION
-function al.check_ip_privates() {
+function check_ip_privates() {
   # by luisadha
     local ip=$(ip addr show | grep -Eo 'inet [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | grep -Ev '127\.0\.0\.1' | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
     echo "$ip"
 }
-declare -f -x al.check_ip_privates;
-alias check_ip_privates='al.check_ip_privates';
+declare -f -x check_ip_privates;
 
-function al.printalpha() {
- for i in {a..z};                                       
-  do type $i 2>/dev/null;                            
- done 
- }
-declare -f -x al.printalpha;
-alias printalpha='al.printalpha';
-
-function al.cattypus() {
+function printalpha()     { for i in {a..z};                                          do type $i 2>/dev/null;                             done }
+declare -f -x printalpha;
+function cattypus()       {
 # by luisadha
   if [ "$(type -t $1)" == "function" ]; then
 echo "$(declare -f $1)";
@@ -26,11 +19,8 @@ elif [ "$(type -t $1)" == "file" ]; then
   echo "$(cat $(type -p $1))";
 else
   echo "$1 is'nt function, alias or file.";
-  fi                    
-}
-declare -f -x al.cattypus;
-alias cattypus='al.cattypus';
-
+  fi                       }
+declare -f -x cattypus
 
 function al_opt_scan {
 # by luisadha
@@ -38,6 +28,7 @@ function al_opt_scan {
 declare -a "$(al help 2>&1 | sed 's/,//g' | sed 's/\[//g' | sed 's/\]//g' | sed 's/^/VARIABEL=/g' | sed 's/\"//g' )"
 al_notify "Exporting..."
 for i in ${VARIABEL[@]}; do
+
   al $i &> /dev/null;
 done
 echo "Export success!, please type env and found "al_something= ..." "
@@ -63,25 +54,18 @@ function al_opt_extract {
 declare -x -f al_opt_extract;
 
 
-function al.setenv() {
+function setenv {
 # function mksh
 	eval export "\"$1\""'="$2"'
 }
-declare -x -f al.setenv
-alias setenv='al.setenv';
+declare -x -f setenv
 
-function bh() { 
-bash -c 'help '"$@"; 
-}
+
+function bh { bash -c 'help '"$@"; }
 declare -f -x bh
-function al.timgrandom() {
-pushd ~ &>/dev/null;                                          
-timg "$(realpath "${ARG:=$(busybox ls ~/**/*.jpg | shuf -n1)}")";                                           
-popd &>/dev/null; 
-}                                             
-declare -f -x al.timgrandom; #by luisadha
-alias timgrandom='al.timgrandom';
-function al.imjpgrand() {
+function timgrandom()     { pushd ~ &>/dev/null;                                           timg "$(realpath "${ARG:=$(busybox ls ~/**/*.jpg | shuf -n1)}")";                                            popd &>/dev/null; }                                             
+declare -f -x timgrandom; #by luisadha 
+function imjpgrand {
 # by luisadha
 dir="${1:+"${1}/*.jpg"}"
 wd="${1-"${PWD}/*.jpg"}"
@@ -97,9 +81,7 @@ else echo "$img are choosed!";
 fi ||\ }
 
 }
-declare -f -x al.imjpgrand
-alias imjpgrand='al.imjpgrand';
-
+declare -f -x imjpgrand
 function brandomusicq {
 # Created by @luisadha 
   set +o noclobber
@@ -240,7 +222,7 @@ cd - &>/dev/null;;
 
 }
 declare -f -x brandomusic
-function al.ranpper-termux() {
+function ranpper-termux {
 #!/bin/bash
 # ranpper.sh v1.0
 # Since Thu May  9 19:00:28 WIB 2019
@@ -256,9 +238,7 @@ local wallpaper="${files[RANDOM % n]}"
 termux-wallpaper -f "$wallpaper" || echo "Something wen't wrong"; 
 return 0
 }
-declare -f -x al.ranpper-termux;
-alias ranpper-termux='al.ranpper-termux';
-
+declare -f -x ranpper-termux 
 # list_sort-by-size
 function lsn {
 (( $# > 0 )) && (ls -s "$@" | sort -n) \
@@ -337,7 +317,7 @@ function duplicatefind {
 find -not -empty -type f -printf "%s\n" | sort -rn | uniq -d | xargs -I{} -n1 find -type f -size {}c -print0 | xargs -0 md5sum | sort | uniq -w32 --all-repeated=separate
 }
 declare -f -x duplicatefind
-function al.alvar()
+function alvar()
 {
 #  before egvarexpan2
 #  now renamed to alvar
@@ -398,11 +378,10 @@ else
  main $1 $2 $3;
 fi
 }
-declare -f -x al.alvar;
-alias alvar='al.alvar';
+declare -f -x alvar
 
 # fkill - kill processes - list only the ones you can kill. Modified the earlier script.
-function al.fkill() {
+function fkill() {
     local pid 
     if [ "$UID" != "0" ]; then
         pid=$(ps -f -u $UID | sed 1d | fzf -m | awk '{print $2}')
@@ -415,9 +394,8 @@ function al.fkill() {
         echo $pid | xargs kill -${1:-9}
     fi  
 }
-declare -f -x al.fkill;
-alias fkill='al.fkill';
 
+declare -f -x fkill
 function cd() {
   # interactive cd by @mgild 
     if [[ "$#" != 0 ]]; then
@@ -439,12 +417,13 @@ function cd() {
     done
 }
 declare -f -x cd
-function al.generate_abstraction() {
+function generate_abstraction()
+{
 file="$1"
 timg "$file" | lolcrab -a
 }
-declare -f -x al.generate_abstraction;
-alias generate_abstraction='al.generate_abstraction';
+declare -f -x generate_abstraction
+
 
 function hide_soft_keyboard() {
   local DIR="/system/bin"
@@ -472,4 +451,4 @@ function hide_soft_keyboard() {
     termux-reload-settings
   fi
 }
-declare -f -x hide_soft_keyboard;
+declare -f -x hide_soft_keyboard
