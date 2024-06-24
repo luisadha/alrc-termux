@@ -1,13 +1,12 @@
 
 # ! bash alrc-termux.module
-# Version 1.4 music.sh
+# Version 1.5 music.sh
 # By Luis Adha
 # COMMENTS ONLY AVAILABLE IN BAHASA (INDONESIAN LANGUAGE)
 
 # IMPORT 
-bash --init-file /data/data/com.termux/files/home/.local/share/alrc-termux/lib/ext_command_helper.sh
-bash --init-file /data/data/com.termux/files/home/.local/share/alrc-termux/lib/check_dependency.sh 
-bash --init-file /data/data/com.termux/files/home/.local/share/alrc-termux/alrc-termux.sh &>/dev/null
+source <(alrc env)&> /dev/null;
+source $ALRC_HOME/lib/ext_command_helper.sh;
 
 # SETUP CONFIG IN ~/.SHORTCUTS/MUSIKTAP.APP
 ##! MOHON JANGAN UNKOMENTAR BAGIAN INI, INI SEKEDAR ARAHAN  UNTUK KONFIGURASI

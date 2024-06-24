@@ -2,8 +2,10 @@
 
 # By Luisadha x fmway
 
-
+PREFIX="/data/data/com.termux/files/usr"
+TERMUX_BIN="${PREFIX}/bin"
 REPO="https://github.com/luisadha/alrc-termux.git"
+BRANCH="v4.3.4"
 
 ALRC_HOME="$HOME/.local/share/alrc-termux"
 
@@ -14,17 +16,17 @@ _run() {
 }
 
 alrc_install() {
-  _run git clone "$REPO" "$ALRC_HOME"
-  [ -e "$HOME/.local/bin/alrc" ] && _run rm -v "$HOME/.local/bin/alrc"
-  _run ln -sv "$ALRC_HOME/alrc" "$HOME/.local/bin/alrc"
+  _run git clone -b $BRANCH "$REPO" "$ALRC_HOME"
+  [ -e "${TERMUX_BIN}/alrc" ] && _run rm -v "${TERMUX_BIN}/alrc"
+  _run ln -sv "$ALRC_HOME/alrc" "${TERMUX_BIN}/alrc"
 
   [ -f $HOME/.shortcuts/alrc.test ] && _run rm -v "$HOME/.shortcuts/alrc.test"
   _run ln -sv "$ALRC_HOME/test/.shortcuts/alrc.test" "$HOME/.shortcuts/alrc.test"
   
   echo
-  echo "alrc installed successfully"
-  echo "please add $ALRC_HOME/env.sh or alrc environment to your bash config"
-  echo -e "\tsource <(\$HOME/.local/bin/alrc env)"
+  echo "status: alrc installed successfully"
+  echo "please add environment to your bash config: "
+  echo -e " source <(alrc env)"
   echo
   source <(alrc env)
 }

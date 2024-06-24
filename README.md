@@ -1,5 +1,5 @@
 # +2 New plugin added called bash-preexec and boxes, try it now!
-
+![logo](./img/alrc.png)
 DESCRIPTION
 -----------
 Alrc-termux is a framework designed to enrich the Termux user experience by providing bash shell configuration and useful plugins."

@@ -42,7 +42,7 @@ _main() {
       $ALRC_HOME/uninstall.sh
       ;;
     env)
-      source $ALRC_HOME/env.sh
+      source $ALRC_HOME/env.sh &>/dev/null;
       ;;
     in|init|test)
        bash $HOME/.shortcuts/alrc.test
