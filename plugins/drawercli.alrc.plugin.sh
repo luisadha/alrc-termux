@@ -47,7 +47,7 @@ EOF
 if check_dependency drawercli 2>/dev/null; then
 main
 else
-    echo 'alrc-termux: drawercli not found, please install it from https://github.com/luisadha/drawercli '
+    echo -e "please install it from https://github.com/luisadha/drawercli "
 fi
 unset -f main
 unset plugin_shortname
