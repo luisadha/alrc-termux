@@ -1,1 +1,5 @@
 .env
+cache/answer.txt
+cache/cached_border.dat
+cache/title-songs.txt
+
