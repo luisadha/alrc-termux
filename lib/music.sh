@@ -5,8 +5,8 @@
 # COMMENTS ONLY AVAILABLE IN BAHASA (INDONESIAN LANGUAGE)
 
 # IMPORT 
-source <(alrc env)&> /dev/null;
-source $ALRC_HOME/lib/ext_command_helper.sh;
+source <(alrc env)
+source ${ALRC_HOME:-/data/data/com.termux/files/home/.local/share/alrc-termux}/lib/ext_command_helper.sh;
 
 # SETUP CONFIG IN ~/.SHORTCUTS/MUSIKTAP.APP
 ##! MOHON JANGAN UNKOMENTAR BAGIAN INI, INI SEKEDAR ARAHAN  UNTUK KONFIGURASI
