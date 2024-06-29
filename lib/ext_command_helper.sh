@@ -2,10 +2,13 @@
 
 set +o noclobber
 
+## OH-MY-BASH PLUGIN HELPER
+
+[[ -d ${OSH:-~/.oh-my-bash/} ]] && omb_plugin_available() { \ls -1 --color=none ${OSH:-~/.oh-my-bash/plugins}; }
+
 ## LOLCRAB GRADIENT TEMPLATE
 al_print_lolcrab_gradient_available() {
 lolcrab --help | xargs -d "\n" | grep -o -P '(?<=possible values: )[^\]]+' | xargs -n1 | sed 's/[,]//g'
-
 }
 
 al_shuf_lolcrab_gradient()
@@ -16,7 +19,7 @@ readarray -t LOLCRAB_GRADIENT_LIST < <(al_print_lolcrab_gradient_available)
         echo "$i";
     done | fold -s | shuf -n1
 }
-
+ 
 ## BOXES DESIGNS TEMPLETE
 
 _al_utils_boxes_main() {

@@ -19,8 +19,8 @@
 #  set -xv
 
 
-export ALRC_VERSION="4.3.3b"
-export loname="alrc-termux"
+export ALRC_VERSION="4.3.4"
+
 ALRC_UDATE='26/04/24 00:54 WIB'
 
 if [ "$ALRC_USE_ENV_PATH" == "true" ]; then

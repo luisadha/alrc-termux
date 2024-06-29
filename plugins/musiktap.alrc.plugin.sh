@@ -6,6 +6,7 @@ readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}"
 function main() {
 local ps=${plugin_shortname}
 cat <<- "EOF" > $HOME/.shortcuts/musiktap.app
+#!/data/data/com.termux/files/usr/bin/bash
 
 # Cli-apps for termux widget "Musiktap adalah konfigurasi untuk menjalankan library musik.sh"
 # Load module from alrc-termux

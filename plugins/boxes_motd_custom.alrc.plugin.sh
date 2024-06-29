@@ -8,7 +8,8 @@ alrc_plugin_enabled+=($plugin_shortname)
 readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
     function al_motd() { 
       unalias al; 
-      source $ALRC_HOME/alrc-termux.sh;
+     source ${ALRC_HOME:-/data/data/com.termux/files/home/.local/share/alrc-termux}/alrc-termux.sh;
+
     }; 
     declare -f -x al_motd
 
@@ -32,8 +33,7 @@ unset -n plugin_shortname
 #ping -c 1 -w 5 google.com &>/dev/null || echo -e "${warn}WARN:${reset}: This action requires an active ${italic}internet${reset} connection.\n"
 # Periksa apakah sudah ada file template border jika tidak maka mendownload automatis
 if [ ! -f $ALRC_HOME/cache/box-designs-templete.txt ]; then
-
-echo -e ${info}"INFO${reset}: Sedang mengunduh... add-on untuk fitur custom motd dengan border, dibutuhkan untuk package ${bold}boxes.${reset}"
+echo -e "${info}INFO${reset}: Downloading... add-on for custom motd feature with border, needed for package ${bold}boxes.${reset}"
 
  curl -fSsl https://boxes.thomasjensen.com/v2.3.0/box-designs.html -o $ALRC_HOME/cache/box-designs-templete.txt 2>/dev/null
 

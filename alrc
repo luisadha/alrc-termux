@@ -1,5 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # By fmways
+
+
+
 ALRC_HOME="$(cd -- "$(dirname -- "$(realpath "${BASH_SOURCE[0]}")")" &> /dev/null && pwd)"
 VERSION="$(cat "${ALRC_HOME}/alrc-termux.sh" | sed -n 's/^# version : //p')"
 CMD="$(basename -- $0)"
@@ -42,7 +45,7 @@ _main() {
       $ALRC_HOME/uninstall.sh
       ;;
     env)
-      source $ALRC_HOME/env.sh &>/dev/null;
+      source $ALRC_HOME/env.sh 2> /dev/null;
       ;;
     in|init|test)
        bash $HOME/.shortcuts/alrc.test
