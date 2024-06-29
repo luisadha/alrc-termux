@@ -32,6 +32,7 @@ cat <<- "EOF" > ~/.drawercli_aliases
 # Generate by plugin drawercli.alrc.plugin.sh
 # require termuxlauncher app
 
+alias wallpaper='ranpper-termux ~/storage/downloads && drawercli -w'
 alias apps='drawercli'
 alias app_favorites='drawercli -u'
 alias app_recomendations='drawercli -S'
