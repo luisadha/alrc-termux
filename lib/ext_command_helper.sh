@@ -8,7 +8,7 @@ set +o noclobber
 
 ## OH-MY-BASH PLUGIN HELPER
 
-[[ -d ${OSH:-~/.oh-my-bash/} ]] && al_print_omb_plugin_available() { \ls -1 --color=none ${OSH:-~/.oh-my-bash/plugins}; }
+[[ -d ${OSH:-~/.oh-my-bash/} ]] && al_print_omb_plugin_available() { \ls -1 --color=none ${OSH:-~/.oh-my-bash}/plugins; }
 
 ## LOLCRAB GRADIENT TEMPLATE
 al_print_lolcrab_gradient_available() {
