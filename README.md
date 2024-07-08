@@ -23,7 +23,6 @@ A. Termux
 - *Automatic*
 
 ```sh
-export PATH="$PATH:$HOME/.local/bin";
 . <(curl -L s.id/24adK )
 ```
 
