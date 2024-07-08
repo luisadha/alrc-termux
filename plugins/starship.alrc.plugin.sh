@@ -8,7 +8,7 @@ plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)}
 
  readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
 
- echo -e "alrc-termux: Plugin ${ps} successfully loadded!\nplease setup your prompt via .bashrc for example: \`starship preset tokyo-night ~\$ALRC_HOME/prompt/starship/tokyo-night.toml'."
+ echo -e "alrc-termux: Plugin ${ps} successfully loadded!\n."
 
  mkdir -p $ALRC_HOME/prompt/starship/
 
@@ -17,13 +17,8 @@ eval "starship preset $import > $ALRC_HOME/prompt/starship/${import}.toml";
 done
 
 if [ $ALRC_USE_STARSHIP == "random" ]; then
-  echo "y"
   al_shuf_starship_prompt
-else
-  echo "n"
 fi
-
-
   unset ps;
   unset plugin_shortname;
   unset import
