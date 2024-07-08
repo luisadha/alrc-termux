@@ -18,8 +18,8 @@
  
 #  set -xv
 
-
-export ALRC_VERSION="4.3.4"
+# major * minor * patch *
+export ALRC_VERSION="4.3.05"
 
 ALRC_UDATE='26/04/24 00:54 WIB'
 
@@ -398,37 +398,56 @@ usage#2: whatisal print this help message and return
 source $0 > /dev/null 2>&1 && until false; do sleep 1; done
 al_set_window "successfully script called via source"; 
 
+# RUNTIME MOTD
 case "$ALRC_MOTD_USE_BOXES" in
-"") al      ;; 
-"random")
-set +o noclobber
-source $ALRC_HOME/lib/ext_command_helper.sh;        al_include_boxes_motd_custom; 
-
- [[ "$ALRC_USE_ALFETCH" != "true" ]] && warning_alfetch_required && unset -f warning_alfetch_required && return 0
-
-setterm --cursor off
-setterm --linewrap off
-echo -ne '\n'
-al | boxes -d $(al_shuf_boxes_design);
-setterm --cursor on
-setterm --linewrap on
-echo -ne '\n'
+  "") al;;
+  "random")
+    set +o noclobber;
+    source $ALRC_HOME/lib/ext_command_helper.sh; al_include_boxes_motd_custom
+    [[ "$ALRC_USE_ALFETCH" != "true" ]] && warning_alfetch_required && unset -f warning_alfetch_required && return 0;
+    setterm --cursor off;
+    setterm --linewrap off;
+    echo -ne '\n';
+    al | boxes -d $(al_shuf_boxes_design);
+    setterm --cursor on;
+    setterm --linewrap on;
+    echo -ne '\n';
    ;;
-*)
-set +o noclobber
-source $ALRC_HOME/lib/ext_command_helper.sh; al_include_boxes_motd_custom; 
-
- [[ "$ALRC_USE_ALFETCH" != "true" ]] && warning_alfetch_required && unset -f warning_alfetch_required && return 0
-
-setterm --cursor off
-setterm --linewrap off
-echo -ne '\n'
-al | boxes -d $ALRC_MOTD_USE_BOXES
-setterm --cursor on
-setterm --linewrap on
-echo -ne '\n'
-      ;;
+ *)
+   set +o noclobber;
+   source $ALRC_HOME/lib/ext_command_helper.sh; al_include_boxes_motd_custom; 
+   [[ "$ALRC_USE_ALFETCH" != "true" ]] && warning_alfetch_required && unset -f warning_alfetch_required && return 0;
+   setterm --cursor off;
+   setterm --linewrap off;
+   echo -ne '\n';
+   al | boxes -d $ALRC_MOTD_USE_BOXES;
+   setterm --cursor on;
+   setterm --linewrap on;
+   echo -ne '\n';
+   ;;
  esac
+# RUNTIME PROMPT
+case "$ALRC_USE_STARSHIP" in
+  "")
+    set +o noclobber
+    alrc_starship=false;
+    ;;
+  "random")
+    set +o noclobber
+    alrc_starship=true;
+    source $ALRC_HOME/lib/ext_command_helper.sh; al_include_starship;
+    al_shuf_boxes_design;
+    #starship preset $(cat $ALRC_HOME/cache/active_prompt.dat) -o ~/.config/starship.toml
+    ;;
+  "$ALRC_USE_STARSHIP")
+    set +o noclobber
+    alrc_starship=true;
+    source $ALRC_HOME/lib/ext_command_helper.sh;
+    al_include_starship
+    starship preset ${ALRC_USE_STARSHIP} -o ~/.config/starship.toml
+    ;;
+esac
+
 
 ##- Enviroment variable
  unset HOME USER
