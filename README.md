@@ -1,4 +1,4 @@
-# +2 New plugin added called bash-preexec and boxes, try it now!
+# +1 New plugin added called "starship" since version 4.3.05, try it now!
 ![logo](./img/alrc.png)
 DESCRIPTION
 -----------
