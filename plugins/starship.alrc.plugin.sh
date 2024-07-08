@@ -9,7 +9,7 @@ plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)}
 
  readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
 
- echo -e "alrc-termux: Plugin ${ps} successfully loadded!\n"
+ echo -e "alrc-termux: Plugin ${ps} successfully loadded!"
 
  mkdir -p $ALRC_HOME/prompt/starship/ &>/dev/null
 
