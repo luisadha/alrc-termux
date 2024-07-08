@@ -438,7 +438,7 @@ case "$ALRC_USE_STARSHIP" in
     source $ALRC_HOME/lib/ext_command_helper.sh; al_include_starship; #shuffle prompt
     #starship preset $(cat $ALRC_HOME/cache/active_prompt.dat) -o ~/.config/starship.toml
     ;;
-  "$ALRC_USE_STARSHIP")
+   *)
     set +o noclobber
     alrc_starship=true;
     source $ALRC_HOME/lib/ext_command_helper.sh; al_include_starship;
