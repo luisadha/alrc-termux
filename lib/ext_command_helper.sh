@@ -2,10 +2,6 @@
 
 set +o noclobber
 
-
-
-
-
 ## OH-MY-BASH PLUGIN HELPER
 
 [[ -d ${OSH:-~/.oh-my-bash/} ]] && al_print_omb_plugin_available() { \ls -1 --color=none ${OSH:-~/.oh-my-bash}/plugins; }
@@ -34,13 +30,14 @@ _al_utils_starship_main
 printf '%s\n' "${PROMPT_LIST[@]}"
 }
 al_shuf_starship_prompt() {
+set +o noclobber
 _al_utils_starship_main;
 local last_prompt_used=$(for i in ${PROMPT_LIST[@]};
 do
   echo "$i"
 done | fold -s | shuf -n1)
 echo "$last_prompt_used" && echo "$last_prompt_used" > $ALRC_HOME/cache/active_prompt.dat
-cp -f $(\ls $ALRC_HOME/prompt/starship/${last_prompt_used}.toml) ~/.config/starship.toml
+\cp -f $(\ls $ALRC_HOME/prompt/starship/${last_prompt_used}.toml) ~/.config/starship.toml
 }
 
 
