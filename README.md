@@ -23,7 +23,7 @@ A. Termux
 - *Automatic*
 
 ```sh
-. <(curl -L s.id/24adK )
+. <(curl -L https://raw.githubusercontent.com/luisadha/alrc-termux/main/install.sh)
 ```
 
 - *Manual*
