@@ -16,7 +16,7 @@ _run() {
 }
 
 alrc_install() {
-  _run git clone -b ${BRANCH:-main} "$REPO" "$ALRC_HOME"
+  _run git clone -b main "$REPO" "$ALRC_HOME"
   [ -e "${TERMUX_BIN}/alrc" ] && _run rm -v "${TERMUX_BIN}/alrc"
   _run ln -sv "$ALRC_HOME/alrc" "${TERMUX_BIN}/alrc"
 
