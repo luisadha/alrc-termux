@@ -3,3 +3,5 @@ cache/answer.txt
 cache/cached_border.dat
 cache/title-songs.txt
 cache/active_prompt.dat
+prompt/starship
+*.toml
