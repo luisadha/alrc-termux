@@ -147,27 +147,25 @@ fi
 
 
 }
-function al_notify()      { local args="$@";                                          read i < <(echo "$args");                                 eval "(al_set_window $i)";                                eval "$(termux-toast $i)";             echo "${i}"; }
+function al_notify() { 
+  local args="$@";
+  read i < <(echo "$args");
+  eval "(al_set_window $i)";
+  eval "$(termux-toast $i)";           
+  echo "${i}"; }
 function al_log () {
-cat $ALRC_HOME/Changelog.al.txt
-}
+  cat $ALRC_HOME/Changelog.al.txt; }
 function alcat () {
-  cat $ALRC_HOME/$ALRC_SOURCE
-}
+  cat $ALRC_HOME/$ALRC_SOURCE; }
 function al_runmanual () {
-    
-  cd $ALRC_HOME && xdg-open README.html
-}
+  cd $ALRC_HOME && xdg-open README.html; }
 function al_opt () {
-[[ -z "$1" ]] && al help | jq . || al "$1"
-}
-
+  [[ -z "$1" ]] && al help | jq . || al "$1"; }
 function al_set_window() {
-
-    title="$*"
-    echo -ne "\033]0;$title \007"
-}
+    title="$*";
+    echo -ne "\033]0;$title \007"; }
 function al_fetchSongInfo() {
+(
 isPlaying() {
 
  termux-media-player info | awk '{print $2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15}' | grep -v "Position:" | xargs
@@ -183,10 +181,10 @@ elif [ $(isPlaying | awk '{print $1}') == "Paused" ]; then
 else
  echo "unknown $(isPlaying)" | cut -d" " -f1
  fi
+)
 }
 
 function al() {
-
 
 # String
 
@@ -197,16 +195,13 @@ local uptimes="$(busybox uptime -s)" > /dev/null 2>&1;
 local batt="$(termux-battery-status 2>&1 | grep -cq 'command not found' || termux-battery-status | head -n 3 | awk '{print $2}' | tail -n 1| sed 's/,/%/g' )"
 local prefix="$PREFIX/bin" 2> /dev/null;
 local sysroot="$SYSROOT/bin" 2> /dev/null;
-
-
 local batteries="${batt:-$(echo "unknown")}" > /dev/null 2>&1;
-
 local packages_termux="$(command ls ${prefix} 2>/dev/null | wc -l || command ls ${sysroot} 2>/dev/null | wc -l) (usr/bin) " &>/dev/null;
-local shell="$(echo "$0" |awk '{gsub(/.*[/]|[.].*/, "", $0)} 1')              ";
+local shell="$(echo "$0" |awk '{gsub(/.*[/]|[.].*/, "", $0)} 1')";
 
 export opt="$1"
 if [ -z "$opt" ]; then
-  if [ $(basename $0) == "bash" ] || [ $(basename $0) == "bash.bin" ]; then
+  if [ "${shell}" == "bash" ] || [ "$shell" == "bash.bin" ]; then
 icon='|'
 abc=$(echo "${icon} os >> $(uname -so)" | wc -L); cba=$(echo "$COLUMNS - $abc" | bc);
 bcd=$(echo "${icon} arch >> $(uname -m)" | wc -L); dcb=$(echo "$COLUMNS - $bcd" | bc);
@@ -252,7 +247,7 @@ echo "Your device isn't Android"
 return 1
 fi
 
-else echo "Hello $(basename $0), please make sure your shell are bash"; return 1; fi
+else echo "Hello ${shell}, please make sure your shell are bash"; return 1; fi
 
 elif [ "$opt" == "os" ]; then
   uname -so;
@@ -359,7 +354,6 @@ echo -e "Available options: \n" >&2;
 
   alcat | grep -w '$opt' | awk '{print $5}' | sed 's/\];//g' | sed 's/\'\$opt'//g' | sed "s/''//g" | sort | grep -v -e '^[[:space:]]*$' | xargs -d "\n" | awk '{for(i=1;i<NF;i++)if(i!=NF){$i=$i","}  }1' | sed 's/^/[/' | sed 's/$/]/'  
 fi
-
 
 }
 
