@@ -17,4 +17,4 @@ pushd $ALRC_HOME &>/dev/null
 _run git pull
 popd &>/dev/null
 
-[ -e "$HOME/.local/bin/alrc" ] || _run ln -sv "$ALRC_HOME" "$HOME/.local/bin/alrc"
+# [ -e "$HOME/.local/bin/alrc" ] || _run ln -sv "$ALRC_HOME" "$HOME/.local/bin/alrc"
