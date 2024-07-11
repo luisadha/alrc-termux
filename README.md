@@ -1,7 +1,7 @@
 # +1 New plugin added called "starship" since version 4.3.05, try it now!
 
 <p align="center">
-  <img src="./img/" alt="Logo" width="500"/>
+  <img src="./img/alrc-favicon.svg" alt="Logo" width="500"/>
 </p>
 
 DESCRIPTION
