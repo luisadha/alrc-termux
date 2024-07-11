@@ -1,5 +1,8 @@
 # +1 New plugin added called "starship" since version 4.3.05, try it now!
-![logo](./img/alrc.png)
+
+<p align="center">
+  <img src="./img/alrc-favicon.png" alt="Logo" width="500"/>
+</p>
 DESCRIPTION
 -----------
 Alrc-termux is a framework designed to enrich the Termux user experience by providing bash shell configuration and useful plugins."
