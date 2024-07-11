@@ -14,13 +14,13 @@
 <a href="https://github.com/luisadha/alrc-termux/issues"><img src="https://img.shields.io/github/issues/luisadha/alrc-termux" alt="issues - alrc-termux"></a>
 </div>
 
+<h2>Demo</h2>
+<a href="https://asciinema.org/a/WBz9QOP5xNeKLFcIOB9wZYeBP" target="_blank"><img src="https://asciinema.org/a/WBz9QOP5xNeKLFcIOB9wZYeBP.svg" /></a>
 
+<!-- [![Shorts Video](https://img.youtube.com/vi/9X6naGKNOys/0.jpg)](https://www.youtube.com/shorts/9X6naGKNOys) -->
 DESCRIPTION
 -----------
 Alrc-termux is a framework designed to enrich the Termux user experience by providing bash shell configuration and useful plugins."
-
-
-[![Shorts Video](https://img.youtube.com/vi/9X6naGKNOys/0.jpg)](https://www.youtube.com/shorts/9X6naGKNOys)
 
 INSTALLATION
 ------------
