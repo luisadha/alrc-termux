@@ -3,6 +3,17 @@
 <p align="center">
   <img src="./img/alrc-favicon.svg" alt="Logo" sanitize=true height="130" width="250" />
 </p>
+<div align="center">
+<a href="https://github.com/luisadha/alrc-termux" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=luisadha&message=alrc-termux&color=blue&logo=github" alt="luisadha - alrc-termux"></a>
+<a href="https://github.com/luisadha/alrc-termux"><img src="https://img.shields.io/github/stars/luisadha/alrc-termux?style=social" alt="stars - alrc-termux"></a>
+<a href="https://github.com/luisadha/alrc-termux"><img src="https://img.shields.io/github/forks/luisadha/alrc-termux?style=social" alt="forks - alrc-termux"></a>
+<!-- <a href="https://github.com/luisadha/alrc-termux/actions?query=workflow:%22GH+Pages+Deploy%22"><img src="https://github.com/luisadha/alrc-termux/workflows/GH%20Pages%20Deploy/badge.svg" alt="GH Pages Deploy"></a>
+-->
+<a href="https://github.com/luisadha/alrc-termux/releases/"><img src="https://img.shields.io/github/release/luisadha/alrc-termux?include_prereleases=&sort=semver&color=blue" alt="GitHub release"></a>
+<a href="#license"><img src="https://img.shields.io/badge/License-GPLv3.0-blue" alt="License"></a>
+<a href="https://github.com/luisadha/alrc-termux/issues"><img src="https://img.shields.io/github/issues/luisadha/alrc-termux" alt="issues - alrc-termux"></a>
+</div>
+
 
 DESCRIPTION
 -----------
