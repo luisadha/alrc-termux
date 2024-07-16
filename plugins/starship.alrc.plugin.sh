@@ -18,7 +18,7 @@ eval "starship preset $import > $ALRC_HOME/prompt/starship/${import}.toml";
 done
 
 if [ $ALRC_USE_STARSHIP == "random" ]; then
-  al_shuf_starship_prompt #&>/dev/null
+  al_shuf_starship_prompt &>/dev/null
 fi
   eval "$(starship init bash)"
   unset ps;
