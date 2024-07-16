@@ -19,7 +19,7 @@
 #  set -xv
 
 # major * minor * patch *
-export ALRC_VERSION="4.3.05"
+export ALRC_VERSION="4.3.06"
 
 ALRC_UDATE='26/04/24 00:54 WIB'
 
