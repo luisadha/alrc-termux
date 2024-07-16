@@ -446,8 +446,9 @@ esac
 HOME="${HOME:=/data/data/com.termux/files/home}" # fix home
 USER="${USER:-$(id -un)}"
 HOSTNAME="$(getprop net.hostname)"
-PS1='\[\e[0;36m\]\u@${HOSTNAME}:\w${text}$\[\e[m\]'
-export HOME USER HOSTNAME PS1
+#PS1='\[\e[0;36m\]\u@${HOSTNAME}:\w${text}$\[\e[m\]'
+export HOME USER HOSTNAME 
+#PS1
 
 
 

@@ -1,7 +1,7 @@
 #! bash alrc-termux.module
 
 if [[ -x $(which starship 2>/dev/null) ]]; then
-  eval "$(starship init bash)"
+
 set +o noclobber
 plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
  ps=${plugin_shortname};
@@ -18,8 +18,9 @@ eval "starship preset $import > $ALRC_HOME/prompt/starship/${import}.toml";
 done
 
 if [ $ALRC_USE_STARSHIP == "random" ]; then
-  al_shuf_starship_prompt &>/dev/null
+  al_shuf_starship_prompt #&>/dev/null
 fi
+  eval "$(starship init bash)"
   unset ps;
   unset plugin_shortname;
   unset import
