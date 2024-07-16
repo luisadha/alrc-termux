@@ -4,7 +4,8 @@
 
 
 ALRC_HOME="$(cd -- "$(dirname -- "$(realpath "${BASH_SOURCE[0]}")")" &> /dev/null && pwd)"
-VERSION="$(cat "${ALRC_HOME}/alrc-termux.sh" | sed -n 's/^# version : //p')"
+VERSION="$(echo "$ALRC_VERSION")"
+#$(cat "${ALRC_HOME}/alrc-termux.sh" | sed -n 's/^# version : //p')"
 CMD="$(basename -- $0)"
 
 _usage() {
@@ -32,7 +33,7 @@ _main() {
     h|help)
       _usage
       ;;
-    v|version)
+    v|-v|version|--version)
       echo $VERSION
       ;;
     i|install)
