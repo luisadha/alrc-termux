@@ -1,4 +1,4 @@
-# +1 New plugin added called "starship" since version 4.3.05, try it now!
+# +2 New plugins added since version 4.3.06, try it now!
 
 <p align="center">
   <img src="./img/alrc-favicon.svg" alt="Logo" sanitize=true height="130" width="250" />
