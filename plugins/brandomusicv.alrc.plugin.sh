@@ -11,7 +11,7 @@ function __brandomusicv()
 
 
   #export BRANDO_RESPONSE=
-  #export BRANDO_NO_CACHE=
+  export BRANDO_NO_CACHE=true
  
   # Variabel ini digunakan untuk aplikasi DMP, aktifkan variabel di .bashrc jika anda memutar dengan DMP player
   # Direkomendasikan untuk mengaktifkan variabel ini secara setinggan default untuk menghindari error
@@ -65,7 +65,7 @@ EOF
     esac
 return
 }
-alias brandomusicv='setenv BRANDO_RESPONSE y & __brandomusicv'
+alias brandomusicv='setenv BRANDO_RESPONSE y && __brandomusicv'
 
 plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
 alrc_plugin_enabled+=($plugin_shortname)
