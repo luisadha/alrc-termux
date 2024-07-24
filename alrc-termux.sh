@@ -19,9 +19,9 @@
 #  set -xv
 
 # major * minor * patch *
-export ALRC_VERSION="4.3.06"
+export ALRC_VERSION="4.3.07"
 
-ALRC_UDATE='26/04/24 00:54 WIB'
+ALRC_UDATE='24/07/24 22:18 WIB'
 
 if [ "$ALRC_USE_ENV_PATH" == "true" ]; then
 export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
@@ -427,16 +427,15 @@ case "$ALRC_USE_STARSHIP" in
     alrc_starship=false;
     ;;
   "random")
-    set +o noclobber
+    set +o noclobber;
     alrc_starship=true;
     source $ALRC_HOME/lib/ext_command_helper.sh; al_include_starship; #shuffle prompt
     #starship preset $(cat $ALRC_HOME/cache/active_prompt.dat) -o ~/.config/starship.toml
     ;;
    *)
-    set +o noclobber
+    set +o noclobber;
     alrc_starship=true;
     source $ALRC_HOME/lib/ext_command_helper.sh; al_include_starship;
-    #starship preset ${ALRC_USE_STARSHIP} -o ~/.config/starship.toml
     ;;
 esac
 
