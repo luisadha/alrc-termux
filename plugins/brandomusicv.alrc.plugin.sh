@@ -4,7 +4,7 @@
 # Copyright (c) 2023 Luisadha, GNU GPLv3
 
 set +o noclobber
-function brandomusicv()
+function __brandomusicv()
 {
   # Testing on Musik com.miui.player (6.4.20i)
   # Testing on Dialog Music Player phone.vishnu.dialogmusicplayer (v2.1.1)
@@ -65,6 +65,7 @@ EOF
     esac
 return
 }
+alias brandomusicv='setenv BRANDO_RESPONSE y & __brandomusicv'
 
 plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
 alrc_plugin_enabled+=($plugin_shortname)
