@@ -20,6 +20,8 @@ done
 
 if [ $ALRC_USE_STARSHIP == "random" ]; then
   al_shuf_starship_prompt &>/dev/null
+  else 
+  starship preset ${ALRC_USE_STARSHIP} -o ~/.config/starship.toml
 fi
   eval "$(starship init bash)"
   unset ps;
