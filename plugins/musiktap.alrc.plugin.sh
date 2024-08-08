@@ -1,5 +1,11 @@
 #! bash alrc-termux.module
+
+plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
+alrc_plugin_enabled+=($plugin_shortname)
+readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
+
 function main() {
+local ps=${plugin_shortname}
 cat <<- "EOF" > $HOME/.shortcuts/musiktap.app
 
 # Cli-apps for termux widget "Musiktap adalah konfigurasi untuk menjalankan library musik.sh"
@@ -19,12 +25,9 @@ bash --init-file ${ALRC_HOME:-~/.alrc.sandbox}/lib/music.sh
 # Tidak pakai source karena pasti bakal error
 
 EOF
+echo -e "alrc-termux: Plugin ${ps} successfully loadded!"
+echo "+1 \"${ps}.app\" file added at ~/.shortcuts"
 }
-plugin_shortname=$(echo "${BASH_SOURCE[0]}" | awk '{gsub(/.*[/]|[.].*/, "", $0)} 1' )
-alrc_plugin_enabled+=($plugin_shortname)
-readarray -t alrc_plugin_enabled <<< $(printf "%s\n" "${alrc_plugin_enabled[@]}" | sort -u)
-
-echo "1 files Added at ~/.shortcuts."
 main;
 unset -f main;
 unset plugin_shortname
