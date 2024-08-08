@@ -7,7 +7,7 @@ cat <<- "EOF" > $HOME/.shortcuts/musiktap.app
 # You should install alrc-termux first!
 #by luisadha 
 #
-
+export ALRC_HOME="/data/data/com.termux/files/home/.local/share/alrc-termux"
 export IMG_COVER="${ALRC_HOME:-~/.alrc.sandbox}/img/miku_75949.png" # path to your image for ascii generating
 export COLOR_GRADIENT="magma" # uncomment to random generate gradient colors
 export ANIMATE_DURATION=5 # Durasi animasi pewarna diset ke nol secara default.
