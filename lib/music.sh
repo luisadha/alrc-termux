@@ -1,12 +1,16 @@
 
 # ! bash alrc-termux.module
-# Version 1.5 music.sh
+# Version 1.5 beta music.sh
 # By Luis Adha
 # COMMENTS ONLY AVAILABLE IN BAHASA (INDONESIAN LANGUAGE)
 
 # IMPORT 
-source <(alrc env)&>/dev/null
-source ${ALRC_HOME:-/data/data/com.termux/files/home/.local/share/alrc-termux}/lib/ext_command_helper.sh;
+#source ${ALRC_HOME}/lib/ext_command_helper.sh
+#source <(~/.local/bin/alrc env)> /dev/null 2>&1; 
+#     \ ini akan mengimpor fungsi
+#      \ brandomusic(),
+#       \ al_notify() dan
+#        \ lolcrab_gradient_shuf
 
 # SETUP CONFIG IN ~/.SHORTCUTS/MUSIKTAP.APP
 ##! MOHON JANGAN UNKOMENTAR BAGIAN INI, INI SEKEDAR ARAHAN  UNTUK KONFIGURASI
@@ -19,15 +23,15 @@ source ${ALRC_HOME:-/data/data/com.termux/files/home/.local/share/alrc-termux}/l
 # VARIABLE
 export PATH="$PATH:~/.cargo/bin"
 #mediaPlayerProccess=$(termux-media-player info)
-getRandom=$(al_shuf_lolcrab_gradient)
+# getRandom=$(al_shuf_lolcrab_gradient)
 
 # CHECK DEPENDENCIES
-check_dependency lolcrab
+: "check_dependency lolcrab
 check_dependency coreutils
 check_dependency termux-media-player
 check_dependency brandomusicx
 check_dependency jp2a
-check_dependency python3
+check_dependency python3 "
 pip show halo &>/dev/null || echo "Python (halo) module not installed!"
 
 
@@ -40,7 +44,44 @@ if [ "$DATE" == "static" ]; then
 static_date=true
 fi
 
+function brandomusicx {
+   # Created by @luisadha
+  
+   help() {
+(
+echo -e "BrandomusicXtended (brandomusicx) is an shortcut for function brandomusic.\n" >&2;
 
+echo -e "Powered by TERMUX API\n
+Available options : " >&2;
+
+  echo -e " [\"help\", \"kill\", \"pause\", \"resume\", \"shuffle\" ]"; 
+  )
+}
+
+opti="$1"
+if [ -z "$opti" ]; then
+  help;
+
+elif [ "$opti" == "shuffle" ] || [ "$opti" == "play" ]; then
+cd ~
+set +o noclobber
+termux-media-player play "$(realpath "$(busybox ls ~/**/*.mp3 | shuf -n1)" )" > ${ALRC_HOME:-~/.alrc.sandbox}/cache/title-songs.txt;
+cd - &>/dev/null;
+elif [ "$opti" == "help" ]; then
+  help;
+elif [ "$opti" == "resume" ]; then
+termux-media-player play;
+printf "Play songs with Type \`${FUNCNAME[0]}'.\n"
+elif [ "$opti" == "pause" ]; then
+termux-media-player pause;
+elif [ "$opti" == "kill" ]; then
+termux-media-player stop;
+ else
+echo "see: \`${FUNCNAME[0]} help' more details."
+fi
+unset -f help
+}
+declare -f -x brandomusicx
 # Fungsi-fungsi
 function __main__()
 {
@@ -57,7 +98,7 @@ drawTextFill() {
  echo -n $arg && printf %"$calc"s | tr " " "-"
 }
 loadingAnimation() {
-python3 ~/.local/share/alrc-termux/lib/fetchSongTitle_animation.py
+python3 ${ALRC_HOME:-~/.alrc.sandbox}/lib/fetchSongTitle_animation.py
 }
 fetchSongInfo() {
 termux-media-player info | xargs -n1 | grep -v "Status:" | grep -v "Track:" | grep -v "Current" | grep -v "Position:" | xargs -d "\n"
@@ -82,7 +123,7 @@ esac
 
 #          set -xv
 if [ ! "$COLUMNS" == "$MAX_COLUMN" ]; then
-al_notify "Your column is $(tput cols), Pinch zoom out to $MAX_COLUMN column to see extended animation. But you can skip this warning ";  read REPLY
+termux-toast "Your column is $(tput cols), Pinch zoom out to $MAX_COLUMN column to see extended animation. But you can skip this warning ";  read REPLY
 fi;
       echo
       loadingAnimation;
@@ -101,3 +142,5 @@ bannerAnimation
    continue
   fi
 done ) &
+
+# 963277
