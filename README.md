@@ -132,6 +132,7 @@ BUGS
 - The al option, namely al_ab, cannot be exported to environment variables. I don't know why that can.
 - On my device The imjpgrand automation feature won't consistently select the image viewer even if I press "Select always" in the end the solution was that one of the apps had to be uninstalled. I kept the zarchiver viewer and deleted the other one.
 - Be careful installing other dotfiles, it can cause unwanted bugs/errors due to misconfiguration. first uninstall alrc-termux if you want to try using other dotfiles. termux-desktop causes imjpgrand to not work and other weird bugs.
+- MI Music and DMP Music player are tested, brandomusicv only tested on mi music player version 6.4.20i other than that version does not work (solution uninstall update or change to another supported music player).
 
 
 
