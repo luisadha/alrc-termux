@@ -107,43 +107,7 @@ fi
 
 }
 declare -f -x brandomusicq
-function brandomusicx {
-   # Created by @luisadha
-   help() {
-(
-echo -e "BrandomusicXtended (brandomusicx) is an shortcut for function brandomusic.\n" >&2;
 
-echo -e "Powered by TERMUX API\n
-Available options : " >&2;
-
-  echo -e " [\"help\", \"kill\", \"pause\", \"resume\", \"shuffle\" ]"; 
-  )
-}
-
-opti="$1"
-if [ -z "$opti" ]; then
-  help;
-
-elif [ "$opti" == "shuffle" ] || [ "$opti" == "play" ]; then
-cd ~
-set +o noclobber
-termux-media-player play "$(realpath "$(busybox ls ~/**/*.mp3 | shuf -n1)" )" > $ALRC_HOME/cache/title-songs.txt;
-cd - &>/dev/null;
-elif [ "$opti" == "help" ]; then
-  help;
-elif [ "$opti" == "resume" ]; then
-termux-media-player play;
-printf "Play songs with Type \`${FUNCNAME[0]}'.\n"
-elif [ "$opti" == "pause" ]; then
-termux-media-player pause;
-elif [ "$opti" == "kill" ]; then
-termux-media-player stop;
- else
-echo "see: \`${FUNCNAME[0]} help' more details."
-fi
-unset -f help
-}
-declare -f -x brandomusicx
 function brandomusic {
 # builtin alrc-termux 
 # USAGE : brandomusic DIR...
