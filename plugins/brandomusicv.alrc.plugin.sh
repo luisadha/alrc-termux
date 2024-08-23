@@ -9,6 +9,9 @@ function __brandomusicv()
   # Testing on Musik com.miui.player (6.4.20i)
   # Testing on Dialog Music Player phone.vishnu.dialogmusicplayer (v2.1.1)
 
+# is Dialog Music Player
+DMPlayer=true # phone.vishnu.dialogmusicplayer
+
 
   #export BRANDO_RESPONSE=
   export BRANDO_NO_CACHE=true
