@@ -10,9 +10,9 @@ function __brandomusicv()
   # Testing on Dialog Music Player phone.vishnu.dialogmusicplayer (v2.1.1)
 
 # is Dialog Music Player
-DMPlayer=true # phone.vishnu.dialogmusicplayer
 
 
+  export DMPLAYER=true # phone.vishnu.dialogmusicplayer
   #export BRANDO_RESPONSE=
   export BRANDO_NO_CACHE=true
  
@@ -24,7 +24,9 @@ DMPlayer=true # phone.vishnu.dialogmusicplayer
       export _TMP=""
  source ~/.local/share/alrc-termux/plugins/brandomusicv.alrc.plugin.sh
   fi
-
+ if [[ $DMPLAYER == true ]]; then
+    hide_soft_keyboard
+ fi
 local format='audio/mp3';
     local file="${1:+"${1}/*.mp3"}";
     local file2="${1-"${HOME}/downloads/*.mp3"}";
