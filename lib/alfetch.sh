@@ -214,16 +214,16 @@ setterm --cursor off
 setterm --linewrap off
 
 default_header
-fetch "$border"\       "▢ border >>"" $(get_border)"\                  "$border"
+fetch "$border"\       "▢ border >>"" $(get_border)"\                       "$border"
 fetch "$border"\       " os >>"""""""""""" $(get_os) ($(get_arch))"\       "$border"
-fetch "$border"\       " term >>"""""""""" $(get_term)"\               "$border"
-fetch "$border"\       " date >>"""""""""" $(get_date)"\           "$border"
-fetch "$border"\       " song >>"""""""""" $(get_song)"\               "$border"
-fetch "$border"\       " kernel >>"""""""" $(get_kernel)"\             "$border"
-fetch "$border"\       " shell >>"""""""" $(get_shell)"\               "$border"
-fetch "$border"\       " battery >>"""""" $(get_battery)"\             "$border"
-fetch "$border"\       " uptime >>"""""" $(get_uptime)"\               "$border"
-fetch "$border"\       " packages >>"""" $(get_packages)"\             "$border"
+fetch "$border"\       " term >>"""""""""" $(get_term)"\                   "$border"
+fetch "$border"\       " date >>"""""""""" $(get_date)"\                   "$border"
+fetch "$border"\       " song >>"""""""""" $(get_song)"\                   "$border"
+fetch "$border"\       " kernel >>"""""""" $(get_kernel)"\                 "$border"
+fetch "$border"\       " shell >>"""""""" $(get_shell)"\                   "$border"
+fetch "$border"\       " battery >>"""""" $(get_battery)"\                 "$border"
+fetch "$border"\       " uptime >>"""""" $(get_uptime)"\                   "$border"
+fetch "$border"\       " packages >>"""" $(get_packages)"\                 "$border"
 default_header
 setterm --cursor on
 setterm --linewrap on
