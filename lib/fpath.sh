@@ -82,7 +82,11 @@ fi ||\ }
 
 }
 declare -f -x imjpgrand
+
 function brandomusicq {
+echo "Maintenance in progress!"
+return 0
+: "
 # Created by @luisadha 
   set +o noclobber
   set +m
@@ -104,7 +108,7 @@ else
   echo "Before proced this action!"
   return 1
 fi
-
+"
 }
 declare -f -x brandomusicq
 
@@ -143,7 +147,9 @@ function brandomusic {
 
 # License : GNU/GPLv3
 # Copyright (c) 2023 @luisadha
-
+echo "Maintenance in progress!"
+return 0
+: "
 set +o noclobber
 local format='audio/mp3'
 local format2='audio'
@@ -183,7 +189,7 @@ echo
 cd - &>/dev/null;;
         * ) rm -f "${tmp}" ; termux-toast "timeout or done!"; cd - &>/dev/null; return 0;;
     esac
-
+"
 }
 declare -f -x brandomusic
 function ranpper-termux {
