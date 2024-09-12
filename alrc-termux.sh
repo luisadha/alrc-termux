@@ -441,12 +441,12 @@ esac
 
 
 ##- Enviroment variable
- unset HOME USER
-HOME="${HOME:=/data/data/com.termux/files/home}" # fix home
+# unset HOME USER
+# HOME="${HOME:=/data/data/com.termux/files/home}" # fix home
 USER="${USER:-$(id -un)}"
 HOSTNAME="$(getprop net.hostname)"
 #PS1='\[\e[0;36m\]\u@${HOSTNAME}:\w${text}$\[\e[m\]'
-export HOME USER HOSTNAME 
+export USER HOSTNAME 
 #PS1
 
 
