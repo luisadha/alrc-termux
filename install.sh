@@ -35,7 +35,13 @@ if ! command -v git &>/dev/null; then
   echo "git not found"
   _run pkg install git
 fi
-
+  if ! command -v hide_soft_keyboard &>/dev/null; then
+  echo -e "'hide_soft_keyboard' not found"
+  _run git clone https://github.com/luisadha/hide_soft_keyboard.git
+  cd hide_soft_keyboard;
+  make install;
+  cd - &>/dev/null;
+  fi
 if [ -d "$ALRC_HOME" ]; then
   echo "alrc-termux already installed"
   echo "updating alrc..."
