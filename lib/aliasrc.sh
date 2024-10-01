@@ -10,9 +10,9 @@ alias r='fc -e -'
 
 #  personal aliases
 #maintain_alias()  {
-
-alias brandomusic-set_autoremove="sed 's/\#\ brandomusic-cache-clear\.sh/\ brandomusic-cache-clear\.sh/g' $ALRC_SCRIPT > $ALRC_SCRIPT.tmp; mv -f $ALRC_SCRIPT.tmp $ALRC_SCRIPT > /dev/null 2>&1; al_login;"
-alias brandomusic+set_autoremove="sed 's/\ brandomusic-cache-clear\.sh/\#\ brandomusic-cache-clear\.sh/g' $ALRC_SCRIPT > $ALRC_SCRIPT.tmp; mv -f $ALRC_SCRIPT.tmp $ALRC_SCRIPT > /dev/null 2>&1; al_login;"
+# Deprecreated alias brandomusic series
+#alias brandomusic-set_autoremove="sed 's/\#\ brandomusic-cache-clear\.sh/\ brandomusic-cache-clear\.sh/g' $ALRC_SCRIPT > $ALRC_SCRIPT.tmp; mv -f $ALRC_SCRIPT.tmp $ALRC_SCRIPT > /dev/null 2>&1; al_login;"
+#alias brandomusic+set_autoremove="sed 's/\ brandomusic-cache-clear\.sh/\#\ brandomusic-cache-clear\.sh/g' $ALRC_SCRIPT > $ALRC_SCRIPT.tmp; mv -f $ALRC_SCRIPT.tmp $ALRC_SCRIPT > /dev/null 2>&1; al_login;"
 #                  }
 #
 # alias al
