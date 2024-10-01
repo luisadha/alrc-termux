@@ -98,7 +98,7 @@ drawTextFill() {
  echo -n $arg && printf %"$calc"s | tr " " "-"
 }
 loadingAnimation() {
-    bash ${ALRC_HOME:~/.alrc.sandbox}/lib/progsche.sh -c '$' 08 "$(songTitle)"
+    bash ${ALRC_HOME:-~/.alrc.sandbox}/lib/progsche.sh -c '$' 08 "$(songTitle)"
 # python3 ${ALRC_HOME:-~/.alrc.sandbox}/lib/fetchSongTitle_animation.py
 }
 songTitle() {
