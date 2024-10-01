@@ -98,11 +98,14 @@ drawTextFill() {
  echo -n $arg && printf %"$calc"s | tr " " "-"
 }
 loadingAnimation() {
-python3 ${ALRC_HOME:-~/.alrc.sandbox}/lib/fetchSongTitle_animation.py
+    bash ${ALRC_HOME:~/.alrc.sandbox}/lib/progsche.sh -c '$' 08 "$(songTitle)"
+# python3 ${ALRC_HOME:-~/.alrc.sandbox}/lib/fetchSongTitle_animation.py
+}
+songTitle() {
+termux-media-player info | xargs -n1 | grep -v "Status:" | grep -v "Track:" | grep -v "Current" | grep -v "Position:" | xargs -d "\n" | awk '{print $1,$2}'
 }
 fetchSongInfo() {
 termux-media-player info | xargs -n1 | grep -v "Status:" | grep -v "Track:" | grep -v "Current" | grep -v "Position:" | xargs -d "\n"
-
 }
 bannerAnimation() {
 if [ "$static_date" == "true" ]; then
