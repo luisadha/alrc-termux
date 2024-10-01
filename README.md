@@ -138,7 +138,10 @@ BUGS
 
 ROADMAP
 -------
-I'd like to add more, aliases, function and plugins for upcoming updates.
+
+DEV: I no longer create scripts for the .shortcuts folder "It was tiring" but requests will still be accepted just not our priority anymore.
+
+DEV: I welcome new plugin support ideas
 
 CONTRIBUTION
 ------------
