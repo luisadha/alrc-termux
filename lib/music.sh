@@ -1,6 +1,6 @@
 
 # ! bash alrc-termux.module
-# Version 1.5 beta music.sh
+# Version 2.0 stable music.sh
 # By Luis Adha
 # COMMENTS ONLY AVAILABLE IN BAHASA (INDONESIAN LANGUAGE)
 
