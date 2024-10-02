@@ -98,11 +98,19 @@ drawTextFill() {
  echo -n $arg && printf %"$calc"s | tr " " "-"
 }
 loadingAnimation() {
-    bash ${ALRC_HOME:-~/.alrc.sandbox}/lib/progsche.sh -c '$' 08 "$(songTitle)"
+  local start finish duration
+  start=$(date +%s)
+  
+ timeout 3s nyancat -i
+  finish=$(date +%s)
+  
+  duration=$((finish - start))
+
+  bash ${ALRC_HOME:-'~/.alrc.sandbox'}/lib/progsche.sh -c '$' $duration "$(songTitle)"
 # python3 ${ALRC_HOME:-~/.alrc.sandbox}/lib/fetchSongTitle_animation.py
 }
 songTitle() {
-termux-media-player info | xargs -n1 | grep -v "Status:" | grep -v "Track:" | grep -v "Current" | grep -v "Position:" | xargs -d "\n" | awk '{print $1,$2}'
+termux-media-player info | xargs -n1 | grep -v "Status:" | grep -v "Track:" | grep -v "Current" | grep -v "Position:" | xargs -d "\n"
 }
 fetchSongInfo() {
 termux-media-player info | xargs -n1 | grep -v "Status:" | grep -v "Track:" | grep -v "Current" | grep -v "Position:" | xargs -d "\n"
@@ -124,14 +132,15 @@ case $- in
     *) echo "this option request interactive shell mode" 1>&2; exit;;
 esac
 
-#          set -xv
+       #  set -xv
 if [ ! "$COLUMNS" == "$MAX_COLUMN" ]; then
-termux-toast "Your column is $(tput cols), Pinch zoom out to $MAX_COLUMN column to see extended animation. But you can skip this warning ";  read REPLY
+termux-toast "Your column is $(tput cols), Pinch zoom out to $MAX_COLUMN column to see extended animation. But you can skip this warning "; 
 fi;
       echo
       loadingAnimation;
       echo ''
-      echo; 
+      echo;
+    #  set +xv
 ( 
 cols=$(tput cols);
 while true; do
