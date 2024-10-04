@@ -38,7 +38,7 @@ A. Termux
 - *Automatic*
 
 ```sh
-. <(curl -L https://raw.githubusercontent.com/luisadha/alrc-termux/main/install.sh)
+curl -Lo- https://get.luisadha.my.id/alrc.sh | bash
 ```
 
 - *Manual*
