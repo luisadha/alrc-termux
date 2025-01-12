@@ -2,7 +2,7 @@
 
 # By Luisadha x fmway
 
-PREFIX="/data/data/com.termux/files/usr"
+PREFIX="${PREFIX:-}"
 TERMUX_BIN="${PREFIX}/bin"
 REPO="https://github.com/luisadha/alrc-termux.git"
 BRANCH="v4.3.4"
