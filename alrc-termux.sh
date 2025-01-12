@@ -174,9 +174,9 @@ isPlayingEdit() {
 termux-media-player info | awk '{print $2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15}' | grep -v "Playing" | grep -v "Position:" | xargs
 }
 
-if [ $(isPlaying | awk '{print $1}') == "Playing" ]; then
+if [ "$(isPlaying | awk '{print $1}')" == "Playing" ]; then
  echo "$(isPlayingEdit) (Memutar)"
-elif [ $(isPlaying | awk '{print $1}') == "Paused" ]; then
+elif [ "$(isPlaying | awk '{print $1}')" == "Paused" ]; then
  echo "$(isPlaying)" |  awk '{gsub("Paused", ""); print $0 " (Dijeda)"}'
 else
  echo "unknown $(isPlaying)" | cut -d" " -f1
