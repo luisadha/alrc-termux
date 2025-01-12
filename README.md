@@ -38,7 +38,7 @@ A. Termux
 - *Automatic*
 
 ```sh
-curl -Lo- https://get.luisadha.my.id/alrc.sh | bash
+curl -Lo- https://alrc.luisadha.my.id | bash
 ```
 
 - *Manual*
