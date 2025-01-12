@@ -215,9 +215,9 @@ ijk=$(echo "${icon} packages >> ${packages_termux}" | wc -L); kji=$(echo "$COLUM
 jkl=$(echo "${icon} bash source >> ${ALRC_SOURCE}" | wc -L); lkj=$(echo "$COLUMNS - $jkl" | bc);
 mno=$(echo "${icon} songs >> $(al_fetchSongInfo)" | wc -L); onm=$(echo "$COLUMNS - $mno" | bc);
 
-ENV="${ENV:-"/system/etc/mkshrc"}"
-test $ENV;
-if [ $? -eq 0 ]; then
+#ENV="${ENV:-"/system/etc/mkshrc"}"
+#test $ENV;
+#if [ $? -eq 0 ]; then
 
 if [ "$ALRC_USE_ALFETCH" == "true" ]; then
 setterm --cursor off
@@ -242,10 +242,7 @@ $(printf %"$COLUMNS"s |tr " " "-") ";
 fi
 echo -e "$thanks"
 #echo "alrc: al is a $(type -t al), More informations? you can type \`whatisal'"
-else
-echo "Your device isn't Android"
-return 1
-fi
+#else echo "Your device isn't Android"; return 1; fi
 
 else echo "Hello ${shell}, please make sure your shell are bash"; return 1; fi
 
