@@ -188,7 +188,7 @@ function al() {
 
 # String
 
-local thanks="Thank you for using alrc-termux!"
+#local thanks="Thank you for using alrc-termux!"
 
 local my_terminal="$(echo $(dirname ${PREFIX:=$SYSROOT}))"
 local uptimes="$(busybox uptime -s)" > /dev/null 2>&1;
@@ -240,7 +240,7 @@ echo -e "$(printf %"$COLUMNS"s |tr " " "-")
 | bash source >> ${ALRC_SOURCE}$(printf %"$lkj"s "$icon" )
 $(printf %"$COLUMNS"s |tr " " "-") ";
 fi
-echo -e "$thanks"
+#echo -e "$thanks"
 #echo "alrc: al is a $(type -t al), More informations? you can type \`whatisal'"
 #else echo "Your device isn't Android"; return 1; fi
 
