@@ -119,10 +119,10 @@ bash ~/.shortcuts/alrc.test
 #### testing
 
 - [x] Termux
-- [x] Ztmexluis
+- [x] ~~Ztmexluis~~
 - [x] Acode Terminal (Plugin Acode)
 - [ ] AndroidIDE (Terminal) But some gui features and features that require fire extinguishers won't work.
-- [ ] Nix-on-droid But some gui features and features that require fire extinguishers won't work.
+- [x] Nix-on-droid But some gui features and features that require fire extinguishers won't work.
 - [ ] Proot-distro (Experimental)
 - [ ] Replit (Just for testing purposes)
 - [ ] Wayland (Not working Alif said)
