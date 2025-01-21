@@ -202,6 +202,7 @@ local shell="$(echo "$0" |awk '{gsub(/.*[/]|[.].*/, "", $0)} 1')";
 export opt="$1"
 if [ -z "$opt" ]; then
   if [ "${shell}" == "bash" ] || [ "$shell" == "bash.bin" ]; then
+
 icon='|'
 abc=$(echo "${icon} os >> $(uname -so)" | wc -L); cba=$(echo "$COLUMNS - $abc" | bc);
 bcd=$(echo "${icon} arch >> $(uname -m)" | wc -L); dcb=$(echo "$COLUMNS - $bcd" | bc);
@@ -220,13 +221,11 @@ mno=$(echo "${icon} songs >> $(al_fetchSongInfo)" | wc -L); onm=$(echo "$COLUMNS
 #if [ $? -eq 0 ]; then
 
 if [ "$ALRC_USE_ALFETCH" == "true" ]; then
-setterm --cursor off
-setterm --linewrap off
-echo -ne '\n'
-source "$ALRC_HOME/lib/alfetch.sh" 
-else
-
-echo -e "$(printf %"$COLUMNS"s |tr " " "-")
+     setterm --cursor off
+     setterm --linewrap off
+     echo -ne '\n'
+     source "$ALRC_HOME/lib/alfetch.sh" 
+else echo -e "$(printf %"$COLUMNS"s |tr " " "-")
 | os >> $(uname -so)$(printf %"$cba"s "$icon" )
 | arch >> $(uname -m)$(printf %"$dcb"s "$icon" )
 | term >> ${TERM}$(printf %"$edc"s "$icon" )
@@ -238,8 +237,7 @@ echo -e "$(printf %"$COLUMNS"s |tr " " "-")
 | battery >> ${batteries}$(printf %"$jih"s "$icon" )
 | packages >> ${packages_termux}$(printf %"$kji"s "$icon" )
 | bash source >> ${ALRC_SOURCE}$(printf %"$lkj"s "$icon" )
-$(printf %"$COLUMNS"s |tr " " "-") ";
-fi
+$(printf %"$COLUMNS"s |tr " " "-") "; fi;
 #echo -e "$thanks"
 #echo "alrc: al is a $(type -t al), More informations? you can type \`whatisal'"
 #else echo "Your device isn't Android"; return 1; fi
@@ -348,10 +346,7 @@ else
 echo -e "Use \`al' or \$al for view system informations" >&2;
 echo -e "Need help? use \`whatisal'\n" >&2;
 echo -e "Available options: \n" >&2;
-
-  alcat | grep -w '$opt' | awk '{print $5}' | sed 's/\];//g' | sed 's/\'\$opt'//g' | sed "s/''//g" | sort | grep -v -e '^[[:space:]]*$' | xargs -d "\n" | awk '{for(i=1;i<NF;i++)if(i!=NF){$i=$i","}  }1' | sed 's/^/[/' | sed 's/$/]/'  
-fi
-
+  alcat | grep -w '$opt' | awk '{print $5}' | sed 's/\];//g' | sed 's/\'\$opt'//g' | sed "s/''//g" | sort | grep -v -e '^[[:space:]]*$' | xargs -d "\n" | awk '{for(i=1;i<NF;i++)if(i!=NF){$i=$i","}  }1' | sed 's/^/[/' | sed 's/$/]/'; fi
 }
 
 function whatisal() {
