@@ -386,7 +386,7 @@ al_set_window "successfully script called via source";
 
 # RUNTIME NORMAL
 if [ "$ALRC_NO_MOTD" == "true" ]; then
-     :
+     unset -f al
 fi  
 # RUNTIME MOTD
 case "$ALRC_MOTD_USE_BOXES" in
