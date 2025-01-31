@@ -19,7 +19,7 @@
 #  set -xv
 
 # major * minor * patch *
-export ALRC_VERSION="4.3.09"
+export ALRC_VERSION="4.3.10"
 
 ALRC_UDATE='12/01/25 18:50 WIB'
 
@@ -219,6 +219,10 @@ mno=$(echo "${icon} songs >> $(al_fetchSongInfo)" | wc -L); onm=$(echo "$COLUMNS
 #ENV="${ENV:-"/system/etc/mkshrc"}"
 #test $ENV;
 #if [ $? -eq 0 ]; then
+
+if [ "$ALRC_NO_MOTD" == "true" ]; then
+     ALRC_USE_ALFETCH="false"
+fi
 
 if [ "$ALRC_USE_ALFETCH" == "true" ]; then
      setterm --cursor off
