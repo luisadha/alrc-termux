@@ -220,10 +220,6 @@ mno=$(echo "${icon} songs >> $(al_fetchSongInfo)" | wc -L); onm=$(echo "$COLUMNS
 #test $ENV;
 #if [ $? -eq 0 ]; then
 
-if [ "$ALRC_NO_MOTD" == "true" ]; then
-     ALRC_USE_ALFETCH="false"
-fi
-
 if [ "$ALRC_USE_ALFETCH" == "true" ]; then
      setterm --cursor off
      setterm --linewrap off
@@ -369,7 +365,7 @@ usage#2: whatisal print this help message and return
 \t al\t  review al and return
 \t $al\t  same as above \`al'
 \t al help\t  print available options using json style
-\t al_scan_opt\t  export all output from al options to enviroment var. use \`env\' or \`alvar\ al' to see effect al_scan_opt.
+\t al_scan_opt\t  \export all output from al options to enviroment var. use \`env\' or \`alvar\ al' to see effect al_scan_opt.
 \t alvar\t  print variable name are exported
 \t chsh -s bash\t  change shell to bash and exit \n
 ";
@@ -388,9 +384,13 @@ usage#2: whatisal print this help message and return
 source $0 > /dev/null 2>&1 && until false; do sleep 1; done
 al_set_window "successfully script called via source"; 
 
+# RUNTIME NORMAL
+if [ "$ALRC_NO_MOTD" == "true" ]; then
+     :
+fi  
 # RUNTIME MOTD
 case "$ALRC_MOTD_USE_BOXES" in
-  "") al;;
+  "")  al;;
   "random")
     set +o noclobber;
     source $ALRC_HOME/lib/ext_command_helper.sh; al_include_boxes_motd_custom
