@@ -1,5 +1,5 @@
 .env
-
+./README.html
 cache/cached_border.dat
 cache/title-songs.txt
 cache/active_prompt.dat
