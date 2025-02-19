@@ -223,7 +223,7 @@ fetch "$border"\       " term >>"""""""""" $(get_term)"\                   "$
 fetch "$border"\       " date >>"""""""""" $(get_date)"\                   "$border"
 fetch "$border"\       " song >>"""""""""" ${get_song}"\                   "$border"
 fetch "$border"\       " kernel >>"""""""" $(get_kernel)"\                 "$border"
-fetch "$border"\       " shell >>"""""""" $(get_shell)"\                   "$border"
+fetch "$border"\       " shell >>"""""""" ${SHELL}"\                   "$border"
 fetch "$border"\       " battery >>"""""" $(get_battery)"\                 "$border"
 fetch "$border"\       " uptime >>"""""" ${get_uptime}"\                   "$border"
 fetch "$border"\       " packages >>"""" $(get_packages)"\                 "$border"
