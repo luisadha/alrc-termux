@@ -58,6 +58,10 @@ _fill_blank=$(printf %"$_calc"s | sed "s/ /$h_line/g")
 #printf %"$_min_cols"s && echo -e "$_char\rHELLO WORD"
 #printf %"$_min_cols"s && echo -e "$_char\r${_char} HELLO WORD"
 
+# Sox
+get_song="$(ps aux | grep '[p]lay' | awk '{for (i=11; i<=NF; i++) printf "%s ", $i; print ""}' | awk -F'/' '{print $NF}' )"
+
+
 get_border() {
 local FETCH_BORDER=${ALRC_MOTD_USE_BOXES:-$(echo "border by alfetch")}
 local GET_BORDER=$(al_info_boxes_border 2>/dev/null)
@@ -152,9 +156,8 @@ else
 echo "Charging"
 fi; 
 }
-get_uptime() {
- uptime --pretty; 
-}
+get_uptime="$(uptime --pretty)"
+
 get_packages() {
  local prefix="$PREFIX/bin" 2> /dev/null;
  local sysroot="$SYSROOT/bin" 2> /dev/null;
@@ -218,11 +221,11 @@ fetch "$border"\       "▢ border >>"" $(get_border)"\                       "$
 fetch "$border"\       " os >>"""""""""""" $(get_os) ($(get_arch))"\       "$border"
 fetch "$border"\       " term >>"""""""""" $(get_term)"\                   "$border"
 fetch "$border"\       " date >>"""""""""" $(get_date)"\                   "$border"
-fetch "$border"\       " song >>"""""""""" $(get_song)"\                   "$border"
+fetch "$border"\       " song >>"""""""""" ${get_song}"\                   "$border"
 fetch "$border"\       " kernel >>"""""""" $(get_kernel)"\                 "$border"
 fetch "$border"\       " shell >>"""""""" $(get_shell)"\                   "$border"
 fetch "$border"\       " battery >>"""""" $(get_battery)"\                 "$border"
-fetch "$border"\       " uptime >>"""""" $(get_uptime)"\                   "$border"
+fetch "$border"\       " uptime >>"""""" ${get_uptime}"\                   "$border"
 fetch "$border"\       " packages >>"""" $(get_packages)"\                 "$border"
 default_header
 setterm --cursor on
