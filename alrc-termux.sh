@@ -19,9 +19,9 @@
 #  set -xv
 
 # major * minor * patch *
-export ALRC_VERSION="4.3.10"
+export ALRC_VERSION="4.3.11"
 
-ALRC_UDATE='12/01/25 18:50 WIB'
+ALRC_UDATE='19/02/25 22:06 WIB'
 
 if [ "$ALRC_USE_ENV_PATH" == "true" ]; then
 export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
@@ -189,7 +189,10 @@ function al() {
 # String
 
 #local thanks="Thank you for using alrc-termux!"
-
+local arch="$(uname -m)"
+local date="$(date)"
+local kernel="$(uname -r)"
+local os="$(uname -so)"
 local my_terminal="$(echo $(dirname ${PREFIX:=$SYSROOT}))"
 local uptimes="$(busybox uptime -s)" > /dev/null 2>&1;
 local batt="$(termux-battery-status 2>&1 | grep -cq 'command not found' || termux-battery-status | head -n 3 | awk '{print $2}' | tail -n 1| sed 's/,/%/g' )"
@@ -204,12 +207,12 @@ if [ -z "$opt" ]; then
   if [ "${shell}" == "bash" ] || [ "$shell" == "bash.bin" ]; then
 
 icon='|'
-abc=$(echo "${icon} os >> $(uname -so)" | wc -L); cba=$(echo "$COLUMNS - $abc" | bc);
-bcd=$(echo "${icon} arch >> $(uname -m)" | wc -L); dcb=$(echo "$COLUMNS - $bcd" | bc);
+abc=$(echo "${icon} os >> ${os}" | wc -L); cba=$(echo "$COLUMNS - $abc" | bc);
+bcd=$(echo "${icon} arch >> ${arch}" | wc -L); dcb=$(echo "$COLUMNS - $bcd" | bc);
 cde=$(echo "${icon} term >> ${TERM}" | wc -L); edc=$(echo "$COLUMNS - $cde" | bc);
-def=$(echo "${icon} date >> $(date)" | wc -L); fed=$(echo "$COLUMNS - $def" | bc);
+def=$(echo "${icon} date >> ${date}" | wc -L); fed=$(echo "$COLUMNS - $def" | bc);
 efg=$(echo "${icon} shell >> ${shell}" | wc -L); gfe=$(echo "$COLUMNS - $efg" | bc);
-fgh=$(echo "${icon} kernel >> $(uname -r)" | wc -L); hgf=$(echo "$COLUMNS - $fgh" | bc);
+fgh=$(echo "${icon} kernel >> ${kernel}" | wc -L); hgf=$(echo "$COLUMNS - $fgh" | bc);
 ghi=$(echo "${icon} uptime >> ${uptimes}" | wc -L); ihg=$(echo "$COLUMNS - $ghi" | bc);
 hij=$(echo "${icon} battery >> ${batteries}" | wc -L); jih=$(echo "$COLUMNS - $hij" | bc);
 ijk=$(echo "${icon} packages >> ${packages_termux}" | wc -L); kji=$(echo "$COLUMNS - $ijk" | bc);
@@ -226,13 +229,13 @@ if [ "$ALRC_USE_ALFETCH" == "true" ]; then
      echo -ne '\n'
      source "$ALRC_HOME/lib/alfetch.sh" 
 else echo -e "$(printf %"$COLUMNS"s |tr " " "-")
-| os >> $(uname -so)$(printf %"$cba"s "$icon" )
-| arch >> $(uname -m)$(printf %"$dcb"s "$icon" )
+| os >> ${os}$(printf %"$cba"s "$icon" )
+| arch >> ${arch}$(printf %"$dcb"s "$icon" )
 | term >> ${TERM}$(printf %"$edc"s "$icon" )
-| date >> $(date)$(printf %"$fed"s "$icon" )
+| date >> ${date}$(printf %"$fed"s "$icon" )
 | shell >> ${shell}$(printf %"$gfe"s "$icon" )
 | songs >> $(al_fetchSongInfo)$(printf %"$onm"s "$icon" )
-| kernel >> $(uname -r)$(printf %"$hgf"s "$icon" )
+| kernel >> ${kernel}$(printf %"$hgf"s "$icon" )
 | uptime >> ${uptimes}$(printf %"$ihg"s "$icon" )
 | battery >> ${batteries}$(printf %"$jih"s "$icon" )
 | packages >> ${packages_termux}$(printf %"$kji"s "$icon" )
@@ -437,39 +440,14 @@ esac
 
 
 ##- Enviroment variable
-# unset HOME USER
-# HOME="${HOME:=/data/data/com.termux/files/home}" # fix home
+# un
 USER="${USER:-$(id -un)}"
 HOSTNAME="$(getprop net.hostname)"
-#PS1='\[\e[0;36m\]\u@${HOSTNAME}:\w${text}$\[\e[m\]'
 export USER HOSTNAME 
-#PS1
 
 
 
-generate_addon_files() {
-set +o noclobber
-export PATH="${PATH}:$HOME/.local/bin"
-
-CHECKIP_FILES="check_ip_publics"
-
-
-#
-export IPFETCH="$ALRC_HOME/cache/ifconfig.txt"
-echo '' > $IPFETCH
-cat <<- "EOF" > $HOME/.local/bin/$CHECKIP_FILES
-
-#!/usr/bin/env bash
-# check_ip_publics v1.0.3
-export ANIMATION_STATE=$(cat $IPFETCH)
-eval "(animation.sh "curl -s -o ${IPFETCH} ifconfig.me")"
-EOF
-
-chmod +x $HOME/.local/bin/$CHECKIP_FILES
-}
-
-generate_addon_files;
- set +o history
+set +o history
 setterm --cursor on
 setterm --linewrap on
 unset -f warning_alfetch_required
