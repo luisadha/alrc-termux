@@ -20,8 +20,10 @@
 
 # major * minor * patch *
 export ALRC_VERSION="4.3.11"
+export ALRC_UDATE='19/02/25 22:06 WIB'
 
-ALRC_UDATE='19/02/25 22:06 WIB'
+# Default value
+export ALRC_NO_MOTD="false"
 
 if [ "$ALRC_USE_ENV_PATH" == "true" ]; then
 export ALRC_HOME="$(cd -P -- "$(dirname -- "$(readlink "${BASH_SOURCE[0]}")")" && pwd)"
