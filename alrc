@@ -34,7 +34,7 @@ _main() {
       _usage
       ;;
     v|-v|version|--version)
-      echo ${VERSION:-4.3.11}
+      echo "alrc ${VERSION:-4.3.11}"
       ;;
     i|install)
       $ALRC_HOME/install.sh
