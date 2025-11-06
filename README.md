@@ -1,4 +1,4 @@
-# +2 New plugins added since version 4.3.06, try it now!
+# +1 New plugins added since version 4.3.07, try it now!
 
 <p align="center">
   <img src="./img/alrc-favicon.svg" alt="Logo" sanitize=true height="130" width="250" />
