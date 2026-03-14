@@ -54,6 +54,12 @@ mkdir -p "$CACHE_DIR"
 
 # ------------------- FUNCTIONS -------------------
 
+
+_border() {
+local FETCH_BORDER=${ALRC_MOTD_USE_BOXES:-$(echo "border by alfetch")}
+local GET_BORDER=$(al_info_boxes_border 2>/dev/null)
+echo "${GET_BORDER:-$FETCH_BORDER}"
+}
 _os() { uname -so; }
 _arch() { uname -m || dpkg --print-architecture; }
 _term() { echo "$TERM"; }
@@ -79,6 +85,7 @@ _battery() {
 }
 
 _song() {
+ps aux | grep '[p]lay' | awk '{for (i=11; i<=NF; i++) printf "%s ", $i; print ""}' | awk -F'/' '{print $NF}' || \
   local info=$(termux-media-player info 2>/dev/null)
   if [[ $info == *"Playing"* ]]; then
     echo "$info" | awk '!/Playing|Position:/ {for(i=2;i<=NF;i++) printf $i " "; print ""}'
@@ -109,6 +116,7 @@ export -f _os _arch _term _date _kernel _shell _packages _uptimes _battery _song
 
 # Run all tasks in background and wait
 (
+  cached border _border > $PREFIX/tmp/_border.txt &
   cached os _os > $PREFIX/tmp/_os.txt &
   cached arch _arch > $PREFIX/tmp/_arch.txt &
   cached term _term > $PREFIX/tmp/_term.txt &
@@ -123,6 +131,7 @@ export -f _os _arch _term _date _kernel _shell _packages _uptimes _battery _song
 )
 
 # Read results
+get_border=$(< $PREFIX/tmp/_border.txt)
 get_os=$(< $PREFIX/tmp/_os.txt)
 get_arch=$(< $PREFIX/tmp/_arch.txt)
 get_term=$(< $PREFIX/tmp/_term.txt)
