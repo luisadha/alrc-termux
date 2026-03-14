@@ -184,7 +184,8 @@ function default_header() {
 
 
 function main() {
-default_header
+setterm --cursor off
+setterm --linewrap off
 default_header
 fetch ${border}" "" ""▢ border >>"" $(get_border)" "${border}"
 fetch ${border}" "" "" os >>" "${get_os} (${get_arch})" "${border}"
