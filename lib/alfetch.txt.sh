@@ -33,7 +33,7 @@ _s1_char='┌'
 _p2_char='┘'
 _s2_char='└'
 _p1_char='┐'
-_char='|'
+border='|'
 _draw_char='─' #━' # ─ # - # =
 _amazing_char_def="${cl0}  ${cl1} ${cl2} ${cl3} ${cl4} ${cl5} ${reset}"
 _amazing_char=${_amazing_char:-$_amazing_char_def}
@@ -177,15 +177,16 @@ function default_header() {
 function main() {
 default_header
 default_header
-fetch ${_char}" "" "" os >>" "${get_os} (${get_arch})" "${_char}"
-fetch ${_char}" "" "" term >>" "${get_term}" "${_char}"
-fetch ${_char}" "" "" date >>" "${get_date}" "${_char}"
-fetch ${_char}" "" "" song >>" "${get_song}" "${_char}"
-fetch ${_char}" "" "" kernel >>" "${get_kernel}" "${_char}"
-fetch ${_char}" "" "" shell >>" "${get_shell}" "${_char}"
-fetch ${_char}" "" "" battery >>" "${get_battery}" "${_char}"
-fetch ${_char}" "" "" uptime >>" "${get_uptime}" "${_char}"
-fetch ${_char}" "" "" packages >>" "${get_packages}" "${_char}"
+fetch ${border}" "" ""▢ border >>"" $(get_border)" "${border}"
+fetch ${border}" "" "" os >>" "${get_os} (${get_arch})" "${border}"
+fetch ${border}" "" "" term >>" "${get_term}" "${border}"
+fetch ${border}" "" "" date >>" "${get_date}" "${border}"
+fetch ${border}" "" "" song >>" "${get_song}" "${border}"
+fetch ${border}" "" "" kernel >>" "${get_kernel}" "${border}"
+fetch ${border}" "" "" shell >>" "${get_shell}" "${border}"
+fetch ${border}" "" "" battery >>" "${get_battery}" "${border}"
+fetch ${border}" "" "" uptime >>" "${get_uptime}" "${border}"
+fetch ${border}" "" "" packages >>" "${get_packages}" "${border}"
 default_header
 }
 
