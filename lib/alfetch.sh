@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#! bash alrc-termux.module
 # Alfetch - a CLI Bash script to show system information on Android devices in termux 
 # Version : v0.0.5b
 # Created : 9 November 2023
