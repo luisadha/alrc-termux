@@ -198,6 +198,9 @@ fetch ${border}" "" "" battery >>" "${get_battery}" "${border}"
 fetch ${border}" "" "" uptime >>" "${get_uptime}" "${border}"
 fetch ${border}" "" "" packages >>" "${get_packages}" "${border}"
 default_header
+setterm --cursor on
+setterm --linewrap on
+echo -ne '\n'
 }
 
 [ ! -d ~/.config/alfetch ] && mkdir -p ~/.config/alfetch #&& echo berhasi  lbuat
