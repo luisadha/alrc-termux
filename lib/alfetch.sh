@@ -178,8 +178,8 @@ function move_space() {
 }
 
 function default_header() {
-
-  printf %"$COLUMNS"s | tr " " "-"
+printf %"$COLUMNS"s | sed "s/ /$h_line/g"
+echo
 }
 
 
